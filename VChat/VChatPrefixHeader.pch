@@ -1,0 +1,23 @@
+//
+//  VChatPrefixHeader.pch
+//  VChat
+//
+//  Created by Recover on 16/3/21.
+//  Copyright © 2016年 Recover. All rights reserved.
+//
+
+#ifndef VChatPrefixHeader_pch
+#define VChatPrefixHeader_pch
+
+//屏幕bounds、高度、宽度
+#define kScreenBounds   [UIScreen mainScreen].bounds
+#define kSceenHeight    [UIScreen mainScreen].bounds.size.height
+#define kSceenWidth     [UIScreen mainScreen].bounds.size.width
+
+//@weakify
+#define weakify(object) autoreleasepool{} __weak typeof(object) weak_##object = object;
+
+//微信绿
+#define kVCchatGreen [UIColor colorWithRed:36/255.0 green:186/255.0 blue:36/255.0 alpha:1]
+
+#endif /* VChatPrefixHeader_pch */
