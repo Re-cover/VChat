@@ -16,8 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="Se4-fV-PvA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Se4-fV-PvA" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="7we-j7-Mv2"/>
+                            <constraint firstAttribute="trailing" secondItem="Se4-fV-PvA" secondAttribute="trailing" id="Dp3-TI-a46"/>
+                            <constraint firstItem="Se4-fV-PvA" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Vs3-Om-eB0"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Se4-fV-PvA" secondAttribute="bottom" id="jRk-6x-qOU"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,4 +37,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Launch" width="621" height="1104"/>
+    </resources>
 </document>
