@@ -1,22 +1,22 @@
 //
-//  LoginViewController.m
+//  PreLoginViewController.m
 //  VChat
 //
-//  Created by Recover on 16/3/21.
+//  Created by Recover on 16/3/22.
 //  Copyright © 2016年 Recover. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "PreLoginViewController.h"
 
-@interface LoginViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *userTextField;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@interface PreLoginViewController ()
+
 @end
 
-@implementation LoginViewController
+@implementation PreLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,10 +24,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleDefault;
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
-
 /*
 #pragma mark - Navigation
 

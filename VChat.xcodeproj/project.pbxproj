@@ -10,6 +10,7 @@
 		2C5F88CE3C16327E4426599E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5F2D4D3BBD1BE7B9091F12 /* libPods.a */; };
 		83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355511CA028E3001C99F2 /* LoginViewController.m */; };
 		83A355541CA02939001C99F2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A355531CA02939001C99F2 /* Login.storyboard */; };
+		83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355561CA076EA001C99F2 /* PreLoginViewController.m */; };
 		83B787D01C9FD75400B60AF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787CF1C9FD75400B60AF7 /* main.m */; };
 		83B787D31C9FD75400B60AF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787D21C9FD75400B60AF7 /* AppDelegate.m */; };
 		83B787DB1C9FD75400B60AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B787DA1C9FD75400B60AF7 /* Assets.xcassets */; };
@@ -40,6 +41,8 @@
 		83A355501CA028E3001C99F2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		83A355511CA028E3001C99F2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
 		83A355531CA02939001C99F2 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Login/Login.storyboard; sourceTree = "<group>"; };
+		83A355551CA076EA001C99F2 /* PreLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreLoginViewController.h; path = Login/PreLoginViewController.h; sourceTree = "<group>"; };
+		83A355561CA076EA001C99F2 /* PreLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreLoginViewController.m; path = Login/PreLoginViewController.m; sourceTree = "<group>"; };
 		83B787CB1C9FD75400B60AF7 /* VChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B787CF1C9FD75400B60AF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83B787D11C9FD75400B60AF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 		83A3554C1CA019E5001C99F2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				83A355551CA076EA001C99F2 /* PreLoginViewController.h */,
+				83A355561CA076EA001C99F2 /* PreLoginViewController.m */,
 				83A355501CA028E3001C99F2 /* LoginViewController.h */,
 				83A355511CA028E3001C99F2 /* LoginViewController.m */,
 			);
@@ -384,6 +389,7 @@
 			files = (
 				83B787D31C9FD75400B60AF7 /* AppDelegate.m in Sources */,
 				83B787D01C9FD75400B60AF7 /* main.m in Sources */,
+				83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */,
 				83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
