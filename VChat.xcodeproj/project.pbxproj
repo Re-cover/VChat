@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C5F88CE3C16327E4426599E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5F2D4D3BBD1BE7B9091F12 /* libPods.a */; };
 		83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355511CA028E3001C99F2 /* LoginViewController.m */; };
-		83A355541CA02939001C99F2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A355531CA02939001C99F2 /* Login.storyboard */; };
+		83A355541CA02939001C99F2 /* PreLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A355531CA02939001C99F2 /* PreLogin.storyboard */; };
 		83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355561CA076EA001C99F2 /* PreLoginViewController.m */; };
 		83B787D01C9FD75400B60AF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787CF1C9FD75400B60AF7 /* main.m */; };
 		83B787D31C9FD75400B60AF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787D21C9FD75400B60AF7 /* AppDelegate.m */; };
@@ -17,6 +17,10 @@
 		83B787DE1C9FD75400B60AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B787DC1C9FD75400B60AF7 /* LaunchScreen.storyboard */; };
 		83B787E91C9FD75400B60AF7 /* VChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787E81C9FD75400B60AF7 /* VChatTests.m */; };
 		83B787F41C9FD75400B60AF7 /* VChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787F31C9FD75400B60AF7 /* VChatUITests.m */; };
+		83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA5F1D1CA1A51A008426FF /* BaseTextField.m */; };
+		83FA5F271CA1B2B8008426FF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA5F261CA1B2B8008426FF /* MainViewController.m */; };
+		83FA5F291CA1B460008426FF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F281CA1B460008426FF /* Login.storyboard */; };
+		83FA5F2B1CA1B5C5008426FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F2A1CA1B5C5008426FF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,7 @@
 		83A3554F1CA02536001C99F2 /* VChatPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VChatPrefixHeader.pch; sourceTree = "<group>"; };
 		83A355501CA028E3001C99F2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		83A355511CA028E3001C99F2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
-		83A355531CA02939001C99F2 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Login/Login.storyboard; sourceTree = "<group>"; };
+		83A355531CA02939001C99F2 /* PreLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PreLogin.storyboard; path = Login/PreLogin.storyboard; sourceTree = "<group>"; };
 		83A355551CA076EA001C99F2 /* PreLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreLoginViewController.h; path = Login/PreLoginViewController.h; sourceTree = "<group>"; };
 		83A355561CA076EA001C99F2 /* PreLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreLoginViewController.m; path = Login/PreLoginViewController.m; sourceTree = "<group>"; };
 		83B787CB1C9FD75400B60AF7 /* VChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +60,12 @@
 		83B787EF1C9FD75400B60AF7 /* VChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B787F31C9FD75400B60AF7 /* VChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VChatUITests.m; sourceTree = "<group>"; };
 		83B787F51C9FD75400B60AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83FA5F1C1CA1A51A008426FF /* BaseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTextField.h; path = Login/BaseTextField.h; sourceTree = "<group>"; };
+		83FA5F1D1CA1A51A008426FF /* BaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTextField.m; path = Login/BaseTextField.m; sourceTree = "<group>"; };
+		83FA5F251CA1B2B8008426FF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Main/MainViewController.h; sourceTree = "<group>"; };
+		83FA5F261CA1B2B8008426FF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Main/MainViewController.m; sourceTree = "<group>"; };
+		83FA5F281CA1B460008426FF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Login/Login.storyboard; sourceTree = "<group>"; };
+		83FA5F2A1CA1B5C5008426FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Main/Main.storyboard; sourceTree = "<group>"; };
 		AB5F2D4D3BBD1BE7B9091F12 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78E9EBB7BC5514BE76A0642 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F564BFDC702DFB2FDCF0A05F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,7 +129,10 @@
 		83A3554D1CA019F8001C99F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				83A355531CA02939001C99F2 /* Login.storyboard */,
+				83A355531CA02939001C99F2 /* PreLogin.storyboard */,
+				83FA5F281CA1B460008426FF /* Login.storyboard */,
+				83FA5F1C1CA1A51A008426FF /* BaseTextField.h */,
+				83FA5F1D1CA1A51A008426FF /* BaseTextField.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -159,6 +172,7 @@
 				83B787D11C9FD75400B60AF7 /* AppDelegate.h */,
 				83B787D21C9FD75400B60AF7 /* AppDelegate.m */,
 				83A3554B1CA019D1001C99F2 /* Login */,
+				83FA5F1F1CA1AEF3008426FF /* Main */,
 				83B787DA1C9FD75400B60AF7 /* Assets.xcassets */,
 				83B787DC1C9FD75400B60AF7 /* LaunchScreen.storyboard */,
 				83B787DF1C9FD75400B60AF7 /* Info.plist */,
@@ -192,6 +206,40 @@
 				83B787F51C9FD75400B60AF7 /* Info.plist */,
 			);
 			path = VChatUITests;
+			sourceTree = "<group>";
+		};
+		83FA5F1F1CA1AEF3008426FF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				83FA5F221CA1AF87008426FF /* Model */,
+				83FA5F211CA1AF80008426FF /* View */,
+				83FA5F201CA1AF74008426FF /* Controller */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		83FA5F201CA1AF74008426FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83FA5F251CA1B2B8008426FF /* MainViewController.h */,
+				83FA5F261CA1B2B8008426FF /* MainViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		83FA5F211CA1AF80008426FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83FA5F2A1CA1B5C5008426FF /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		83FA5F221CA1AF87008426FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		D0AAB16A780CAB9F9D50E193 /* Pods */ = {
@@ -313,8 +361,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B787DE1C9FD75400B60AF7 /* LaunchScreen.storyboard in Resources */,
+				83FA5F2B1CA1B5C5008426FF /* Main.storyboard in Resources */,
 				83B787DB1C9FD75400B60AF7 /* Assets.xcassets in Resources */,
-				83A355541CA02939001C99F2 /* Login.storyboard in Resources */,
+				83A355541CA02939001C99F2 /* PreLogin.storyboard in Resources */,
+				83FA5F291CA1B460008426FF /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,9 +438,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B787D31C9FD75400B60AF7 /* AppDelegate.m in Sources */,
+				83FA5F271CA1B2B8008426FF /* MainViewController.m in Sources */,
 				83B787D01C9FD75400B60AF7 /* main.m in Sources */,
 				83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */,
 				83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */,
+				83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
