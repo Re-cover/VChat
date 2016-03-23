@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WQe-Su-smt">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--我-->
+        <scene sceneID="KgJ-es-MKA">
+            <objects>
+                <viewController id="WQe-Su-smt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b1P-d9-6JH"/>
+                        <viewControllerLayoutGuide type="bottom" id="DnD-so-2Z1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7BK-L0-PXc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我" image="tabbar_me_no" selectedImage="tabbar_me_yes" id="gTh-KK-Apw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vSo-rm-cDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075.5" y="992.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar_me_no" width="23" height="23"/>
+        <image name="tabbar_me_yes" width="23" height="23"/>
+    </resources>
+</document>
