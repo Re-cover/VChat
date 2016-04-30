@@ -1,12 +1,13 @@
 platform :ios, '8.0'
 inhibit_all_warnings!
 
-pod 'AVOSCloud'
-pod 'AVOSCloudIM'
 pod 'AFNetworking'
+pod 'AVOSCloud'
+pod 'RongCloudIMKit'
 pod 'YYModel'
 pod 'YYWebImage'
 pod 'YYText'
-pod 'Masonry'
-pod 'Realm'
+pod 'DateTools'
 pod 'MBProgressHUD'
+pod 'Masonry'
+pod 'FDFullscreenPopGesture'

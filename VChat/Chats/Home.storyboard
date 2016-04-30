@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y0G-aL-ajc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1XB-NQ-Fx9">
+            <objects>
+                <navigationController id="y0G-aL-ajc" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="pgt-m6-uTw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZbY-jr-UoX" kind="relationship" relationship="rootViewController" id="HOE-ug-hWL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWv-cJ-laU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1173.5" y="777.5"/>
+        </scene>
+        <!--微信-->
+        <scene sceneID="gw0-Xz-Zsw">
+            <objects>
+                <viewController id="ZbY-jr-UoX" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GZD-ta-m2g"/>
+                        <viewControllerLayoutGuide type="bottom" id="TUg-YE-VHr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pyu-RI-Og9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wqz-pD-75o">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" id="LLo-Zj-y6F" customClass="HomeTableViewCell">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LLo-Zj-y6F" id="8Dr-Fl-eAa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k7W-OJ-jjr">
+                                                    <rect key="frame" x="10" y="9" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="UQb-UA-ySA"/>
+                                                        <constraint firstAttribute="width" constant="50" id="phe-LP-0hd"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY0-iK-xMI">
+                                                    <rect key="frame" x="70" y="9" width="48" height="27"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="19"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seI-sP-pBb">
+                                                    <rect key="frame" x="70" y="39" width="35.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rY0-iK-xMI" firstAttribute="top" secondItem="k7W-OJ-jjr" secondAttribute="top" id="1sW-BC-QSu"/>
+                                                <constraint firstItem="rY0-iK-xMI" firstAttribute="leading" secondItem="k7W-OJ-jjr" secondAttribute="trailing" constant="10" id="NQW-v0-MeI"/>
+                                                <constraint firstItem="k7W-OJ-jjr" firstAttribute="centerY" secondItem="8Dr-Fl-eAa" secondAttribute="centerY" id="UqY-un-Ylp"/>
+                                                <constraint firstItem="k7W-OJ-jjr" firstAttribute="leading" secondItem="8Dr-Fl-eAa" secondAttribute="leading" constant="10" id="V0P-89-O8M"/>
+                                                <constraint firstItem="seI-sP-pBb" firstAttribute="bottom" secondItem="k7W-OJ-jjr" secondAttribute="bottom" id="YHy-Mr-L6e"/>
+                                                <constraint firstItem="rY0-iK-xMI" firstAttribute="top" secondItem="8Dr-Fl-eAa" secondAttribute="top" constant="5" id="hM3-hd-07P"/>
+                                                <constraint firstItem="seI-sP-pBb" firstAttribute="top" secondItem="rY0-iK-xMI" secondAttribute="bottom" constant="2" id="x5T-jd-U1o"/>
+                                                <constraint firstItem="seI-sP-pBb" firstAttribute="leading" secondItem="k7W-OJ-jjr" secondAttribute="trailing" constant="10" id="zJ5-rU-RXa"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="hM3-hd-07P"/>
+                                                    <exclude reference="x5T-jd-U1o"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImage" destination="k7W-OJ-jjr" id="OoW-3l-QLn"/>
+                                            <outlet property="lastMessageLabel" destination="seI-sP-pBb" id="4do-0x-0IW"/>
+                                            <outlet property="nickNameLabel" destination="rY0-iK-xMI" id="ybV-Tw-eVt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wqz-pD-75o" secondAttribute="trailing" id="fNo-E9-XeM"/>
+                            <constraint firstItem="TUg-YE-VHr" firstAttribute="top" secondItem="Wqz-pD-75o" secondAttribute="bottom" id="gfZ-0G-ePk"/>
+                            <constraint firstItem="Wqz-pD-75o" firstAttribute="leading" secondItem="Pyu-RI-Og9" secondAttribute="leading" id="mJZ-Pi-0Ty"/>
+                            <constraint firstItem="Wqz-pD-75o" firstAttribute="top" secondItem="GZD-ta-m2g" secondAttribute="bottom" id="w05-Wr-m8h"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="微信" image="tabbar_mainframe" selectedImage="tabbar_mainframeHL" id="HL2-Wb-EsH"/>
+                    <navigationItem key="navigationItem" title="微信" id="7JJ-dd-k7b"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="HomeTableView" destination="Wqz-pD-75o" id="uTS-KP-9ed"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSI-Qi-MBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700.5" y="777.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar_mainframe" width="25" height="23"/>
+        <image name="tabbar_mainframeHL" width="25" height="23"/>
+    </resources>
+</document>

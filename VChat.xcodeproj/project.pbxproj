@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		2C5F88CE3C16327E4426599E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5F2D4D3BBD1BE7B9091F12 /* libPods.a */; };
+		832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832A2BA61CD4564800CEBEA9 /* HomeViewController.m */; };
 		83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355511CA028E3001C99F2 /* LoginViewController.m */; };
 		83A355541CA02939001C99F2 /* PreLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A355531CA02939001C99F2 /* PreLogin.storyboard */; };
 		83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355561CA076EA001C99F2 /* PreLoginViewController.m */; };
 		83B787D01C9FD75400B60AF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787CF1C9FD75400B60AF7 /* main.m */; };
 		83B787D31C9FD75400B60AF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787D21C9FD75400B60AF7 /* AppDelegate.m */; };
-		83B787DB1C9FD75400B60AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B787DA1C9FD75400B60AF7 /* Assets.xcassets */; };
 		83B787DE1C9FD75400B60AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B787DC1C9FD75400B60AF7 /* LaunchScreen.storyboard */; };
 		83B787E91C9FD75400B60AF7 /* VChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787E81C9FD75400B60AF7 /* VChatTests.m */; };
 		83B787F41C9FD75400B60AF7 /* VChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787F31C9FD75400B60AF7 /* VChatUITests.m */; };
+		83D0D6211CD3824300CB2B26 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */; };
+		83D0D6251CD385D900CB2B26 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0D6241CD385D900CB2B26 /* BaseViewController.m */; };
+		83EA57A21CD47E4700D00B0E /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57A11CD47E4700D00B0E /* ContactsViewController.m */; };
+		83EA57A51CD47F1F00D00B0E /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57A41CD47F1F00D00B0E /* ContactTableViewCell.m */; };
+		83EA57AB1CD47F5000D00B0E /* Contacts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EA57A61CD47F5000D00B0E /* Contacts.xcassets */; };
+		83EA57AC1CD47F5000D00B0E /* Discover.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EA57A71CD47F5000D00B0E /* Discover.xcassets */; };
+		83EA57AD1CD47F5000D00B0E /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EA57A81CD47F5000D00B0E /* Home.xcassets */; };
+		83EA57AE1CD47F5000D00B0E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EA57A91CD47F5000D00B0E /* Images.xcassets */; };
+		83EA57AF1CD47F5000D00B0E /* Me.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EA57AA1CD47F5000D00B0E /* Me.xcassets */; };
+		83EA57B21CD4838C00D00B0E /* DiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57B11CD4838C00D00B0E /* DiscoverTableViewCell.m */; };
+		83EA57B51CD483B400D00B0E /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57B41CD483B400D00B0E /* DiscoverViewController.m */; };
+		83EA57B81CD4EE4700D00B0E /* MeInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57B71CD4EE4700D00B0E /* MeInfoTableViewCell.m */; };
+		83EA57BB1CD4F47800D00B0E /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57BA1CD4F47800D00B0E /* MeTableViewCell.m */; };
+		83EA57C11CD4F61200D00B0E /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57C01CD4F61200D00B0E /* MeViewController.m */; };
 		83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA5F1D1CA1A51A008426FF /* BaseTextField.m */; };
-		83FA5F271CA1B2B8008426FF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA5F261CA1B2B8008426FF /* MainViewController.m */; };
+		83FA5F271CA1B2B8008426FF /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA5F261CA1B2B8008426FF /* MainTabBarController.m */; };
 		83FA5F291CA1B460008426FF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F281CA1B460008426FF /* Login.storyboard */; };
 		83FA5F2B1CA1B5C5008426FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F2A1CA1B5C5008426FF /* Main.storyboard */; };
-		83FA5F5C1CA25F42008426FF /* Chats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F5B1CA25F42008426FF /* Chats.storyboard */; };
+		83FA5F5C1CA25F42008426FF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F5B1CA25F42008426FF /* Home.storyboard */; };
 		83FA5F5E1CA25F5C008426FF /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F5D1CA25F5C008426FF /* Contacts.storyboard */; };
 		83FA5F601CA25F72008426FF /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F5F1CA25F72008426FF /* Discover.storyboard */; };
 		83FA5F621CA25F90008426FF /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F611CA25F90008426FF /* Me.storyboard */; };
@@ -45,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		832A2BA51CD4564800CEBEA9 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Chats/HomeViewController.h; sourceTree = "<group>"; };
+		832A2BA61CD4564800CEBEA9 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Chats/HomeViewController.m; sourceTree = "<group>"; };
 		83A3554F1CA02536001C99F2 /* VChatPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VChatPrefixHeader.pch; sourceTree = "<group>"; };
 		83A355501CA028E3001C99F2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		83A355511CA028E3001C99F2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
@@ -55,7 +71,6 @@
 		83B787CF1C9FD75400B60AF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83B787D11C9FD75400B60AF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83B787D21C9FD75400B60AF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		83B787DA1C9FD75400B60AF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83B787DD1C9FD75400B60AF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83B787DF1C9FD75400B60AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83B787E41C9FD75400B60AF7 /* VChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,13 +79,36 @@
 		83B787EF1C9FD75400B60AF7 /* VChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B787F31C9FD75400B60AF7 /* VChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VChatUITests.m; sourceTree = "<group>"; };
 		83B787F51C9FD75400B60AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83D0D61F1CD3824300CB2B26 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewCell.h; path = Chats/HomeTableViewCell.h; sourceTree = "<group>"; };
+		83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewCell.m; path = Chats/HomeTableViewCell.m; sourceTree = "<group>"; };
+		83D0D6231CD385D900CB2B26 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Common/BaseViewController.h; sourceTree = "<group>"; };
+		83D0D6241CD385D900CB2B26 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Common/BaseViewController.m; sourceTree = "<group>"; };
+		83EA57A01CD47E4700D00B0E /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsViewController.h; path = Contacts/ContactsViewController.h; sourceTree = "<group>"; };
+		83EA57A11CD47E4700D00B0E /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsViewController.m; path = Contacts/ContactsViewController.m; sourceTree = "<group>"; };
+		83EA57A31CD47F1F00D00B0E /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactTableViewCell.h; path = Contacts/ContactTableViewCell.h; sourceTree = "<group>"; };
+		83EA57A41CD47F1F00D00B0E /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactTableViewCell.m; path = Contacts/ContactTableViewCell.m; sourceTree = "<group>"; };
+		83EA57A61CD47F5000D00B0E /* Contacts.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Contacts.xcassets; path = Sources/Contacts.xcassets; sourceTree = "<group>"; };
+		83EA57A71CD47F5000D00B0E /* Discover.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Discover.xcassets; path = Sources/Discover.xcassets; sourceTree = "<group>"; };
+		83EA57A81CD47F5000D00B0E /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Home.xcassets; path = Sources/Home.xcassets; sourceTree = "<group>"; };
+		83EA57A91CD47F5000D00B0E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Sources/Images.xcassets; sourceTree = "<group>"; };
+		83EA57AA1CD47F5000D00B0E /* Me.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Me.xcassets; path = Sources/Me.xcassets; sourceTree = "<group>"; };
+		83EA57B01CD4838C00D00B0E /* DiscoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverTableViewCell.h; path = Discover/DiscoverTableViewCell.h; sourceTree = "<group>"; };
+		83EA57B11CD4838C00D00B0E /* DiscoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverTableViewCell.m; path = Discover/DiscoverTableViewCell.m; sourceTree = "<group>"; };
+		83EA57B31CD483B400D00B0E /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverViewController.h; path = Discover/DiscoverViewController.h; sourceTree = "<group>"; };
+		83EA57B41CD483B400D00B0E /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverViewController.m; path = Discover/DiscoverViewController.m; sourceTree = "<group>"; };
+		83EA57B61CD4EE4700D00B0E /* MeInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeInfoTableViewCell.h; path = Me/MeInfoTableViewCell.h; sourceTree = "<group>"; };
+		83EA57B71CD4EE4700D00B0E /* MeInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeInfoTableViewCell.m; path = Me/MeInfoTableViewCell.m; sourceTree = "<group>"; };
+		83EA57B91CD4F47800D00B0E /* MeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeTableViewCell.h; path = Me/MeTableViewCell.h; sourceTree = "<group>"; };
+		83EA57BA1CD4F47800D00B0E /* MeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeTableViewCell.m; path = Me/MeTableViewCell.m; sourceTree = "<group>"; };
+		83EA57BF1CD4F61200D00B0E /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeViewController.h; path = Me/MeViewController.h; sourceTree = "<group>"; };
+		83EA57C01CD4F61200D00B0E /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeViewController.m; path = Me/MeViewController.m; sourceTree = "<group>"; };
 		83FA5F1C1CA1A51A008426FF /* BaseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTextField.h; path = Login/BaseTextField.h; sourceTree = "<group>"; };
 		83FA5F1D1CA1A51A008426FF /* BaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTextField.m; path = Login/BaseTextField.m; sourceTree = "<group>"; };
-		83FA5F251CA1B2B8008426FF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Main/MainViewController.h; sourceTree = "<group>"; };
-		83FA5F261CA1B2B8008426FF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Main/MainViewController.m; sourceTree = "<group>"; };
+		83FA5F251CA1B2B8008426FF /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabBarController.h; path = Main/MainTabBarController.h; sourceTree = "<group>"; };
+		83FA5F261CA1B2B8008426FF /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabBarController.m; path = Main/MainTabBarController.m; sourceTree = "<group>"; };
 		83FA5F281CA1B460008426FF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Login/Login.storyboard; sourceTree = "<group>"; };
 		83FA5F2A1CA1B5C5008426FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Main/Main.storyboard; sourceTree = "<group>"; };
-		83FA5F5B1CA25F42008426FF /* Chats.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Chats.storyboard; path = Chats/Chats.storyboard; sourceTree = "<group>"; };
+		83FA5F5B1CA25F42008426FF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Chats/Home.storyboard; sourceTree = "<group>"; };
 		83FA5F5D1CA25F5C008426FF /* Contacts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Contacts.storyboard; path = Contacts/Contacts.storyboard; sourceTree = "<group>"; };
 		83FA5F5F1CA25F72008426FF /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = Discover/Discover.storyboard; sourceTree = "<group>"; };
 		83FA5F611CA25F90008426FF /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Me.storyboard; path = Me/Me.storyboard; sourceTree = "<group>"; };
@@ -111,6 +149,18 @@
 				AB5F2D4D3BBD1BE7B9091F12 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8355E5FB1CD475D500FC7A51 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				83EA57A61CD47F5000D00B0E /* Contacts.xcassets */,
+				83EA57A71CD47F5000D00B0E /* Discover.xcassets */,
+				83EA57A81CD47F5000D00B0E /* Home.xcassets */,
+				83EA57A91CD47F5000D00B0E /* Images.xcassets */,
+				83EA57AA1CD47F5000D00B0E /* Me.xcassets */,
+			);
+			name = Sources;
 			sourceTree = "<group>";
 		};
 		83A3554B1CA019D1001C99F2 /* Login */ = {
@@ -179,13 +229,13 @@
 			children = (
 				83B787D11C9FD75400B60AF7 /* AppDelegate.h */,
 				83B787D21C9FD75400B60AF7 /* AppDelegate.m */,
+				83D0D6221CD385A000CB2B26 /* Common */,
 				83A3554B1CA019D1001C99F2 /* Login */,
 				83FA5F1F1CA1AEF3008426FF /* Main */,
 				83FA5F4E1CA25A01008426FF /* Chats */,
 				83FA5F4D1CA25A00008426FF /* Contacts */,
 				83FA5F4C1CA259FF008426FF /* Discover */,
 				83FA5F4B1CA259FC008426FF /* Me */,
-				83B787DA1C9FD75400B60AF7 /* Assets.xcassets */,
 				83B787DC1C9FD75400B60AF7 /* LaunchScreen.storyboard */,
 				83B787DF1C9FD75400B60AF7 /* Info.plist */,
 				83B787CE1C9FD75400B60AF7 /* Supporting Files */,
@@ -196,6 +246,7 @@
 		83B787CE1C9FD75400B60AF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8355E5FB1CD475D500FC7A51 /* Sources */,
 				83A3554F1CA02536001C99F2 /* VChatPrefixHeader.pch */,
 				83B787CF1C9FD75400B60AF7 /* main.m */,
 			);
@@ -220,6 +271,15 @@
 			path = VChatUITests;
 			sourceTree = "<group>";
 		};
+		83D0D6221CD385A000CB2B26 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				83D0D6231CD385D900CB2B26 /* BaseViewController.h */,
+				83D0D6241CD385D900CB2B26 /* BaseViewController.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		83FA5F1F1CA1AEF3008426FF /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,8 +293,8 @@
 		83FA5F201CA1AF74008426FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				83FA5F251CA1B2B8008426FF /* MainViewController.h */,
-				83FA5F261CA1B2B8008426FF /* MainViewController.m */,
+				83FA5F251CA1B2B8008426FF /* MainTabBarController.h */,
+				83FA5F261CA1B2B8008426FF /* MainTabBarController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -297,6 +357,8 @@
 		83FA5F4F1CA25A39008426FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				832A2BA51CD4564800CEBEA9 /* HomeViewController.h */,
+				832A2BA61CD4564800CEBEA9 /* HomeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -304,7 +366,9 @@
 		83FA5F501CA25A3B008426FF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				83FA5F5B1CA25F42008426FF /* Chats.storyboard */,
+				83FA5F5B1CA25F42008426FF /* Home.storyboard */,
+				83D0D61F1CD3824300CB2B26 /* HomeTableViewCell.h */,
+				83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -319,6 +383,8 @@
 		83FA5F521CA25A48008426FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				83EA57A01CD47E4700D00B0E /* ContactsViewController.h */,
+				83EA57A11CD47E4700D00B0E /* ContactsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -327,6 +393,8 @@
 			isa = PBXGroup;
 			children = (
 				83FA5F5D1CA25F5C008426FF /* Contacts.storyboard */,
+				83EA57A31CD47F1F00D00B0E /* ContactTableViewCell.h */,
+				83EA57A41CD47F1F00D00B0E /* ContactTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -341,6 +409,8 @@
 		83FA5F551CA25A58008426FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				83EA57B31CD483B400D00B0E /* DiscoverViewController.h */,
+				83EA57B41CD483B400D00B0E /* DiscoverViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -349,6 +419,8 @@
 			isa = PBXGroup;
 			children = (
 				83FA5F5F1CA25F72008426FF /* Discover.storyboard */,
+				83EA57B01CD4838C00D00B0E /* DiscoverTableViewCell.h */,
+				83EA57B11CD4838C00D00B0E /* DiscoverTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -363,6 +435,8 @@
 		83FA5F581CA25A72008426FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				83EA57BF1CD4F61200D00B0E /* MeViewController.h */,
+				83EA57C01CD4F61200D00B0E /* MeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -371,6 +445,10 @@
 			isa = PBXGroup;
 			children = (
 				83FA5F611CA25F90008426FF /* Me.storyboard */,
+				83EA57B61CD4EE4700D00B0E /* MeInfoTableViewCell.h */,
+				83EA57B71CD4EE4700D00B0E /* MeInfoTableViewCell.m */,
+				83EA57B91CD4F47800D00B0E /* MeTableViewCell.h */,
+				83EA57BA1CD4F47800D00B0E /* MeTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -461,7 +539,6 @@
 				TargetAttributes = {
 					83B787CA1C9FD75400B60AF7 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = BSX56YTBJ6;
 					};
 					83B787E31C9FD75400B60AF7 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -500,13 +577,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83FA5F5C1CA25F42008426FF /* Chats.storyboard in Resources */,
+				83EA57AF1CD47F5000D00B0E /* Me.xcassets in Resources */,
+				83FA5F5C1CA25F42008426FF /* Home.storyboard in Resources */,
 				83FA5F601CA25F72008426FF /* Discover.storyboard in Resources */,
 				83B787DE1C9FD75400B60AF7 /* LaunchScreen.storyboard in Resources */,
 				83FA5F2B1CA1B5C5008426FF /* Main.storyboard in Resources */,
-				83B787DB1C9FD75400B60AF7 /* Assets.xcassets in Resources */,
 				83FA5F621CA25F90008426FF /* Me.storyboard in Resources */,
 				83A355541CA02939001C99F2 /* PreLogin.storyboard in Resources */,
+				83EA57AD1CD47F5000D00B0E /* Home.xcassets in Resources */,
+				83EA57AC1CD47F5000D00B0E /* Discover.xcassets in Resources */,
+				83EA57AB1CD47F5000D00B0E /* Contacts.xcassets in Resources */,
+				83EA57AE1CD47F5000D00B0E /* Images.xcassets in Resources */,
 				83FA5F5E1CA25F5C008426FF /* Contacts.storyboard in Resources */,
 				83FA5F291CA1B460008426FF /* Login.storyboard in Resources */,
 			);
@@ -581,12 +662,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EA57B21CD4838C00D00B0E /* DiscoverTableViewCell.m in Sources */,
 				83B787D31C9FD75400B60AF7 /* AppDelegate.m in Sources */,
-				83FA5F271CA1B2B8008426FF /* MainViewController.m in Sources */,
+				83D0D6251CD385D900CB2B26 /* BaseViewController.m in Sources */,
+				83EA57A51CD47F1F00D00B0E /* ContactTableViewCell.m in Sources */,
+				83EA57B51CD483B400D00B0E /* DiscoverViewController.m in Sources */,
+				83EA57BB1CD4F47800D00B0E /* MeTableViewCell.m in Sources */,
+				83EA57B81CD4EE4700D00B0E /* MeInfoTableViewCell.m in Sources */,
+				83FA5F271CA1B2B8008426FF /* MainTabBarController.m in Sources */,
 				83B787D01C9FD75400B60AF7 /* main.m in Sources */,
+				83D0D6211CD3824300CB2B26 /* HomeTableViewCell.m in Sources */,
 				83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */,
 				83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */,
+				83EA57A21CD47E4700D00B0E /* ContactsViewController.m in Sources */,
 				83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */,
+				83EA57C11CD4F61200D00B0E /* MeViewController.m in Sources */,
+				832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +809,7 @@
 			baseConfigurationReference = C78E9EBB7BC5514BE76A0642 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = VChat/VChatPrefixHeader.pch;
 				INFOPLIST_FILE = VChat/Info.plist;
@@ -732,6 +824,7 @@
 			baseConfigurationReference = F564BFDC702DFB2FDCF0A05F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = VChat/VChatPrefixHeader.pch;
 				INFOPLIST_FILE = VChat/Info.plist;

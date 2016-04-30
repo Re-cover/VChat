@@ -17,16 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="Se4-fV-PvA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="Fdm-35-Mtm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Se4-fV-PvA" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="7we-j7-Mv2"/>
-                            <constraint firstAttribute="trailing" secondItem="Se4-fV-PvA" secondAttribute="trailing" id="Dp3-TI-a46"/>
-                            <constraint firstItem="Se4-fV-PvA" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Vs3-Om-eB0"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Se4-fV-PvA" secondAttribute="bottom" id="jRk-6x-qOU"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Fdm-35-Mtm" secondAttribute="bottom" id="8oQ-rO-1Ds"/>
+                            <constraint firstItem="Fdm-35-Mtm" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="CZw-9r-Q2b"/>
+                            <constraint firstItem="Fdm-35-Mtm" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="IKQ-wg-dCk"/>
+                            <constraint firstAttribute="trailing" secondItem="Fdm-35-Mtm" secondAttribute="trailing" id="SlJ-3q-BhF"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launch" width="621" height="1104"/>
+        <image name="Launch" width="320" height="568"/>
     </resources>
 </document>

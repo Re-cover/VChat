@@ -5,10 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="jfP-XX-OCo">
             <objects>
-                <tabBarController id="lBn-8y-utc" customClass="MainViewController" sceneMemberID="viewController">
+                <tabBarController id="lBn-8y-utc" customClass="MainTabBarController" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="LLk-GU-FOx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -31,10 +32,10 @@
             </objects>
             <point key="canvasLocation" x="417.5" y="136.5"/>
         </scene>
-        <!--Chats-->
+        <!--Home-->
         <scene sceneID="Rg7-mN-raH">
             <objects>
-                <viewControllerPlaceholder storyboardName="Chats" id="Kc4-jA-hUS" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Home" id="Kc4-jA-hUS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="eOh-Wu-UaY"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20H-kM-gp3" userLabel="First Responder" sceneMemberID="firstResponder"/>

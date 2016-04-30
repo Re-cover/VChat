@@ -1,34 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nZt-02-tCe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dJi-kl-znF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--通讯录-->
-        <scene sceneID="0LR-lu-Fhd">
+        <!--Navigation Controller-->
+        <scene sceneID="vQ4-xW-jXK">
             <objects>
-                <viewController id="nZt-02-tCe" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gEO-eB-Xih"/>
-                        <viewControllerLayoutGuide type="bottom" id="QmT-RC-8dh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DDn-TH-oyU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="通讯录" image="tabbar_book_no" selectedImage="tabbar_book_yes" id="dJL-wz-CZ0"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                <navigationController id="dJi-kl-znF" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zi8-Rb-BOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="ufP-g9-9nK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Yqp-XQ-uIu" kind="relationship" relationship="rootViewController" id="3Bu-AP-sdD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJ8-3K-fDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216.5" y="992.5"/>
+            <point key="canvasLocation" x="-416.5" y="1204.5"/>
+        </scene>
+        <!--通讯录-->
+        <scene sceneID="Ato-BT-9rw">
+            <objects>
+                <viewController id="Yqp-XQ-uIu" customClass="ContactsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TRj-WS-PjY"/>
+                        <viewControllerLayoutGuide type="bottom" id="FaA-IN-DCb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Edf-ZW-jWH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Vue-8o-TT2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" id="7bG-49-Tdq" customClass="ContactTableViewCell">
+                                        <rect key="frame" x="0.0" y="113.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7bG-49-Tdq" id="Bh0-2S-Ogh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rbj-zg-Z4h">
+                                                    <rect key="frame" x="10" y="7" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="5pp-MQ-Vxw"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Pp8-Q7-mfY"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qN-8q-KOL">
+                                                    <rect key="frame" x="50" y="9.5" width="43" height="24"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4qN-8q-KOL" firstAttribute="leading" secondItem="rbj-zg-Z4h" secondAttribute="trailing" constant="10" id="4NK-Zs-cd9"/>
+                                                <constraint firstItem="rbj-zg-Z4h" firstAttribute="centerY" secondItem="Bh0-2S-Ogh" secondAttribute="centerY" id="9VO-Hq-zrM"/>
+                                                <constraint firstItem="4qN-8q-KOL" firstAttribute="centerY" secondItem="Bh0-2S-Ogh" secondAttribute="centerY" id="DPo-Im-Swi"/>
+                                                <constraint firstItem="rbj-zg-Z4h" firstAttribute="leading" secondItem="Bh0-2S-Ogh" secondAttribute="leading" constant="10" id="xKd-96-Gys"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="rbj-zg-Z4h" id="iux-yy-CvC"/>
+                                            <outlet property="nickNameLabel" destination="4qN-8q-KOL" id="lGF-AP-eR3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vue-8o-TT2" secondAttribute="trailing" id="SSV-RT-XU9"/>
+                            <constraint firstItem="FaA-IN-DCb" firstAttribute="top" secondItem="Vue-8o-TT2" secondAttribute="bottom" id="U8y-Lf-VwQ"/>
+                            <constraint firstItem="Vue-8o-TT2" firstAttribute="top" secondItem="TRj-WS-PjY" secondAttribute="bottom" id="e5P-w5-o8U"/>
+                            <constraint firstItem="Vue-8o-TT2" firstAttribute="leading" secondItem="Edf-ZW-jWH" secondAttribute="leading" id="eyr-XJ-vlR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="通讯录" image="tabbar_contacts" selectedImage="tabbar_contactsHL" id="KIc-ri-nDx"/>
+                    <navigationItem key="navigationItem" title="通讯录" id="sSs-Kc-3Y1"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ContactsTableView" destination="Vue-8o-TT2" id="iOa-fW-EM8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8aG-MJ-gwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.5" y="1204.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="tabbar_book_no" width="27" height="23"/>
-        <image name="tabbar_book_yes" width="27" height="23"/>
+        <image name="tabbar_contacts" width="27" height="23"/>
+        <image name="tabbar_contactsHL" width="27" height="23"/>
     </resources>
 </document>
