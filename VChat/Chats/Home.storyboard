@@ -26,7 +26,7 @@
         <!--微信-->
         <scene sceneID="gw0-Xz-Zsw">
             <objects>
-                <viewController id="ZbY-jr-UoX" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ZbY-jr-UoX" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GZD-ta-m2g"/>
                         <viewControllerLayoutGuide type="bottom" id="TUg-YE-VHr"/>
@@ -40,7 +40,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" id="LLo-Zj-y6F" customClass="HomeTableViewCell">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="68"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LLo-Zj-y6F" id="8Dr-Fl-eAa">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
@@ -56,7 +56,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY0-iK-xMI">
                                                     <rect key="frame" x="70" y="9" width="48" height="27"/>
                                                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="19"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seI-sP-pBb">
@@ -106,11 +106,20 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="HomeTableView" destination="Wqz-pD-75o" id="uTS-KP-9ed"/>
+                        <segue destination="CdP-ml-4Io" kind="show" identifier="toChat" id="O2u-Vh-L5U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSI-Qi-MBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-700.5" y="777.5"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="F6s-1S-vtj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="CdP-ml-4Io" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HY7-B5-nmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258.5" y="777.5"/>
         </scene>
     </scenes>
     <resources>

@@ -28,11 +28,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleDefault;
-}
-
-
 - (IBAction)didCancelButtonClicked:(id)sender {
     [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];

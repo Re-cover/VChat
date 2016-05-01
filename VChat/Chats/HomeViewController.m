@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "HomeTableViewCell.h"
+#import "ChatViewController.h"
 
 @interface HomeViewController ()
 
@@ -33,7 +34,7 @@
     return 9;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = @"HomeTableViewCell";
     HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     cell.avatarImage.image = [UIImage imageNamed:@"default_avatar"];
@@ -42,5 +43,15 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    HomeTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [self performSegueWithIdentifier:@"toChat" sender:cell];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ChatViewController *vc = segue.destinationViewController;
+    HomeTableViewCell *cell = sender;
+    vc.title = cell.nickNameLabel.text;
+}
 
 @end

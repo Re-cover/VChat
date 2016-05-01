@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2C5F88CE3C16327E4426599E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5F2D4D3BBD1BE7B9091F12 /* libPods.a */; };
 		832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832A2BA61CD4564800CEBEA9 /* HomeViewController.m */; };
+		8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385B6C11CD597D20005EFE6 /* ChatViewController.m */; };
+		8385B6C81CD5B1500005EFE6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8385B6C71CD5B1500005EFE6 /* Chat.storyboard */; };
+		8385B6CA1CD5B17E0005EFE6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8385B6C91CD5B17E0005EFE6 /* Home.storyboard */; };
 		83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355511CA028E3001C99F2 /* LoginViewController.m */; };
 		83A355541CA02939001C99F2 /* PreLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A355531CA02939001C99F2 /* PreLogin.storyboard */; };
 		83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355561CA076EA001C99F2 /* PreLoginViewController.m */; };
@@ -35,7 +38,6 @@
 		83FA5F271CA1B2B8008426FF /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA5F261CA1B2B8008426FF /* MainTabBarController.m */; };
 		83FA5F291CA1B460008426FF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F281CA1B460008426FF /* Login.storyboard */; };
 		83FA5F2B1CA1B5C5008426FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F2A1CA1B5C5008426FF /* Main.storyboard */; };
-		83FA5F5C1CA25F42008426FF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F5B1CA25F42008426FF /* Home.storyboard */; };
 		83FA5F5E1CA25F5C008426FF /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F5D1CA25F5C008426FF /* Contacts.storyboard */; };
 		83FA5F601CA25F72008426FF /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F5F1CA25F72008426FF /* Discover.storyboard */; };
 		83FA5F621CA25F90008426FF /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F611CA25F90008426FF /* Me.storyboard */; };
@@ -61,6 +63,10 @@
 /* Begin PBXFileReference section */
 		832A2BA51CD4564800CEBEA9 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Chats/HomeViewController.h; sourceTree = "<group>"; };
 		832A2BA61CD4564800CEBEA9 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Chats/HomeViewController.m; sourceTree = "<group>"; };
+		8385B6C01CD597D20005EFE6 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = Chats/ChatViewController.h; sourceTree = "<group>"; };
+		8385B6C11CD597D20005EFE6 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatViewController.m; path = Chats/ChatViewController.m; sourceTree = "<group>"; };
+		8385B6C71CD5B1500005EFE6 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Chat.storyboard; path = Chats/Chat.storyboard; sourceTree = "<group>"; };
+		8385B6C91CD5B17E0005EFE6 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Chats/Home.storyboard; sourceTree = "<group>"; };
 		83A3554F1CA02536001C99F2 /* VChatPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VChatPrefixHeader.pch; sourceTree = "<group>"; };
 		83A355501CA028E3001C99F2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		83A355511CA028E3001C99F2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
@@ -108,7 +114,6 @@
 		83FA5F261CA1B2B8008426FF /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabBarController.m; path = Main/MainTabBarController.m; sourceTree = "<group>"; };
 		83FA5F281CA1B460008426FF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Login/Login.storyboard; sourceTree = "<group>"; };
 		83FA5F2A1CA1B5C5008426FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Main/Main.storyboard; sourceTree = "<group>"; };
-		83FA5F5B1CA25F42008426FF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Chats/Home.storyboard; sourceTree = "<group>"; };
 		83FA5F5D1CA25F5C008426FF /* Contacts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Contacts.storyboard; path = Contacts/Contacts.storyboard; sourceTree = "<group>"; };
 		83FA5F5F1CA25F72008426FF /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = Discover/Discover.storyboard; sourceTree = "<group>"; };
 		83FA5F611CA25F90008426FF /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Me.storyboard; path = Me/Me.storyboard; sourceTree = "<group>"; };
@@ -359,6 +364,8 @@
 			children = (
 				832A2BA51CD4564800CEBEA9 /* HomeViewController.h */,
 				832A2BA61CD4564800CEBEA9 /* HomeViewController.m */,
+				8385B6C01CD597D20005EFE6 /* ChatViewController.h */,
+				8385B6C11CD597D20005EFE6 /* ChatViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -366,7 +373,8 @@
 		83FA5F501CA25A3B008426FF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				83FA5F5B1CA25F42008426FF /* Home.storyboard */,
+				8385B6C91CD5B17E0005EFE6 /* Home.storyboard */,
+				8385B6C71CD5B1500005EFE6 /* Chat.storyboard */,
 				83D0D61F1CD3824300CB2B26 /* HomeTableViewCell.h */,
 				83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */,
 			);
@@ -577,13 +585,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8385B6C81CD5B1500005EFE6 /* Chat.storyboard in Resources */,
 				83EA57AF1CD47F5000D00B0E /* Me.xcassets in Resources */,
-				83FA5F5C1CA25F42008426FF /* Home.storyboard in Resources */,
 				83FA5F601CA25F72008426FF /* Discover.storyboard in Resources */,
 				83B787DE1C9FD75400B60AF7 /* LaunchScreen.storyboard in Resources */,
 				83FA5F2B1CA1B5C5008426FF /* Main.storyboard in Resources */,
 				83FA5F621CA25F90008426FF /* Me.storyboard in Resources */,
 				83A355541CA02939001C99F2 /* PreLogin.storyboard in Resources */,
+				8385B6CA1CD5B17E0005EFE6 /* Home.storyboard in Resources */,
 				83EA57AD1CD47F5000D00B0E /* Home.xcassets in Resources */,
 				83EA57AC1CD47F5000D00B0E /* Discover.xcassets in Resources */,
 				83EA57AB1CD47F5000D00B0E /* Contacts.xcassets in Resources */,
@@ -676,6 +685,7 @@
 				83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */,
 				83EA57A21CD47E4700D00B0E /* ContactsViewController.m in Sources */,
 				83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */,
+				8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */,
 				83EA57C11CD4F61200D00B0E /* MeViewController.m in Sources */,
 				832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */,
 			);

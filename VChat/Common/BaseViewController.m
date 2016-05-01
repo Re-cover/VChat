@@ -7,7 +7,6 @@
 //
 
 #import "BaseViewController.h"
-#import <UINavigationController+FDFullscreenPopGesture.h>
 
 @interface BaseViewController ()
 
@@ -17,19 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.fd_prefersNavigationBarHidden = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
 }
 
 - (void)dealloc
 {
-    //[super dealloc];
     NSLog(@"释放%@", self.classForCoder);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
