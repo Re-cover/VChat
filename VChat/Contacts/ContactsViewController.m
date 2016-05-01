@@ -17,6 +17,7 @@
 
 @implementation ContactsViewController
 
+# pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.ContactsTableView.dataSource = self;
@@ -28,6 +29,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+# pragma mark - UITableViewDataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 3;
@@ -36,6 +38,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 9;
 }
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = @"ContactTableViewCell";
     ContactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -43,5 +46,7 @@
     cell.nickNameLabel.text = @"昵称";
     return cell;
 }
+
+# pragma mark - UITableViewDelegate
 
 @end

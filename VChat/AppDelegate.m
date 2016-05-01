@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <RealReachability.h>
 
 @interface AppDelegate ()
 
@@ -16,6 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    GLobalRealReachability.hostForPing = @"leancloud.cn";
+    [GLobalRealReachability startNotifier];
     return YES;
 }
 

@@ -15,6 +15,7 @@
 
 @end
 
+# pragma mark - 生命周期
 @implementation DiscoverViewController
 
 - (void)viewDidLoad {
@@ -28,6 +29,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+# pragma mark - UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 4;
 }
@@ -45,6 +48,14 @@
         default:
             return 0;
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -99,14 +110,6 @@
             break;
     }
     return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 10;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 10;
 }
 
 
