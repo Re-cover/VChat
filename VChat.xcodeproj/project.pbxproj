@@ -22,6 +22,10 @@
 		83B787F41C9FD75400B60AF7 /* VChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787F31C9FD75400B60AF7 /* VChatUITests.m */; };
 		83D0D6211CD3824300CB2B26 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */; };
 		83D0D6251CD385D900CB2B26 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0D6241CD385D900CB2B26 /* BaseViewController.m */; };
+		83E7F8771CD6306B00F94FCA /* RegisterViaPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F8761CD6306B00F94FCA /* RegisterViaPhoneViewController.m */; };
+		83E7F87A1CD6309B00F94FCA /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F8791CD6309B00F94FCA /* VerifyViewController.m */; };
+		83E7F87D1CD630F300F94FCA /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F87C1CD630F300F94FCA /* PersonalInfoViewController.m */; };
+		83E7F87F1CD6314400F94FCA /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E7F87E1CD6314400F94FCA /* Register.storyboard */; };
 		83EA57A21CD47E4700D00B0E /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57A11CD47E4700D00B0E /* ContactsViewController.m */; };
 		83EA57A51CD47F1F00D00B0E /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57A41CD47F1F00D00B0E /* ContactTableViewCell.m */; };
 		83EA57AB1CD47F5000D00B0E /* Contacts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EA57A61CD47F5000D00B0E /* Contacts.xcassets */; };
@@ -89,6 +93,13 @@
 		83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewCell.m; path = Chats/HomeTableViewCell.m; sourceTree = "<group>"; };
 		83D0D6231CD385D900CB2B26 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Common/BaseViewController.h; sourceTree = "<group>"; };
 		83D0D6241CD385D900CB2B26 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Common/BaseViewController.m; sourceTree = "<group>"; };
+		83E7F8751CD6306B00F94FCA /* RegisterViaPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViaPhoneViewController.h; path = Register/RegisterViaPhoneViewController.h; sourceTree = "<group>"; };
+		83E7F8761CD6306B00F94FCA /* RegisterViaPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViaPhoneViewController.m; path = Register/RegisterViaPhoneViewController.m; sourceTree = "<group>"; };
+		83E7F8781CD6309B00F94FCA /* VerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerifyViewController.h; path = Register/VerifyViewController.h; sourceTree = "<group>"; };
+		83E7F8791CD6309B00F94FCA /* VerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerifyViewController.m; path = Register/VerifyViewController.m; sourceTree = "<group>"; };
+		83E7F87B1CD630F300F94FCA /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonalInfoViewController.h; path = Register/PersonalInfoViewController.h; sourceTree = "<group>"; };
+		83E7F87C1CD630F300F94FCA /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonalInfoViewController.m; path = Register/PersonalInfoViewController.m; sourceTree = "<group>"; };
+		83E7F87E1CD6314400F94FCA /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Register.storyboard; path = Register/Register.storyboard; sourceTree = "<group>"; };
 		83EA57A01CD47E4700D00B0E /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsViewController.h; path = Contacts/ContactsViewController.h; sourceTree = "<group>"; };
 		83EA57A11CD47E4700D00B0E /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsViewController.m; path = Contacts/ContactsViewController.m; sourceTree = "<group>"; };
 		83EA57A31CD47F1F00D00B0E /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactTableViewCell.h; path = Contacts/ContactTableViewCell.h; sourceTree = "<group>"; };
@@ -236,6 +247,7 @@
 				83B787D21C9FD75400B60AF7 /* AppDelegate.m */,
 				83D0D6221CD385A000CB2B26 /* Common */,
 				83A3554B1CA019D1001C99F2 /* Login */,
+				83E7F8711CD62FAE00F94FCA /* Register */,
 				83FA5F1F1CA1AEF3008426FF /* Main */,
 				83FA5F4E1CA25A01008426FF /* Chats */,
 				83FA5F4D1CA25A00008426FF /* Contacts */,
@@ -283,6 +295,44 @@
 				83D0D6241CD385D900CB2B26 /* BaseViewController.m */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		83E7F8711CD62FAE00F94FCA /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				83E7F8741CD62FD800F94FCA /* Model */,
+				83E7F8731CD62FD600F94FCA /* View */,
+				83E7F8721CD62FCF00F94FCA /* Controller */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		83E7F8721CD62FCF00F94FCA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83E7F8751CD6306B00F94FCA /* RegisterViaPhoneViewController.h */,
+				83E7F8761CD6306B00F94FCA /* RegisterViaPhoneViewController.m */,
+				83E7F8781CD6309B00F94FCA /* VerifyViewController.h */,
+				83E7F8791CD6309B00F94FCA /* VerifyViewController.m */,
+				83E7F87B1CD630F300F94FCA /* PersonalInfoViewController.h */,
+				83E7F87C1CD630F300F94FCA /* PersonalInfoViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		83E7F8731CD62FD600F94FCA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83E7F87E1CD6314400F94FCA /* Register.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		83E7F8741CD62FD800F94FCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		83FA5F1F1CA1AEF3008426FF /* Main */ = {
@@ -599,6 +649,7 @@
 				83EA57AE1CD47F5000D00B0E /* Images.xcassets in Resources */,
 				83FA5F5E1CA25F5C008426FF /* Contacts.storyboard in Resources */,
 				83FA5F291CA1B460008426FF /* Login.storyboard in Resources */,
+				83E7F87F1CD6314400F94FCA /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +727,7 @@
 				83D0D6251CD385D900CB2B26 /* BaseViewController.m in Sources */,
 				83EA57A51CD47F1F00D00B0E /* ContactTableViewCell.m in Sources */,
 				83EA57B51CD483B400D00B0E /* DiscoverViewController.m in Sources */,
+				83E7F87A1CD6309B00F94FCA /* VerifyViewController.m in Sources */,
 				83EA57BB1CD4F47800D00B0E /* MeTableViewCell.m in Sources */,
 				83EA57B81CD4EE4700D00B0E /* MeInfoTableViewCell.m in Sources */,
 				83FA5F271CA1B2B8008426FF /* MainTabBarController.m in Sources */,
@@ -687,6 +739,8 @@
 				83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */,
 				8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */,
 				83EA57C11CD4F61200D00B0E /* MeViewController.m in Sources */,
+				83E7F8771CD6306B00F94FCA /* RegisterViaPhoneViewController.m in Sources */,
+				83E7F87D1CD630F300F94FCA /* PersonalInfoViewController.m in Sources */,
 				832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

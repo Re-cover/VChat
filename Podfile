@@ -4,7 +4,7 @@ inhibit_all_warnings!
 pod 'AFNetworking'
 pod 'RealReachability'
 pod 'AVOSCloud'
-pod 'RongCloudIMKit'
+pod 'RongCloudIMKitWithVoip'
 pod 'YYModel'
 pod 'YYWebImage'
 pod 'YYText'

@@ -7,6 +7,7 @@
 //
 
 #import "ChatViewController.h"
+#import <RongIMKit/RongIMKit.h>
 
 @interface ChatViewController ()
 

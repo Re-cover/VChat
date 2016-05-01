@@ -56,6 +56,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="DWq-HV-f0p" kind="show" id="fGz-mr-oEr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-sd-vyh">
                                 <rect key="frame" x="300" y="30" width="55" height="20"/>
@@ -96,7 +99,15 @@
                 <viewControllerPlaceholder storyboardName="Login" id="FEG-h7-G5x" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXU-kb-3rH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="590.5" y="341"/>
+            <point key="canvasLocation" x="617.5" y="226"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="czJ-rY-xwg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Register" id="DWq-HV-f0p" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcO-Gq-eVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="626.5" y="433"/>
         </scene>
     </scenes>
     <resources>
