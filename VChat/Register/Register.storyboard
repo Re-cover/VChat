@@ -140,7 +140,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="enterButtonDidClicked:" destination="fZZ-RP-Efa" eventType="touchUpInside" id="aGp-J8-4vO"/>
-                                    <segue destination="tVO-j4-f4s" kind="show" id="ybA-OB-42G"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1q-FQ-0ov">
@@ -200,11 +199,12 @@
                         <outlet property="enterButton" destination="r1E-lt-XFK" id="JzI-J2-i1B"/>
                         <outlet property="nickNameTextField" destination="Iqr-KM-DUN" id="P6m-hs-5CW"/>
                         <outlet property="passwordTextField" destination="FsU-Qz-eMH" id="TkM-lv-Y2a"/>
+                        <segue destination="tVO-j4-f4s" kind="show" identifier="toMainView" id="6sk-S6-rb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZf-RI-HiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1422.5" y="475.5"/>
+            <point key="canvasLocation" x="1429.5" y="475.5"/>
         </scene>
         <!--Main-->
         <scene sceneID="AqQ-xl-O3U">
@@ -212,7 +212,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="tVO-j4-f4s" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bH3-1s-hlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759" y="476"/>
+            <point key="canvasLocation" x="1190" y="977"/>
         </scene>
         <!--Verify View Controller-->
         <scene sceneID="dab-pd-9iW">
@@ -305,7 +305,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="fZZ-RP-Efa" kind="show" id="Lp1-QE-dFU"/>
+                                    <action selector="commitButtonDidClicked:" destination="3gC-VF-4Qy" eventType="touchUpInside" id="YGG-PW-PKI"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写验证码" textAlignment="justified" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="X4f-tD-S9X" customClass="BaseTextField">
@@ -352,6 +352,8 @@
                         <outlet property="VerifyCodeTextField" destination="X4f-tD-S9X" id="Zvu-Ry-2Ky"/>
                         <outlet property="commitButton" destination="AFL-OL-Oax" id="p94-CF-pcZ"/>
                         <outlet property="phoneNumberLabel" destination="Hpl-in-Sde" id="bHE-R8-352"/>
+                        <segue destination="fZZ-RP-Efa" kind="show" identifier="toPersonalInfoView" id="0if-c4-1Gs"/>
+                        <segue destination="tVO-j4-f4s" kind="show" identifier="toMainView" id="dOa-Ft-0mX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScT-cs-MNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -429,7 +431,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="3gC-VF-4Qy" kind="show" identifier="toVerifyView" id="Nbp-Zf-hW8"/>
+                                    <action selector="registerButtonDidClicked:" destination="oh0-lC-whn" eventType="touchUpInside" id="0yh-vr-wee"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyK-IH-lE1">
@@ -478,6 +480,7 @@
                     <connections>
                         <outlet property="phoneNumberTextField" destination="s2Z-XY-YAU" id="A8d-jW-v1T"/>
                         <outlet property="registerButton" destination="BHW-8b-5xF" id="Dsr-5v-ggr"/>
+                        <segue destination="3gC-VF-4Qy" kind="show" identifier="toVerifyView" id="1ZW-Jl-3Xf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQI-As-B90" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -488,4 +491,7 @@
     <resources>
         <image name="choose_avatar" width="71" height="71"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dOa-Ft-0mX"/>
+    </inferredMetricsTieBreakers>
 </document>

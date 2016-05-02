@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Register.h"
 
-@interface RegisterViaPhoneViewController : UIViewController
+@interface RegisterViaPhoneViewController : UIViewController<VerifySMSDelegate>
 
 @end

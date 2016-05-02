@@ -48,6 +48,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="TextFieldDidChanged:" destination="Mo7-ga-yKP" eventType="editingChanged" id="4QE-2I-XNM"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7T-38-24w" userLabel="分隔线">
                                 <rect key="frame" x="15" y="185" width="345" height="1"/>
@@ -73,6 +76,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="TextFieldDidChanged:" destination="Mo7-ga-yKP" eventType="editingChanged" id="QS3-EB-aa8"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vS-jF-vhD" userLabel="分隔线">
                                 <rect key="frame" x="15" y="236" width="345" height="1"/>
@@ -97,8 +103,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didLoginButtonClicked:" destination="Mo7-ga-yKP" eventType="touchUpInside" id="F8g-lc-5Xe"/>
-                                    <segue destination="nsv-hx-bJr" kind="show" id="DcK-bw-gCi"/>
+                                    <action selector="loginButtonDidClicked:" destination="Mo7-ga-yKP" eventType="touchUpInside" id="eve-Ma-9Zo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZw-jD-ydU">
@@ -110,7 +115,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="登录遇到问题？"/>
                                 <connections>
-                                    <action selector="didLoginProblemButtonClicked:" destination="Mo7-ga-yKP" eventType="touchUpInside" id="ZLR-AT-PGa"/>
+                                    <action selector="loginProblemButtonDidCilcked:" destination="Mo7-ga-yKP" eventType="touchUpInside" id="B72-1k-hJc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用帐号和密码登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkg-eN-Hqz">
@@ -156,10 +161,11 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="LoginButton" destination="imQ-Um-0g1" id="AKa-l3-gN0"/>
-                        <outlet property="LoginProblemButton" destination="KZw-jD-ydU" id="33S-sn-iVP"/>
+                        <outlet property="loginButton" destination="imQ-Um-0g1" id="VrX-a5-s3e"/>
+                        <outlet property="loginProblemButton" destination="KZw-jD-ydU" id="l11-1p-01R"/>
                         <outlet property="passwordTextField" destination="LjS-JV-zti" id="iMJ-dI-UDd"/>
                         <outlet property="userTextField" destination="UNd-sd-6pq" id="y3s-I8-0ks"/>
+                        <segue destination="nsv-hx-bJr" kind="show" identifier="toMainView" id="2iG-TU-2un"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdz-xN-EhT" userLabel="First Responder" sceneMemberID="firstResponder"/>

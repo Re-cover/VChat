@@ -8,6 +8,9 @@
 
 #import "PersonalInfoViewController.h"
 #import "BaseTextField.h"
+#import <AVUser.h>
+#import <AVFile.h>
+#import <SVProgressHUD.h>
 
 @interface PersonalInfoViewController ()
 
@@ -83,13 +86,45 @@
 }
 
 - (IBAction)enterButtonDidClicked:(id)sender {
+    [self endEdit];
     if (![self.passwordTextField.text isEqualToString: self.confirmPasswordTextField.text]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"两次密码输入不一致" message:nil preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
         [alert addAction:cancelAction];
         [self presentViewController:alert animated:YES completion:nil];
     } else {
-        
+        [SVProgressHUD show];
+        NSData *imageData = nil;
+        if ([self.avatarButton.currentImage isEqual: [UIImage imageNamed:@"choose_avatar"]]) {
+            imageData = UIImagePNGRepresentation([UIImage imageNamed:@"default_avatar"]);
+        } else {
+            imageData = UIImagePNGRepresentation(self.avatarButton.currentImage);
+        }
+        AVFile *imageFile = [AVFile fileWithData:imageData];
+        [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"头像上传成功");
+                [[AVUser currentUser] setObject:(NSString*)imageFile.url forKey:@"avatarURL"];
+                [[AVUser currentUser] setObject:(NSString*)self.nickNameTextField.text forKey:@"nickName"];
+                [[AVUser currentUser] setPassword:self.passwordTextField.text];
+                [[AVUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if (succeeded) {
+                        NSLog(@"个人信息上传成功");
+                        if ([SVProgressHUD isVisible]) {
+                            [SVProgressHUD dismiss];
+                        }
+                        [self performSegueWithIdentifier:@"toMainView" sender:self];
+                    } else {
+                        NSLog(@"个人信息上传失败，错误信息为%@", error.description);
+                        [SVProgressHUD showErrorWithStatus:error.description];
+                    }
+                }];
+            } else {
+                NSLog(@"头像上传失败，错误信息为%@", error.description);
+                [SVProgressHUD showErrorWithStatus:error.description];
+            }
+        }];
+
     }
 }
 - (IBAction)cancelButtonDidClicked:(id)sender {

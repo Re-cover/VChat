@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <RealReachability.h>
+#import <AVOSCloud.h>
+#import <SVProgressHUD.h>
 
 @interface AppDelegate ()
 
@@ -19,6 +21,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     GLobalRealReachability.hostForPing = @"leancloud.cn";
     [GLobalRealReachability startNotifier];
+    [AVOSCloud setApplicationId:@"nRTh2Xb9aQ8Dfq8W4XwqNKtG-gzGzoHsz"
+                      clientKey:@"WOrJmocpBoXkREXnuFus14Ov"];
+    //[SVProgressHUD setDefaultMaskType: SVProgressHUDMaskTypeBlack];
     return YES;
 }
 

@@ -8,6 +8,9 @@
 
 #import "VerifyViewController.h"
 #import "BaseTextField.h"
+#import "Register.h"
+#import <SVProgressHUD.h>
+#import <AVQuery.h>
 
 @interface VerifyViewController ()
 
@@ -32,7 +35,17 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+# pragma mark - RegisterViaPhoneNumberDelegate
+
+- (void)registerViaPhoneNumberSuccessed{
+    NSLog(@"验证成功");
+    [self performSegueWithIdentifier:@"toPersonalInfoView" sender:self];
+}
+
+- (void)registerViaPhoneNumberFailed {
+    [SVProgressHUD showInfoWithStatus:@"验证失败"];
 }
 
 - (IBAction)VeifyCodeTextDidChanged:(id)sender {
@@ -50,9 +63,32 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)endEdit {
-    [self.view endEditing:YES];
+- (IBAction)commitButtonDidClicked:(id)sender {
+    [self endEdit];
+    AVQuery *query = [AVQuery queryWithClassName:@"_User"];
+    [query whereKey:@"mobilePhoneNumber" equalTo: self.phoneNumber];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count != 0) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"该手机号已注册" message:@"是否使用该手机号直接登录" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [self performSegueWithIdentifier:@"toMainView" sender:self];
+            }];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:confirmAction];
+            [alert addAction:cancelAction];
+            [self presentViewController:alert animated:YES completion:nil];
+        } else {
+            [Register sharedRegister].registerViaPhoneNumberDelegate = self;
+            [[Register sharedRegister] verifyPhoneNumber:self.phoneNumber With:self.VerifyCodeTextField.text];
+        }
+    }];
+
 }
 
-
+- (void)endEdit {
+    [self.view endEditing:YES];
+    if([SVProgressHUD isVisible]) {
+        [SVProgressHUD dismiss];
+    }
+}
 @end

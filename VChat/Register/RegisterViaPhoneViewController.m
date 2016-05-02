@@ -9,6 +9,7 @@
 #import "RegisterViaPhoneViewController.h"
 #import "VerifyViewController.h"
 #import "BaseTextField.h"
+#import <SVProgressHUD.h>
 
 @interface RegisterViaPhoneViewController ()
 
@@ -33,6 +34,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+# pragma mark - VerifySMSDelegate
+
+- (void)verifySMSSendSuccessed {
+    NSLog(@"验证短信发送成功");
+    [self performSegueWithIdentifier:@"toVerifyView" sender:self];
+}
+
+- (void)verifySMSSendFailed {
+    [SVProgressHUD showInfoWithStatus:@"验证短信发送失败"];
+}
+
 - (BOOL)isPhoneNumber:(NSString *)num {
     
     //    电信号段:133/153/180/181/189/177
@@ -48,6 +60,9 @@
 
 - (void)endEdit {
     [self.view endEditing:YES];
+    if ([SVProgressHUD isVisible]) {
+        [SVProgressHUD dismiss];
+    }
 }
 
 - (IBAction)phoneNumberDidChanged:(id)sender {
@@ -62,6 +77,12 @@
 - (IBAction)cancelButtonDidClicked:(id)sender {
     [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)registerButtonDidClicked:(id)sender {
+    [self endEdit];
+    [Register sharedRegister].verifySMSdelegate = self;
+    [[Register sharedRegister] registerViaPhoneNumber:self.phoneNumberTextField.text];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

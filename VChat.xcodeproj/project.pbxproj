@@ -22,6 +22,7 @@
 		83B787F41C9FD75400B60AF7 /* VChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787F31C9FD75400B60AF7 /* VChatUITests.m */; };
 		83D0D6211CD3824300CB2B26 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */; };
 		83D0D6251CD385D900CB2B26 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0D6241CD385D900CB2B26 /* BaseViewController.m */; };
+		83DEAC791CD6F174009A6CAB /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DEAC781CD6F174009A6CAB /* Register.m */; };
 		83E7F8771CD6306B00F94FCA /* RegisterViaPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F8761CD6306B00F94FCA /* RegisterViaPhoneViewController.m */; };
 		83E7F87A1CD6309B00F94FCA /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F8791CD6309B00F94FCA /* VerifyViewController.m */; };
 		83E7F87D1CD630F300F94FCA /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F87C1CD630F300F94FCA /* PersonalInfoViewController.m */; };
@@ -93,6 +94,8 @@
 		83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewCell.m; path = Chats/HomeTableViewCell.m; sourceTree = "<group>"; };
 		83D0D6231CD385D900CB2B26 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Common/BaseViewController.h; sourceTree = "<group>"; };
 		83D0D6241CD385D900CB2B26 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Common/BaseViewController.m; sourceTree = "<group>"; };
+		83DEAC771CD6F174009A6CAB /* Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Register.h; path = Network/Register.h; sourceTree = "<group>"; };
+		83DEAC781CD6F174009A6CAB /* Register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Register.m; path = Network/Register.m; sourceTree = "<group>"; };
 		83E7F8751CD6306B00F94FCA /* RegisterViaPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViaPhoneViewController.h; path = Register/RegisterViaPhoneViewController.h; sourceTree = "<group>"; };
 		83E7F8761CD6306B00F94FCA /* RegisterViaPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViaPhoneViewController.m; path = Register/RegisterViaPhoneViewController.m; sourceTree = "<group>"; };
 		83E7F8781CD6309B00F94FCA /* VerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerifyViewController.h; path = Register/VerifyViewController.h; sourceTree = "<group>"; };
@@ -245,6 +248,7 @@
 			children = (
 				83B787D11C9FD75400B60AF7 /* AppDelegate.h */,
 				83B787D21C9FD75400B60AF7 /* AppDelegate.m */,
+				83DEAC761CD6F10F009A6CAB /* Network */,
 				83D0D6221CD385A000CB2B26 /* Common */,
 				83A3554B1CA019D1001C99F2 /* Login */,
 				83E7F8711CD62FAE00F94FCA /* Register */,
@@ -295,6 +299,16 @@
 				83D0D6241CD385D900CB2B26 /* BaseViewController.m */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		83DEAC761CD6F10F009A6CAB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				83DEAC771CD6F174009A6CAB /* Register.h */,
+				83DEAC781CD6F174009A6CAB /* Register.m */,
+			);
+			name = Network;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		83E7F8711CD62FAE00F94FCA /* Register */ = {
@@ -742,6 +756,7 @@
 				83E7F8771CD6306B00F94FCA /* RegisterViaPhoneViewController.m in Sources */,
 				83E7F87D1CD630F300F94FCA /* PersonalInfoViewController.m in Sources */,
 				832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */,
+				83DEAC791CD6F174009A6CAB /* Register.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

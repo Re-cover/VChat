@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Register.h"
 
-@interface VerifyViewController : UIViewController
+@interface VerifyViewController : UIViewController<RegisterViaPhoneNumberDelegate>
 
 @property (nonatomic, copy) NSString *phoneNumber;
 
