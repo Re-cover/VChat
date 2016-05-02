@@ -8,7 +8,10 @@
 
 #import "LoginViewController.h"
 #import <AVUser.h>
+#import <RongIMKit/RCIM.h>
 #import <SVProgressHUD.h>
+#import "UserService.h"
+#import "TokenModel.h"
 
 @interface LoginViewController ()
 
@@ -16,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginProblemButton;
+@property (strong, nonatomic) TokenModel *tokenModel;
 
 @end
 
@@ -56,10 +60,19 @@
     [AVUser logInWithUsernameInBackground:self.userTextField.text password:self.passwordTextField.text block:^(AVUser *user, NSError *error) {
         if (user != nil) {
             NSLog(@"登录成功");
-            if ([SVProgressHUD isVisible]) {
-                [SVProgressHUD dismiss];
-            }
-            [self performSegueWithIdentifier:@"toMainView" sender:self];
+            [[UserService sharedUserService] tokenWithUserId:(NSString *)(NSString *)[[AVUser currentUser] objectForKey:@"objectId"]
+                                                        name:(NSString *)(NSString *)[[AVUser currentUser] objectForKey:@"nickName"]
+                                                 portraitUri:(NSString *)[[AVUser currentUser] objectForKey:@"avatarURL"]
+                                                    complete:^(TokenModel* model) {
+                                                        self.tokenModel = model;
+                                                        [[NSUserDefaults standardUserDefaults] setObject:model.token forKey:@"userToken"];
+                                                        if ([SVProgressHUD isVisible]) {
+                                                            [SVProgressHUD dismiss];
+                                                        }
+                                                        [self performSegueWithIdentifier:@"toMainView" sender:self];
+                                                    } failure:^(NSError *error) {
+                                                        NSLog(@"%@", error.description);
+                                                    }];
         } else {
             switch (error.code) {
                 case 210:

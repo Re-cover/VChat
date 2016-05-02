@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2C5F88CE3C16327E4426599E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5F2D4D3BBD1BE7B9091F12 /* libPods.a */; };
 		832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832A2BA61CD4564800CEBEA9 /* HomeViewController.m */; };
+		832F57091CD786FD000F46AA /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F57051CD786FD000F46AA /* Register.m */; };
+		832F570A1CD786FD000F46AA /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F57071CD786FD000F46AA /* UserService.m */; };
+		832F570D1CD7896B000F46AA /* TokenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F570C1CD7896B000F46AA /* TokenModel.m */; };
+		8372A1481CD798730030385B /* NSString+SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8372A1471CD798730030385B /* NSString+SHA1.m */; };
 		8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385B6C11CD597D20005EFE6 /* ChatViewController.m */; };
 		8385B6C81CD5B1500005EFE6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8385B6C71CD5B1500005EFE6 /* Chat.storyboard */; };
 		8385B6CA1CD5B17E0005EFE6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8385B6C91CD5B17E0005EFE6 /* Home.storyboard */; };
@@ -22,7 +26,6 @@
 		83B787F41C9FD75400B60AF7 /* VChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787F31C9FD75400B60AF7 /* VChatUITests.m */; };
 		83D0D6211CD3824300CB2B26 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */; };
 		83D0D6251CD385D900CB2B26 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0D6241CD385D900CB2B26 /* BaseViewController.m */; };
-		83DEAC791CD6F174009A6CAB /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DEAC781CD6F174009A6CAB /* Register.m */; };
 		83E7F8771CD6306B00F94FCA /* RegisterViaPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F8761CD6306B00F94FCA /* RegisterViaPhoneViewController.m */; };
 		83E7F87A1CD6309B00F94FCA /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F8791CD6309B00F94FCA /* VerifyViewController.m */; };
 		83E7F87D1CD630F300F94FCA /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F87C1CD630F300F94FCA /* PersonalInfoViewController.m */; };
@@ -68,6 +71,14 @@
 /* Begin PBXFileReference section */
 		832A2BA51CD4564800CEBEA9 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Chats/HomeViewController.h; sourceTree = "<group>"; };
 		832A2BA61CD4564800CEBEA9 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Chats/HomeViewController.m; sourceTree = "<group>"; };
+		832F57041CD786FD000F46AA /* Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Register.h; path = VChat/Network/Register.h; sourceTree = "<group>"; };
+		832F57051CD786FD000F46AA /* Register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Register.m; path = VChat/Network/Register.m; sourceTree = "<group>"; };
+		832F57061CD786FD000F46AA /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserService.h; path = VChat/Network/UserService.h; sourceTree = "<group>"; };
+		832F57071CD786FD000F46AA /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserService.m; path = VChat/Network/UserService.m; sourceTree = "<group>"; };
+		832F570B1CD7896B000F46AA /* TokenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TokenModel.h; path = Login/TokenModel.h; sourceTree = "<group>"; };
+		832F570C1CD7896B000F46AA /* TokenModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TokenModel.m; path = Login/TokenModel.m; sourceTree = "<group>"; };
+		8372A1461CD798730030385B /* NSString+SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SHA1.h"; path = "Common/NSString+SHA1.h"; sourceTree = "<group>"; };
+		8372A1471CD798730030385B /* NSString+SHA1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SHA1.m"; path = "Common/NSString+SHA1.m"; sourceTree = "<group>"; };
 		8385B6C01CD597D20005EFE6 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = Chats/ChatViewController.h; sourceTree = "<group>"; };
 		8385B6C11CD597D20005EFE6 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatViewController.m; path = Chats/ChatViewController.m; sourceTree = "<group>"; };
 		8385B6C71CD5B1500005EFE6 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Chat.storyboard; path = Chats/Chat.storyboard; sourceTree = "<group>"; };
@@ -94,8 +105,6 @@
 		83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewCell.m; path = Chats/HomeTableViewCell.m; sourceTree = "<group>"; };
 		83D0D6231CD385D900CB2B26 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Common/BaseViewController.h; sourceTree = "<group>"; };
 		83D0D6241CD385D900CB2B26 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Common/BaseViewController.m; sourceTree = "<group>"; };
-		83DEAC771CD6F174009A6CAB /* Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Register.h; path = Network/Register.h; sourceTree = "<group>"; };
-		83DEAC781CD6F174009A6CAB /* Register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Register.m; path = Network/Register.m; sourceTree = "<group>"; };
 		83E7F8751CD6306B00F94FCA /* RegisterViaPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViaPhoneViewController.h; path = Register/RegisterViaPhoneViewController.h; sourceTree = "<group>"; };
 		83E7F8761CD6306B00F94FCA /* RegisterViaPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViaPhoneViewController.m; path = Register/RegisterViaPhoneViewController.m; sourceTree = "<group>"; };
 		83E7F8781CD6309B00F94FCA /* VerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerifyViewController.h; path = Register/VerifyViewController.h; sourceTree = "<group>"; };
@@ -217,6 +226,8 @@
 		83A3554E1CA019FB001C99F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				832F570B1CD7896B000F46AA /* TokenModel.h */,
+				832F570C1CD7896B000F46AA /* TokenModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -297,6 +308,8 @@
 			children = (
 				83D0D6231CD385D900CB2B26 /* BaseViewController.h */,
 				83D0D6241CD385D900CB2B26 /* BaseViewController.m */,
+				8372A1461CD798730030385B /* NSString+SHA1.h */,
+				8372A1471CD798730030385B /* NSString+SHA1.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -304,8 +317,10 @@
 		83DEAC761CD6F10F009A6CAB /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				83DEAC771CD6F174009A6CAB /* Register.h */,
-				83DEAC781CD6F174009A6CAB /* Register.m */,
+				832F57041CD786FD000F46AA /* Register.h */,
+				832F57051CD786FD000F46AA /* Register.m */,
+				832F57061CD786FD000F46AA /* UserService.h */,
+				832F57071CD786FD000F46AA /* UserService.m */,
 			);
 			name = Network;
 			path = ..;
@@ -738,6 +753,7 @@
 			files = (
 				83EA57B21CD4838C00D00B0E /* DiscoverTableViewCell.m in Sources */,
 				83B787D31C9FD75400B60AF7 /* AppDelegate.m in Sources */,
+				832F570A1CD786FD000F46AA /* UserService.m in Sources */,
 				83D0D6251CD385D900CB2B26 /* BaseViewController.m in Sources */,
 				83EA57A51CD47F1F00D00B0E /* ContactTableViewCell.m in Sources */,
 				83EA57B51CD483B400D00B0E /* DiscoverViewController.m in Sources */,
@@ -745,18 +761,20 @@
 				83EA57BB1CD4F47800D00B0E /* MeTableViewCell.m in Sources */,
 				83EA57B81CD4EE4700D00B0E /* MeInfoTableViewCell.m in Sources */,
 				83FA5F271CA1B2B8008426FF /* MainTabBarController.m in Sources */,
+				8372A1481CD798730030385B /* NSString+SHA1.m in Sources */,
 				83B787D01C9FD75400B60AF7 /* main.m in Sources */,
 				83D0D6211CD3824300CB2B26 /* HomeTableViewCell.m in Sources */,
 				83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */,
 				83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */,
 				83EA57A21CD47E4700D00B0E /* ContactsViewController.m in Sources */,
 				83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */,
+				832F57091CD786FD000F46AA /* Register.m in Sources */,
+				832F570D1CD7896B000F46AA /* TokenModel.m in Sources */,
 				8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */,
 				83EA57C11CD4F61200D00B0E /* MeViewController.m in Sources */,
 				83E7F8771CD6306B00F94FCA /* RegisterViaPhoneViewController.m in Sources */,
 				83E7F87D1CD630F300F94FCA /* PersonalInfoViewController.m in Sources */,
 				832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */,
-				83DEAC791CD6F174009A6CAB /* Register.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

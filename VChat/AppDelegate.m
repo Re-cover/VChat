@@ -10,6 +10,7 @@
 #import <RealReachability.h>
 #import <AVOSCloud.h>
 #import <SVProgressHUD.h>
+#import <RongCloudIMKitWithVoip/RongIMKit/RCIM.h>
 
 @interface AppDelegate ()
 
@@ -23,7 +24,7 @@
     [GLobalRealReachability startNotifier];
     [AVOSCloud setApplicationId:@"nRTh2Xb9aQ8Dfq8W4XwqNKtG-gzGzoHsz"
                       clientKey:@"WOrJmocpBoXkREXnuFus14Ov"];
-    //[SVProgressHUD setDefaultMaskType: SVProgressHUDMaskTypeBlack];
+    [[RCIM sharedRCIM] initWithAppKey:@"kj7swf8o7bdy2"];
     return YES;
 }
 
