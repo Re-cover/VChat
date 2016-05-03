@@ -6,8 +6,9 @@
 //  Copyright © 2016年 Recover. All rights reserved.
 //
 
-#import "BaseViewController.h"
+//#import "BaseViewController.h"
+#import <RongIMKit/RongIMKit.h>
 
-@interface ChatViewController : BaseViewController<UITableViewDelegate, UITableViewDataSource>
+@interface ChatViewController :RCConversationViewController
 
 @end

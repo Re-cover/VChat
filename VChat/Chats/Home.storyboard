@@ -106,7 +106,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="HomeTableView" destination="Wqz-pD-75o" id="uTS-KP-9ed"/>
-                        <segue destination="CdP-ml-4Io" kind="show" identifier="toChat" id="O2u-Vh-L5U"/>
+                        <segue destination="CdP-ml-4Io" kind="show" identifier="toChatView" id="O2u-Vh-L5U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSI-Qi-MBL" userLabel="First Responder" sceneMemberID="firstResponder"/>

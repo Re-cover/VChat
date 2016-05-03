@@ -17,13 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if(self.conversationType == ConversationType_PRIVATE) {
+        self.displayUserNameInCell = NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-
 
 @end

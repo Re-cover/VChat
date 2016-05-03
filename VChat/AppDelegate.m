@@ -7,10 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import <RealReachability.h>
 #import <AVOSCloud.h>
+#import <AVUser.h>
+#import <AVQuery.h>
 #import <SVProgressHUD.h>
-#import <RongCloudIMKitWithVoip/RongIMKit/RCIM.h>
 
 @interface AppDelegate ()
 
@@ -18,10 +18,30 @@
 
 @implementation AppDelegate
 
+- (void)getUserInfoWithUserId:(NSString *)userId completion:(void (^)(RCUserInfo *))completion{
+    AVQuery *query = [AVQuery queryWithClassName:@"_User"];
+    [query getObjectInBackgroundWithId:userId block:^(AVObject *object, NSError *error) {
+        if (object != nil) {
+            RCUserInfo *user = [[RCUserInfo alloc]init];
+            user.userId = userId;
+            user.name = [object objectForKey:@"nickName"];
+            user.portraitUri = [object objectForKey:@"avatarURL"];
+            return completion(user);
+        } else {
+            return completion(nil);
+        }
+    }];
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    GLobalRealReachability.hostForPing = @"leancloud.cn";
-    [GLobalRealReachability startNotifier];
+    [UINavigationBar appearance].barStyle  = UIBarStyleBlack;
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    [[RCIM sharedRCIM] setUserInfoDataSource:self];
+    //[[RCIM sharedRCIM] setGroupInfoDataSource:self];
+    
     [AVOSCloud setApplicationId:@"nRTh2Xb9aQ8Dfq8W4XwqNKtG-gzGzoHsz"
                       clientKey:@"WOrJmocpBoXkREXnuFus14Ov"];
     [[RCIM sharedRCIM] initWithAppKey:@"kj7swf8o7bdy2"];

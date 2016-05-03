@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import <RongIMKit/RongIMKit.h>
 
-@interface HomeViewController : BaseViewController<UITableViewDelegate, UITableViewDataSource>
+@interface HomeViewController : RCConversationListViewController
 
 @end
