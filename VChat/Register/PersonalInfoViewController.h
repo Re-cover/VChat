@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserService.h"
 
-@interface PersonalInfoViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface PersonalInfoViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, ConnectIMServerDelegate>
 
 @end

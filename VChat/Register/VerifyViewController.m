@@ -8,9 +8,10 @@
 
 #import "VerifyViewController.h"
 #import "BaseTextField.h"
-#import "Register.h"
+#import "TokenModel.h"
 #import <SVProgressHUD.h>
 #import <AVQuery.h>
+#import <AVUser.h>
 
 @interface VerifyViewController ()
 
@@ -48,6 +49,33 @@
     [SVProgressHUD showInfoWithStatus:@"验证失败"];
 }
 
+# pragma mark - ConnectIMServerDelegate
+
+- (void)getTokenSuccessed {
+    NSLog(@"获取token成功");
+}
+
+- (void)getTokenFailed:(NSError *)error {
+    [SVProgressHUD showErrorWithStatus:@"获取token失败"];
+}
+
+- (void)connectIMServerSuccessed {
+    NSLog(@"连接IM服务器成功");
+    if ([SVProgressHUD isVisible]) {
+        [SVProgressHUD dismiss];
+    }
+    [self performSegueWithIdentifier:@"toMainView" sender:self];
+}
+
+- (void)connectIMServerFailed:(NSInteger)status {
+    NSString *info = [NSString stringWithFormat:@"连接IM服务器失败，错误代码为%ld", status];
+    [SVProgressHUD showErrorWithStatus: info];
+}
+
+- (void)connectIMServerTokenIncorrect {
+    [SVProgressHUD showErrorWithStatus:@"连接IM服务器失败，token错误"];
+}
+
 - (IBAction)VeifyCodeTextDidChanged:(id)sender {
     if (self.VerifyCodeTextField.text.length == 6) {
         self.commitButton.enabled = YES;
@@ -71,7 +99,18 @@
         if (objects.count != 0) {
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"该手机号已注册" message:@"是否使用该手机号直接登录" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                [self performSegueWithIdentifier:@"toMainView" sender:self];
+                [SVProgressHUD showWithStatus:@"登录中..."];
+                [AVUser signUpOrLoginWithMobilePhoneNumberInBackground:self.phoneNumber
+                                                               smsCode:self.VerifyCodeTextField.text
+                                                                 block:^(AVUser *user, NSError *error) {
+                                                                     if (user != nil) {
+                                                                         NSLog(@"已注册用户登录成功");
+                                                                         [UserService sharedUserService].connectIMServerDelegate = self;
+                                                                         [[UserService sharedUserService] connectIMServer];
+                                                                     } else {
+                                                                         NSLog(@"已注册用户登录失败，错误信息为%@", error.description);
+                                                                     }
+                                                                 }];
             }];
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
             [alert addAction:confirmAction];

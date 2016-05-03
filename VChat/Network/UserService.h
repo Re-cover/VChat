@@ -11,11 +11,29 @@
 typedef void(^success)(id);
 typedef void(^failure)(NSError *error);
 
+@protocol ConnectIMServerDelegate <NSObject>
+
+- (void)getTokenSuccessed;
+
+- (void)getTokenFailed:(NSError *)error;
+
+- (void)connectIMServerSuccessed;
+
+- (void)connectIMServerFailed:(NSInteger)status;
+
+- (void)connectIMServerTokenIncorrect;
+
+@end
+
 @interface UserService : NSObject
+
+@property (weak, nonatomic) id<ConnectIMServerDelegate> connectIMServerDelegate;
 
 + (instancetype)sharedUserService;
 
 - (void)tokenWithUserId:(NSString *)userId name:(NSString *)name portraitUri:(NSString *)uri
                complete:(success)successBlock failure:(failure)failureBlock;
+
+- (void)connectIMServer;
 
 @end

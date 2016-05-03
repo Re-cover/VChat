@@ -24,6 +24,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *enterButton;
 
+@property (strong, nonatomic) UIImagePickerController *picker;
+
 
 @end
 
@@ -48,24 +50,50 @@
     [self.avatarButton setImage:image forState:UIControlStateNormal];
 }
 
+# pragma mark - ConnectIMServerDelegate
+
+- (void)getTokenSuccessed {
+    NSLog(@"获取token成功");
+}
+
+- (void)getTokenFailed:(NSError *)error {
+    [SVProgressHUD showErrorWithStatus:@"获取token失败"];
+}
+
+- (void)connectIMServerSuccessed {
+    NSLog(@"连接IM服务器成功");
+    if ([SVProgressHUD isVisible]) {
+        [SVProgressHUD dismiss];
+    }
+    [self performSegueWithIdentifier:@"toMainView" sender:self];
+}
+
+- (void)connectIMServerFailed:(NSInteger)status {
+    NSString *info = [NSString stringWithFormat:@"连接IM服务器失败，错误代码为%ld", status];
+    [SVProgressHUD showErrorWithStatus: info];
+}
+
+- (void)connectIMServerTokenIncorrect {
+    [SVProgressHUD showErrorWithStatus:@"连接IM服务器失败，token错误"];
+}
+
 - (IBAction)AvatarButtonDidClicked:(id)sender {
     [self.view endEditing:YES];
+    if (self.picker == nil) {
+        self.picker = [[UIImagePickerController alloc] init];
+        self.picker.delegate = self;
+        self.picker.allowsEditing = YES;
+    }
+    @weakify(self);
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    
     UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        picker.allowsEditing = YES;
-        [self presentViewController:picker animated:YES completion:nil];
+        weak_self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:weak_self.picker animated:YES completion:nil];
     }];
     
     UIAlertAction *chooseImageAction = [UIAlertAction actionWithTitle:@"从手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        picker.allowsEditing = YES;
-        [self presentViewController:picker animated:YES completion:nil];
+        weak_self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:weak_self.picker animated:YES completion:nil];
     }];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
@@ -110,10 +138,8 @@
                 [[AVUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (succeeded) {
                         NSLog(@"个人信息上传成功");
-                        if ([SVProgressHUD isVisible]) {
-                            [SVProgressHUD dismiss];
-                        }
-                        [self performSegueWithIdentifier:@"toMainView" sender:self];
+                        [UserService sharedUserService].connectIMServerDelegate = self;
+                        [[UserService sharedUserService] connectIMServer];
                     } else {
                         NSLog(@"个人信息上传失败，错误信息为%@", error.description);
                         [SVProgressHUD showErrorWithStatus:error.description];
@@ -134,6 +160,9 @@
 
 - (void)endEdit {
     [self.view endEditing:YES];
+    if ([SVProgressHUD isVisible]) {
+        [SVProgressHUD dismiss];
+    }
 }
 
 @end

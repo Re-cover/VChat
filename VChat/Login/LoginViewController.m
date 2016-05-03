@@ -38,6 +38,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+# pragma mark - ConnectIMServerDelegate
+
+- (void)getTokenSuccessed {
+    NSLog(@"获取token成功");
+}
+
+- (void)getTokenFailed:(NSError *)error {
+    [SVProgressHUD showErrorWithStatus:@"获取token失败"];
+}
+
+- (void)connectIMServerSuccessed {
+    NSLog(@"连接IM服务器成功");
+    if ([SVProgressHUD isVisible]) {
+        [SVProgressHUD dismiss];
+    }
+    [self performSegueWithIdentifier:@"toMainView" sender:self];
+}
+
+- (void)connectIMServerFailed:(NSInteger)status {
+    NSString *info = [NSString stringWithFormat:@"连接IM服务器失败，错误代码为%ld", status];
+    [SVProgressHUD showErrorWithStatus: info];
+}
+
+- (void)connectIMServerTokenIncorrect {
+    [SVProgressHUD showErrorWithStatus:@"连接IM服务器失败，token错误"];
+}
+
 - (IBAction)didCancelButtonClicked:(id)sender {
     [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -60,19 +87,8 @@
     [AVUser logInWithUsernameInBackground:self.userTextField.text password:self.passwordTextField.text block:^(AVUser *user, NSError *error) {
         if (user != nil) {
             NSLog(@"登录成功");
-            [[UserService sharedUserService] tokenWithUserId:(NSString *)(NSString *)[[AVUser currentUser] objectForKey:@"objectId"]
-                                                        name:(NSString *)(NSString *)[[AVUser currentUser] objectForKey:@"nickName"]
-                                                 portraitUri:(NSString *)[[AVUser currentUser] objectForKey:@"avatarURL"]
-                                                    complete:^(TokenModel* model) {
-                                                        self.tokenModel = model;
-                                                        [[NSUserDefaults standardUserDefaults] setObject:model.token forKey:@"userToken"];
-                                                        if ([SVProgressHUD isVisible]) {
-                                                            [SVProgressHUD dismiss];
-                                                        }
-                                                        [self performSegueWithIdentifier:@"toMainView" sender:self];
-                                                    } failure:^(NSError *error) {
-                                                        NSLog(@"%@", error.description);
-                                                    }];
+            [UserService sharedUserService].connectIMServerDelegate = self;
+            [[UserService sharedUserService] connectIMServer];
         } else {
             switch (error.code) {
                 case 210:

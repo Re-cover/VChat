@@ -11,6 +11,8 @@
 #import "TokenModel.h"
 #import <AFNetworking.h>
 #import <YYModel.h>
+#import <AVUser.h>
+#import <RongIMKit/RCIM.h>
 
 @interface UserService()
 
@@ -69,6 +71,27 @@
                failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                    failureBlock(error);
                }];
+}
+
+- (void)connectIMServer {
+    [self tokenWithUserId:(NSString *)(NSString *)[[AVUser currentUser] objectForKey:@"objectId"]
+                                                name:(NSString *)(NSString *)[[AVUser currentUser] objectForKey:@"nickName"]
+                                         portraitUri:(NSString *)[[AVUser currentUser] objectForKey:@"avatarURL"]
+                                            complete:^(TokenModel* model) {
+                                                [_connectIMServerDelegate getTokenSuccessed];
+                                                [[NSUserDefaults standardUserDefaults] setObject:model.token forKey:@"userToken"];
+                                                [[RCIM sharedRCIM] connectWithToken:model.token success:^(NSString *userId) {
+                                                    [_connectIMServerDelegate connectIMServerSuccessed];
+                                                } error:^(RCConnectErrorCode status) {
+                                                    NSLog(@"连接IM服务器失败，错误码为%ld", (long)status);
+                                                    [_connectIMServerDelegate connectIMServerFailed:status];
+                                                } tokenIncorrect:^{
+                                                    NSLog(@"连接IM服务器失败，token错误");
+                                                    [_connectIMServerDelegate connectIMServerTokenIncorrect];
+                                                }];
+                                            } failure:^(NSError *error) {
+                                                [_connectIMServerDelegate getTokenFailed:error];
+                                            }];
 }
 
 @end

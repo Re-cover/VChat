@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LoginViewController : UIViewController
+#import "UserService.h"
+@interface LoginViewController : UIViewController<ConnectIMServerDelegate>
 
 @end
