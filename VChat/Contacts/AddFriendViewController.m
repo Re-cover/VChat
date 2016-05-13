@@ -24,25 +24,16 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-    //self.searchController.searchResultsUpdater = self;
-    //[self.searchController.searchBar sizeToFit];
-    self.searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
-    self.searchController.hidesNavigationBarDuringPresentation = NO;
-    self.searchController.dimsBackgroundDuringPresentation = NO;
-    self.tableView.tableHeaderView = self.searchController.searchBar;
-    //self.navigationItem.titleView = self.searchController.searchBar;
-    self.definesPresentationContext = YES;
 }
 
 # pragma mark - UITableViewDataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -60,11 +51,6 @@
 
 # pragma mark - UITableViewDelegate
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0 && indexPath.row == 0) {
-        NSLog(@"搜索");
-        self.searchController.searchBar.hidden = NO;
-        [self.searchController.searchBar becomeFirstResponder];
-    }
-}
+# pragma mark
+
 @end

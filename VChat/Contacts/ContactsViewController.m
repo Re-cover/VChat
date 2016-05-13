@@ -8,11 +8,14 @@
 
 #import "ContactsViewController.h"
 #import "ContactTableViewCell.h"
+#import "BlurView.h"
 
 @interface ContactsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *ContactsTableView;
+@property (strong, nonatomic) BlurView *blurView;
 @property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) UIViewController *searchResultController;
 
 @end
 
@@ -23,6 +26,7 @@
     [super viewDidLoad];
     self.ContactsTableView.dataSource = self;
     self.ContactsTableView.delegate = self;
+    self.searchController.delegate = self;
     self.ContactsTableView.tableHeaderView = self.searchController.searchBar;
 }
 
@@ -53,17 +57,49 @@
 - (IBAction)addFriendButtonDidClicked:(id)sender {
 }
 
+#pragma mark - UISearchControllerDelegate
+
+- (void)willPresentSearchController:(UISearchController*)searchController
+{
+    [[UIApplication sharedApplication].keyWindow addSubview:self.blurView];
+}
+
+- (void)willDismissSearchController:(UISearchController*)searchController
+{
+    [self.blurView removeFromSuperview];
+}
+
 
 # pragma mark getters
 
+- (BlurView *)blurView {
+    if (!_blurView) {
+        _blurView = [[BlurView alloc] initWithFrame:CGRectMake(0, 64, kSceenWidth, kSceenHeight - 64)];
+    }
+    return _blurView;
+}
+
 - (UISearchController *)searchController {
     if (!_searchController) {
-        _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-        _searchController.obscuresBackgroundDuringPresentation = YES;
+        _searchController = [[UISearchController alloc] initWithSearchResultsController:nil
+                             ];
+        _searchController.dimsBackgroundDuringPresentation = NO;
         _searchController.hidesNavigationBarDuringPresentation = YES;
-        //_searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
+        _searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
+        _searchController.searchBar.tintColor = kVChatGreen;
+        _searchController.searchBar.backgroundColor = [UIColor whiteColor];
         self.definesPresentationContext = YES;
     }
     return _searchController;
+}
+
+
+#warning 未调用
+- (UIViewController *)searchResultController {
+    if (!_searchResultController) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Search" bundle:nil];
+        _searchResultController = [storyboard instantiateInitialViewController];
+    }
+    return _searchResultController;
 }
 @end

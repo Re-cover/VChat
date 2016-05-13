@@ -26,6 +26,8 @@
 		83B787DE1C9FD75400B60AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B787DC1C9FD75400B60AF7 /* LaunchScreen.storyboard */; };
 		83B787E91C9FD75400B60AF7 /* VChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787E81C9FD75400B60AF7 /* VChatTests.m */; };
 		83B787F41C9FD75400B60AF7 /* VChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787F31C9FD75400B60AF7 /* VChatUITests.m */; };
+		83C24F241CE62251000BF792 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C24F231CE62251000BF792 /* Search.storyboard */; };
+		83C24F271CE6406F000BF792 /* BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C24F261CE6406F000BF792 /* BlurView.m */; };
 		83D0D6211CD3824300CB2B26 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */; };
 		83D0D6251CD385D900CB2B26 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0D6241CD385D900CB2B26 /* BaseViewController.m */; };
 		83E7F8771CD6306B00F94FCA /* RegisterViaPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F8761CD6306B00F94FCA /* RegisterViaPhoneViewController.m */; };
@@ -107,6 +109,9 @@
 		83B787EF1C9FD75400B60AF7 /* VChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B787F31C9FD75400B60AF7 /* VChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VChatUITests.m; sourceTree = "<group>"; };
 		83B787F51C9FD75400B60AF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83C24F231CE62251000BF792 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Search.storyboard; path = Contacts/Search.storyboard; sourceTree = "<group>"; };
+		83C24F251CE6406F000BF792 /* BlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlurView.h; path = Common/BlurView.h; sourceTree = "<group>"; };
+		83C24F261CE6406F000BF792 /* BlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlurView.m; path = Common/BlurView.m; sourceTree = "<group>"; };
 		83D0D61F1CD3824300CB2B26 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewCell.h; path = Chats/HomeTableViewCell.h; sourceTree = "<group>"; };
 		83D0D6201CD3824300CB2B26 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewCell.m; path = Chats/HomeTableViewCell.m; sourceTree = "<group>"; };
 		83D0D6231CD385D900CB2B26 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Common/BaseViewController.h; sourceTree = "<group>"; };
@@ -316,6 +321,8 @@
 				83D0D6241CD385D900CB2B26 /* BaseViewController.m */,
 				8372A1461CD798730030385B /* NSString+SHA1.h */,
 				8372A1471CD798730030385B /* NSString+SHA1.m */,
+				83C24F251CE6406F000BF792 /* BlurView.h */,
+				83C24F261CE6406F000BF792 /* BlurView.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -488,6 +495,7 @@
 			isa = PBXGroup;
 			children = (
 				83FA5F5D1CA25F5C008426FF /* Contacts.storyboard */,
+				83C24F231CE62251000BF792 /* Search.storyboard */,
 				83EA57A31CD47F1F00D00B0E /* ContactTableViewCell.h */,
 				83EA57A41CD47F1F00D00B0E /* ContactTableViewCell.m */,
 				836790331CD9D14000DDF20E /* SearchFriendCell.h */,
@@ -680,6 +688,7 @@
 				83FA5F601CA25F72008426FF /* Discover.storyboard in Resources */,
 				83B787DE1C9FD75400B60AF7 /* LaunchScreen.storyboard in Resources */,
 				83FA5F2B1CA1B5C5008426FF /* Main.storyboard in Resources */,
+				83C24F241CE62251000BF792 /* Search.storyboard in Resources */,
 				83FA5F621CA25F90008426FF /* Me.storyboard in Resources */,
 				83A355541CA02939001C99F2 /* PreLogin.storyboard in Resources */,
 				8385B6CA1CD5B17E0005EFE6 /* Home.storyboard in Resources */,
@@ -764,6 +773,7 @@
 			files = (
 				83EA57B21CD4838C00D00B0E /* DiscoverTableViewCell.m in Sources */,
 				83B787D31C9FD75400B60AF7 /* AppDelegate.m in Sources */,
+				83C24F271CE6406F000BF792 /* BlurView.m in Sources */,
 				832F570A1CD786FD000F46AA /* UserService.m in Sources */,
 				83D0D6251CD385D900CB2B26 /* BaseViewController.m in Sources */,
 				83B2FA891CD9C9BD000BBC75 /* AddFriendViewController.m in Sources */,
