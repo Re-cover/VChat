@@ -61,7 +61,7 @@
 
 - (void)willPresentSearchController:(UISearchController*)searchController
 {
-    [[UIApplication sharedApplication].keyWindow addSubview:self.blurView];
+    [self.view addSubview:self.blurView];
 }
 
 - (void)willDismissSearchController:(UISearchController*)searchController
@@ -92,7 +92,6 @@
     }
     return _searchController;
 }
-
 
 #warning 未调用
 - (UIViewController *)searchResultController {
