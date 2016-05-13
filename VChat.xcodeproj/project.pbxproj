@@ -12,6 +12,7 @@
 		832F57091CD786FD000F46AA /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F57051CD786FD000F46AA /* Register.m */; };
 		832F570A1CD786FD000F46AA /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F57071CD786FD000F46AA /* UserService.m */; };
 		832F570D1CD7896B000F46AA /* TokenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F570C1CD7896B000F46AA /* TokenModel.m */; };
+		836790351CD9D14000DDF20E /* SearchFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 836790341CD9D14000DDF20E /* SearchFriendCell.m */; };
 		8372A1481CD798730030385B /* NSString+SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8372A1471CD798730030385B /* NSString+SHA1.m */; };
 		8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385B6C11CD597D20005EFE6 /* ChatViewController.m */; };
 		8385B6C81CD5B1500005EFE6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8385B6C71CD5B1500005EFE6 /* Chat.storyboard */; };
@@ -19,6 +20,7 @@
 		83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355511CA028E3001C99F2 /* LoginViewController.m */; };
 		83A355541CA02939001C99F2 /* PreLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A355531CA02939001C99F2 /* PreLogin.storyboard */; };
 		83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355561CA076EA001C99F2 /* PreLoginViewController.m */; };
+		83B2FA891CD9C9BD000BBC75 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B2FA881CD9C9BD000BBC75 /* AddFriendViewController.m */; };
 		83B787D01C9FD75400B60AF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787CF1C9FD75400B60AF7 /* main.m */; };
 		83B787D31C9FD75400B60AF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B787D21C9FD75400B60AF7 /* AppDelegate.m */; };
 		83B787DE1C9FD75400B60AF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B787DC1C9FD75400B60AF7 /* LaunchScreen.storyboard */; };
@@ -77,6 +79,8 @@
 		832F57071CD786FD000F46AA /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserService.m; path = VChat/Network/UserService.m; sourceTree = "<group>"; };
 		832F570B1CD7896B000F46AA /* TokenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TokenModel.h; path = Login/TokenModel.h; sourceTree = "<group>"; };
 		832F570C1CD7896B000F46AA /* TokenModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TokenModel.m; path = Login/TokenModel.m; sourceTree = "<group>"; };
+		836790331CD9D14000DDF20E /* SearchFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchFriendCell.h; path = Contacts/SearchFriendCell.h; sourceTree = "<group>"; };
+		836790341CD9D14000DDF20E /* SearchFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchFriendCell.m; path = Contacts/SearchFriendCell.m; sourceTree = "<group>"; };
 		8372A1461CD798730030385B /* NSString+SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SHA1.h"; path = "Common/NSString+SHA1.h"; sourceTree = "<group>"; };
 		8372A1471CD798730030385B /* NSString+SHA1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SHA1.m"; path = "Common/NSString+SHA1.m"; sourceTree = "<group>"; };
 		8385B6C01CD597D20005EFE6 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = Chats/ChatViewController.h; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 		83A355531CA02939001C99F2 /* PreLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PreLogin.storyboard; path = Login/PreLogin.storyboard; sourceTree = "<group>"; };
 		83A355551CA076EA001C99F2 /* PreLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreLoginViewController.h; path = Login/PreLoginViewController.h; sourceTree = "<group>"; };
 		83A355561CA076EA001C99F2 /* PreLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreLoginViewController.m; path = Login/PreLoginViewController.m; sourceTree = "<group>"; };
+		83B2FA871CD9C9BD000BBC75 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFriendViewController.h; path = Contacts/AddFriendViewController.h; sourceTree = "<group>"; };
+		83B2FA881CD9C9BD000BBC75 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFriendViewController.m; path = Contacts/AddFriendViewController.m; sourceTree = "<group>"; };
 		83B787CB1C9FD75400B60AF7 /* VChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B787CF1C9FD75400B60AF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83B787D11C9FD75400B60AF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -472,6 +478,8 @@
 			children = (
 				83EA57A01CD47E4700D00B0E /* ContactsViewController.h */,
 				83EA57A11CD47E4700D00B0E /* ContactsViewController.m */,
+				83B2FA871CD9C9BD000BBC75 /* AddFriendViewController.h */,
+				83B2FA881CD9C9BD000BBC75 /* AddFriendViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -482,6 +490,8 @@
 				83FA5F5D1CA25F5C008426FF /* Contacts.storyboard */,
 				83EA57A31CD47F1F00D00B0E /* ContactTableViewCell.h */,
 				83EA57A41CD47F1F00D00B0E /* ContactTableViewCell.m */,
+				836790331CD9D14000DDF20E /* SearchFriendCell.h */,
+				836790341CD9D14000DDF20E /* SearchFriendCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -626,6 +636,7 @@
 				TargetAttributes = {
 					83B787CA1C9FD75400B60AF7 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = BSX56YTBJ6;
 					};
 					83B787E31C9FD75400B60AF7 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -755,6 +766,7 @@
 				83B787D31C9FD75400B60AF7 /* AppDelegate.m in Sources */,
 				832F570A1CD786FD000F46AA /* UserService.m in Sources */,
 				83D0D6251CD385D900CB2B26 /* BaseViewController.m in Sources */,
+				83B2FA891CD9C9BD000BBC75 /* AddFriendViewController.m in Sources */,
 				83EA57A51CD47F1F00D00B0E /* ContactTableViewCell.m in Sources */,
 				83EA57B51CD483B400D00B0E /* DiscoverViewController.m in Sources */,
 				83E7F87A1CD6309B00F94FCA /* VerifyViewController.m in Sources */,
@@ -775,6 +787,7 @@
 				83E7F8771CD6306B00F94FCA /* RegisterViaPhoneViewController.m in Sources */,
 				83E7F87D1CD630F300F94FCA /* PersonalInfoViewController.m in Sources */,
 				832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */,
+				836790351CD9D14000DDF20E /* SearchFriendCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,12 +920,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = VChat/VChatPrefixHeader.pch;
 				INFOPLIST_FILE = VChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Recover.VChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -922,12 +937,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = VChat/VChatPrefixHeader.pch;
 				INFOPLIST_FILE = VChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Recover.VChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

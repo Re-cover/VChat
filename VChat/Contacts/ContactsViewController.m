@@ -12,6 +12,7 @@
 @interface ContactsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *ContactsTableView;
+@property (strong, nonatomic) UISearchController *searchController;
 
 @end
 
@@ -22,6 +23,7 @@
     [super viewDidLoad];
     self.ContactsTableView.dataSource = self;
     self.ContactsTableView.delegate = self;
+    self.ContactsTableView.tableHeaderView = self.searchController.searchBar;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,5 +50,20 @@
 }
 
 # pragma mark - UITableViewDelegate
+- (IBAction)addFriendButtonDidClicked:(id)sender {
+}
 
+
+# pragma mark getters
+
+- (UISearchController *)searchController {
+    if (!_searchController) {
+        _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+        _searchController.obscuresBackgroundDuringPresentation = YES;
+        _searchController.hidesNavigationBarDuringPresentation = YES;
+        //_searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
+        self.definesPresentationContext = YES;
+    }
+    return _searchController;
+}
 @end

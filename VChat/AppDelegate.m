@@ -11,6 +11,7 @@
 #import <AVUser.h>
 #import <AVQuery.h>
 #import <SVProgressHUD.h>
+#import "MainTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -45,6 +46,26 @@
     [AVOSCloud setApplicationId:@"nRTh2Xb9aQ8Dfq8W4XwqNKtG-gzGzoHsz"
                       clientKey:@"WOrJmocpBoXkREXnuFus14Ov"];
     [[RCIM sharedRCIM] initWithAppKey:@"kj7swf8o7bdy2"];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIStoryboard *mainStoryboard = nil;
+    NSString *userToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"userToken"];
+    
+    if (userToken == nil) {
+        mainStoryboard = [UIStoryboard storyboardWithName:@"PreLogin" bundle:nil];
+    } else {
+        NSLog(@"Token:%@", userToken);
+        mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        [[RCIM sharedRCIM] connectWithToken:userToken success:^(NSString *userId) {
+            NSLog(@"登录成功");
+        } error:^(RCConnectErrorCode status) {
+            NSLog(@"%ld", status);
+        } tokenIncorrect:^{
+            NSLog(@"token错误");
+        }];
+        self.window.rootViewController = [mainStoryboard instantiateInitialViewController];
+        [self.window makeKeyAndVisible];
+    }
     return YES;
 }
 
