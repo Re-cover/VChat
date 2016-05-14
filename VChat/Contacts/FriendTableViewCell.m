@@ -1,14 +1,14 @@
 //
-//  SearchFriendCell.m
+//  FriendTableViewCell.m
 //  VChat
 //
-//  Created by Recover on 16/5/4.
+//  Created by Recover on 16/5/14.
 //  Copyright © 2016年 Recover. All rights reserved.
 //
 
-#import "SearchFriendCell.h"
+#import "FriendTableViewCell.h"
 
-@implementation SearchFriendCell
+@implementation FriendTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -17,7 +17,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    
+
     // Configure the view for the selected state
 }
 

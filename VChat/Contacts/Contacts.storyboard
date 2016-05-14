@@ -89,7 +89,6 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="addFriendButtonDidClicked:" destination="Yqp-XQ-uIu" id="ACZ-tE-NrX"/>
-                                <segue destination="g1z-MY-s4m" kind="show" id="DMs-hG-xYu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -97,87 +96,24 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="ContactsTableView" destination="Vue-8o-TT2" id="iOa-fW-EM8"/>
+                        <segue destination="daj-xY-ZyI" kind="show" identifier="toFriendInfoView" id="UPq-zv-HMP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aG-MJ-gwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.5" y="1204.5"/>
         </scene>
-        <!--添加朋友-->
-        <scene sceneID="ffJ-Rl-a9j">
+        <!--FriendInfo-->
+        <scene sceneID="Ccu-4e-mgE">
             <objects>
-                <viewController title="添加朋友" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="g1z-MY-s4m" customClass="AddFriendViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="G0Z-fj-yiW"/>
-                        <viewControllerLayoutGuide type="bottom" id="ovk-aA-2Go"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bkl-uy-MLY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cPx-hd-5oH">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchFriendCell" rowHeight="50" id="oDL-bS-UyR" customClass="SearchFriendCell">
-                                        <rect key="frame" x="0.0" y="49.5" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oDL-bS-UyR" id="NL8-5N-OyP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_friend" translatesAutoresizingMaskIntoConstraints="NO" id="fBz-Fa-8Hb">
-                                                    <rect key="frame" x="15" y="13" width="24" height="24"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="24" id="59K-Mi-9b7"/>
-                                                        <constraint firstAttribute="width" constant="24" id="GSD-rh-be2"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号/用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCI-67-5u9">
-                                                    <rect key="frame" x="54" y="13" width="306" height="24"/>
-                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="TCI-67-5u9" firstAttribute="leading" secondItem="fBz-Fa-8Hb" secondAttribute="trailing" constant="15" id="KgA-pm-HAf"/>
-                                                <constraint firstItem="fBz-Fa-8Hb" firstAttribute="leading" secondItem="NL8-5N-OyP" secondAttribute="leading" constant="15" id="YJe-oP-2eV"/>
-                                                <constraint firstItem="TCI-67-5u9" firstAttribute="centerY" secondItem="NL8-5N-OyP" secondAttribute="centerY" id="eB8-xW-H1n"/>
-                                                <constraint firstItem="fBz-Fa-8Hb" firstAttribute="centerY" secondItem="NL8-5N-OyP" secondAttribute="centerY" id="vPg-LK-zMM"/>
-                                                <constraint firstAttribute="trailing" secondItem="TCI-67-5u9" secondAttribute="trailing" constant="15" id="zy9-9o-Hcb"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="searchImageView" destination="fBz-Fa-8Hb" id="jyg-gE-ssR"/>
-                                            <outlet property="titleLabel" destination="TCI-67-5u9" id="FrS-Ao-G3p"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="cPx-hd-5oH" firstAttribute="leading" secondItem="Bkl-uy-MLY" secondAttribute="leading" id="BKL-0i-Lbz"/>
-                            <constraint firstItem="ovk-aA-2Go" firstAttribute="top" secondItem="cPx-hd-5oH" secondAttribute="bottom" id="Rv1-fG-wa6"/>
-                            <constraint firstAttribute="trailing" secondItem="cPx-hd-5oH" secondAttribute="trailing" id="mBK-2G-bcM"/>
-                            <constraint firstItem="cPx-hd-5oH" firstAttribute="top" secondItem="G0Z-fj-yiW" secondAttribute="bottom" id="tfk-Ky-ois"/>
-                        </constraints>
-                    </view>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="tableView" destination="cPx-hd-5oH" id="oyH-VC-3QY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ezN-58-6MJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="FriendInfo" id="daj-xY-ZyI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJq-uV-C7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="485.5" y="1204.5"/>
+            <point key="canvasLocation" x="344" y="1205"/>
         </scene>
     </scenes>
     <resources>
         <image name="contacts_add_friend" width="28" height="30"/>
-        <image name="search_friend" width="32" height="32"/>
         <image name="tabbar_contacts" width="27" height="23"/>
         <image name="tabbar_contactsHL" width="27" height="23"/>
     </resources>

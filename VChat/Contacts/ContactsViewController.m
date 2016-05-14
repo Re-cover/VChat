@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *ContactsTableView;
 @property (strong, nonatomic) BlurView *blurView;
 @property (strong, nonatomic) UISearchController *searchController;
-@property (strong, nonatomic) UIViewController *searchResultController;
 
 @end
 
@@ -27,6 +26,7 @@
     self.ContactsTableView.dataSource = self;
     self.ContactsTableView.delegate = self;
     self.searchController.delegate = self;
+    self.searchController.searchBar.delegate = self;
     self.ContactsTableView.tableHeaderView = self.searchController.searchBar;
 }
 
@@ -53,9 +53,11 @@
     return cell;
 }
 
-# pragma mark - UITableViewDelegate
 - (IBAction)addFriendButtonDidClicked:(id)sender {
+    [self.searchController.searchBar becomeFirstResponder];
 }
+
+# pragma mark - UITableViewDelegate
 
 #pragma mark - UISearchControllerDelegate
 
@@ -69,6 +71,11 @@
     [self.blurView removeFromSuperview];
 }
 
+# pragma mark - UISearchBarDelegate
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSLog(@"搜索");
+    [self performSegueWithIdentifier:@"toFriendInfoView" sender:nil];
+}
 
 # pragma mark getters
 
@@ -81,8 +88,7 @@
 
 - (UISearchController *)searchController {
     if (!_searchController) {
-        _searchController = [[UISearchController alloc] initWithSearchResultsController:nil
-                             ];
+        _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
         _searchController.dimsBackgroundDuringPresentation = NO;
         _searchController.hidesNavigationBarDuringPresentation = YES;
         _searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
@@ -91,14 +97,5 @@
         self.definesPresentationContext = YES;
     }
     return _searchController;
-}
-
-#warning 未调用
-- (UIViewController *)searchResultController {
-    if (!_searchResultController) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Search" bundle:nil];
-        _searchResultController = [storyboard instantiateInitialViewController];
-    }
-    return _searchResultController;
 }
 @end

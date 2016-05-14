@@ -48,7 +48,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wBV-bH-YVy">
-                                                    <rect key="frame" x="10" y="10" width="70" height="70"/>
+                                                    <rect key="frame" x="15" y="10" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="3oJ-H1-BXi"/>
                                                         <constraint firstAttribute="height" constant="70" id="YAN-Pd-p7e"/>
@@ -60,7 +60,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUn-d7-P9l">
-                                                    <rect key="frame" x="95" y="20" width="43" height="24"/>
+                                                    <rect key="frame" x="100" y="20" width="43" height="24"/>
                                                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ex-wv-tbf">
-                                                    <rect key="frame" x="95" y="50" width="35.5" height="20"/>
+                                                    <rect key="frame" x="100" y="50" width="35.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -81,7 +81,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="wBV-bH-YVy" firstAttribute="centerY" secondItem="bM3-kv-bB6" secondAttribute="centerY" id="EUR-Gg-yzA"/>
-                                                <constraint firstItem="wBV-bH-YVy" firstAttribute="leading" secondItem="bM3-kv-bB6" secondAttribute="leading" constant="10" id="HXh-3n-F5O"/>
+                                                <constraint firstItem="wBV-bH-YVy" firstAttribute="leading" secondItem="bM3-kv-bB6" secondAttribute="leading" constant="15" id="HXh-3n-F5O"/>
                                                 <constraint firstItem="1Ex-wv-tbf" firstAttribute="leading" secondItem="wBV-bH-YVy" secondAttribute="trailing" constant="15" id="IIo-3V-PEd"/>
                                                 <constraint firstAttribute="trailing" secondItem="7XF-8L-sfJ" secondAttribute="trailing" id="Vby-6v-qiF"/>
                                                 <constraint firstItem="1Ex-wv-tbf" firstAttribute="bottom" secondItem="wBV-bH-YVy" secondAttribute="bottom" constant="-10" id="aKs-wn-wri"/>

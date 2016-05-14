@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
-@interface ContactsViewController : BaseViewController<UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate>
+@interface ContactsViewController : BaseViewController<UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate,UISearchBarDelegate>
 
 @end
