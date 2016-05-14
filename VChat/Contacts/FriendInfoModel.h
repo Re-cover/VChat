@@ -10,4 +10,12 @@
 
 @interface FriendInfoModel : NSObject
 
+@property (nonatomic, copy) NSString *remarkName;
+@property (nonatomic, copy) NSString *vChatId;
+@property (nonatomic, copy) NSString *nickName;
+@property (nonatomic, copy) NSString *phoneNumber;
+@property (nonatomic, copy) NSString *area;
+@property (nonatomic, copy) NSString *signature;
+@property (nonatomic, assign) BOOL isFriend;
+
 @end

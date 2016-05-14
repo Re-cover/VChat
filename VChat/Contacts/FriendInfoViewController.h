@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FriendInfoModel.h"
 
 @interface FriendInfoViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) FriendInfoModel *model;
 
 @end

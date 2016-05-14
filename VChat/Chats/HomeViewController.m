@@ -7,13 +7,12 @@
 //
 
 #import "HomeViewController.h"
-#import "HomeTableViewCell.h"
 #import "ChatViewController.h"
-#import <RealReachability.h>
+#import "SystemMessageViewController.h"
+
 
 @interface HomeViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *HomeTableView;
 
 @end
 
@@ -24,19 +23,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = YES;
     [self setDisplayConversationTypes:@[@(ConversationType_PRIVATE),
                                         @(ConversationType_DISCUSSION),
-                                        @(ConversationType_CHATROOM),
                                         @(ConversationType_GROUP),
-                                        @(ConversationType_APPSERVICE),
                                         @(ConversationType_SYSTEM)]];
-    self.automaticallyAdjustsScrollViewInsets = YES;
-    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    [self setCollectionConversationType:@[@(ConversationType_SYSTEM)]];
 }
 
 -(void)dealloc {
@@ -44,20 +36,26 @@
 }
 
 
-# pragma mark - 
+# pragma mark - 点击会话列表cell的回调
+
 - (void)onSelectedTableRow:(RCConversationModelType)conversationModelType
          conversationModel:(RCConversationModel *)model
                atIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"toChatView" sender:model];
+    if (conversationModelType == RC_CONVERSATION_MODEL_TYPE_COLLECTION) {
+        [self performSegueWithIdentifier:@"toSystemMessageView" sender:nil];
+    } else if (model.conversationModelType == ConversationType_PRIVATE){
+        [self performSegueWithIdentifier:@"toChatView" sender:model];
+    }
 }
 
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ChatViewController *vc = segue.destinationViewController;
-    RCConversationModel *model = sender;
-    vc.conversationType = model.conversationType;
-    vc.targetId = model.targetId;
-    vc.title = model.conversationTitle;
+    if ([segue.identifier isEqualToString: @"toChatView"]) {
+        ChatViewController *vc = segue.destinationViewController;
+        RCConversationModel *model = sender;
+        vc.conversationType = model.conversationType;
+        vc.targetId = model.targetId;
+        vc.title = model.conversationTitle;
+    }
 }
 
 @end

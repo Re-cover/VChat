@@ -34,79 +34,15 @@
                     <view key="view" contentMode="scaleToFill" id="Pyu-RI-Og9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wqz-pD-75o">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" id="LLo-Zj-y6F" customClass="HomeTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="68"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LLo-Zj-y6F" id="8Dr-Fl-eAa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k7W-OJ-jjr">
-                                                    <rect key="frame" x="10" y="9" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="UQb-UA-ySA"/>
-                                                        <constraint firstAttribute="width" constant="50" id="phe-LP-0hd"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY0-iK-xMI">
-                                                    <rect key="frame" x="70" y="9" width="48" height="27"/>
-                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="19"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seI-sP-pBb">
-                                                    <rect key="frame" x="70" y="39" width="35.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="rY0-iK-xMI" firstAttribute="top" secondItem="k7W-OJ-jjr" secondAttribute="top" id="1sW-BC-QSu"/>
-                                                <constraint firstItem="rY0-iK-xMI" firstAttribute="leading" secondItem="k7W-OJ-jjr" secondAttribute="trailing" constant="10" id="NQW-v0-MeI"/>
-                                                <constraint firstItem="k7W-OJ-jjr" firstAttribute="centerY" secondItem="8Dr-Fl-eAa" secondAttribute="centerY" id="UqY-un-Ylp"/>
-                                                <constraint firstItem="k7W-OJ-jjr" firstAttribute="leading" secondItem="8Dr-Fl-eAa" secondAttribute="leading" constant="10" id="V0P-89-O8M"/>
-                                                <constraint firstItem="seI-sP-pBb" firstAttribute="bottom" secondItem="k7W-OJ-jjr" secondAttribute="bottom" id="YHy-Mr-L6e"/>
-                                                <constraint firstItem="rY0-iK-xMI" firstAttribute="top" secondItem="8Dr-Fl-eAa" secondAttribute="top" constant="5" id="hM3-hd-07P"/>
-                                                <constraint firstItem="seI-sP-pBb" firstAttribute="top" secondItem="rY0-iK-xMI" secondAttribute="bottom" constant="2" id="x5T-jd-U1o"/>
-                                                <constraint firstItem="seI-sP-pBb" firstAttribute="leading" secondItem="k7W-OJ-jjr" secondAttribute="trailing" constant="10" id="zJ5-rU-RXa"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="hM3-hd-07P"/>
-                                                    <exclude reference="x5T-jd-U1o"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="avatarImage" destination="k7W-OJ-jjr" id="OoW-3l-QLn"/>
-                                            <outlet property="lastMessageLabel" destination="seI-sP-pBb" id="4do-0x-0IW"/>
-                                            <outlet property="nickNameLabel" destination="rY0-iK-xMI" id="ybV-Tw-eVt"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Wqz-pD-75o" secondAttribute="trailing" id="fNo-E9-XeM"/>
-                            <constraint firstItem="TUg-YE-VHr" firstAttribute="top" secondItem="Wqz-pD-75o" secondAttribute="bottom" id="gfZ-0G-ePk"/>
-                            <constraint firstItem="Wqz-pD-75o" firstAttribute="leading" secondItem="Pyu-RI-Og9" secondAttribute="leading" id="mJZ-Pi-0Ty"/>
-                            <constraint firstItem="Wqz-pD-75o" firstAttribute="top" secondItem="GZD-ta-m2g" secondAttribute="bottom" id="w05-Wr-m8h"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="微信" image="tabbar_mainframe" selectedImage="tabbar_mainframeHL" id="HL2-Wb-EsH"/>
                     <navigationItem key="navigationItem" title="微信" id="7JJ-dd-k7b"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="HomeTableView" destination="Wqz-pD-75o" id="uTS-KP-9ed"/>
                         <segue destination="CdP-ml-4Io" kind="show" identifier="toChatView" id="O2u-Vh-L5U"/>
+                        <segue destination="UAc-wg-9YU" kind="show" identifier="toSystemMessageView" id="JKn-u1-PUH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSI-Qi-MBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,7 +55,15 @@
                 <viewControllerPlaceholder storyboardName="Chat" id="CdP-ml-4Io" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HY7-B5-nmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-258.5" y="777.5"/>
+            <point key="canvasLocation" x="-364.5" y="867"/>
+        </scene>
+        <!--SystemMessage-->
+        <scene sceneID="lnm-CK-JRz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SystemMessage" id="UAc-wg-9YU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="md2-Bt-FK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-329.5" y="696"/>
         </scene>
     </scenes>
     <resources>
