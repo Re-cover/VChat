@@ -112,15 +112,13 @@
 # pragma mark Setters
 
 - (void)setModelWith:(AVObject *)object {
-    if (!_model) {
-        _model = [[FriendInfoModel alloc] init];
-        _model.avatarUrl = [object valueForKey:@"avatarURL"];
-        _model.vChatId = [object valueForKey:@"username"];
-        _model.nickName = [object valueForKey:@"nickName"];
-        _model.phoneNumber = [object valueForKey:@"mobilePhoneNumber"];
-        _model.area =[object valueForKey:@"area"];
-        _model.signature = [object valueForKey:@"signature"];
-    }
+    _model = [[FriendInfoModel alloc] init];
+    _model.avatarUrl = [object valueForKey:@"avatarURL"];
+    _model.vChatId = [object valueForKey:@"username"];
+    _model.nickName = [object valueForKey:@"nickName"];
+    _model.phoneNumber = [object valueForKey:@"mobilePhoneNumber"];
+    _model.area =[object valueForKey:@"area"];
+    _model.signature = [object valueForKey:@"signature"];
 }
 
 - (UISearchController *)searchController {
