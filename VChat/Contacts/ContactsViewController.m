@@ -9,12 +9,16 @@
 #import "ContactsViewController.h"
 #import "ContactTableViewCell.h"
 #import "BlurView.h"
+#import <AVQuery.h>
+#import "FriendInfoModel.h"
+#import "FriendInfoViewController.h"
 
 @interface ContactsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *ContactsTableView;
-@property (strong, nonatomic) BlurView *blurView;
 @property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) BlurView *blurView;
+@property (strong, nonatomic) FriendInfoModel *model;
 
 @end
 
@@ -73,17 +77,50 @@
 
 # pragma mark - UISearchBarDelegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"搜索");
-    [self performSegueWithIdentifier:@"toFriendInfoView" sender:nil];
+    NSLog(@"%@", searchBar.text);
+    AVQuery *query = [AVQuery queryWithClassName:@"_User"];
+    [query whereKey:@"mobilePhoneNumber" equalTo: searchBar.text];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count == 0) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"该用户不存在" message:@"无法找到该用户，请检查你填写的账号是否正确" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+            [alert addAction:confirmAction];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        else {
+            AVObject *friendObject = [objects lastObject];
+            [self setModelWith:friendObject];
+            [self performSegueWithIdentifier:@"toFriendInfoView" sender:nil];
+        }
+    }];
 }
 
-# pragma mark getters
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    FriendInfoViewController *controller = segue.destinationViewController;
+    controller.model = self.model;
+}
+
+# pragma mark Getters
 
 - (BlurView *)blurView {
     if (!_blurView) {
         _blurView = [[BlurView alloc] initWithFrame:CGRectMake(0, 64, kSceenWidth, kSceenHeight - 64)];
     }
     return _blurView;
+}
+
+# pragma mark Setters
+
+- (void)setModelWith:(AVObject *)object {
+    if (!_model) {
+        _model = [[FriendInfoModel alloc] init];
+        _model.avatarUrl = [object valueForKey:@"avatarURL"];
+        _model.vChatId = [object valueForKey:@"username"];
+        _model.nickName = [object valueForKey:@"nickName"];
+        _model.phoneNumber = [object valueForKey:@"mobilePhoneNumber"];
+        _model.area =[object valueForKey:@"area"];
+        _model.signature = [object valueForKey:@"signature"];
+    }
 }
 
 - (UISearchController *)searchController {
@@ -98,4 +135,5 @@
     }
     return _searchController;
 }
+
 @end

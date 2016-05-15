@@ -9,6 +9,7 @@
 #import "FriendInfoViewController.h"
 #import "FriendTableViewCell.h"
 #import "FriendInfoTableViewCell.h"
+#import <YYWebImage.h>
 
 @interface FriendInfoViewController ()
 
@@ -58,17 +59,17 @@
         case 0: {
             NSString *identifier = @"FriendInfoTableViewCell";
             FriendInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-            cell.avatarImageView.image = [UIImage imageNamed:@"default_avatar"];\
-            cell.remarkLabel.text = @"胡腾宇";
-            cell.vChatIDLabel.text = @"微信号：recover2012";
-            cell.nickNameLabel.text = @"昵称：Terry.";
+            [cell.avatarImageView yy_setImageWithURL:[NSURL URLWithString:self.model.avatarUrl] placeholder:nil];
+            cell.remarkLabel.text = self.model.nickName;
+            cell.vChatIDLabel.text = [NSString stringWithFormat:@"%@%@", @"微信号：", self.model.vChatId];
+            cell.nickNameLabel.text = [NSString stringWithFormat:@"%@%@", @"昵称：", self.model.nickName];
             return cell;
         }
         case 1: {
             NSString *identifier = @"FriendTableViewCell";
             FriendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
             cell.titleLabel.text = @"电话号码";
-            cell.contentLabel.text = @"186 1111 1111";
+            cell.contentLabel.text = self.model.phoneNumber;
             return cell;
         }
         case 2: {
@@ -77,12 +78,12 @@
             switch (indexPath.row) {
                 case 0: {
                     cell.titleLabel.text = @"地区";
-                    cell.contentLabel.text = @"北京";
+                    cell.contentLabel.text = self.model.area;
                     break;
                 }
                 case 1: {
                     cell.titleLabel.text = @"个性签名";
-                    cell.contentLabel.text = @"这是一条很有个性的签名";
+                    cell.contentLabel.text = self.model.signature;
                     break;
                 }
                 default:
