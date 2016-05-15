@@ -63,9 +63,9 @@
         } tokenIncorrect:^{
             NSLog(@"token错误");
         }];
-        self.window.rootViewController = [mainStoryboard instantiateInitialViewController];
-        [self.window makeKeyAndVisible];
     }
+    self.window.rootViewController = [mainStoryboard instantiateInitialViewController];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

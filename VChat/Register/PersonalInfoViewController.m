@@ -126,7 +126,7 @@
         if ([self.avatarButton.currentImage isEqual: [UIImage imageNamed:@"choose_avatar"]]) {
             imageData = UIImagePNGRepresentation([UIImage imageNamed:@"default_avatar"]);
         } else {
-            imageData = UIImagePNGRepresentation(self.avatarButton.currentImage);
+            imageData = [self imageWithImage:self.avatarButton.currentImage scaledToSize:CGSizeMake(360, 360)];
         }
         AVFile *imageFile = [AVFile fileWithData:imageData];
         [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -163,6 +163,15 @@
     if ([SVProgressHUD isVisible]) {
         [SVProgressHUD dismiss];
     }
+}
+
+- (NSData *)imageWithImage:(UIImage*)image scaledToSize:(CGSize)targetSize;
+{
+    UIGraphicsBeginImageContext(targetSize);
+    [image drawInRect:CGRectMake(0, 0, targetSize.width, targetSize.height)];
+    UIImage* targetImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return UIImagePNGRepresentation(targetImage);
 }
 
 @end

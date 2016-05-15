@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "webwxgeticon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "webwxgeticon.png",
       "scale" : "2x"
     },
     {
