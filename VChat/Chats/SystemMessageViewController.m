@@ -8,6 +8,9 @@
 
 #import "SystemMessageViewController.h"
 #import "FriendInfoModel.h"
+#import "FriendInfoViewController.h"
+#import <AVQuery.h>
+
 @interface SystemMessageViewController ()
 
 @end
@@ -31,11 +34,28 @@
          conversationModel:(RCConversationModel *)model
                atIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%@", model.targetId);
-    [self performSegueWithIdentifier:@"toFriendInfoView" sender:model];
+    AVQuery *query = [AVQuery queryWithClassName:@"_User"];
+    [query getObjectInBackgroundWithId:model.targetId
+                                 block:^(AVObject *object, NSError *error) {
+                                     if (error == nil) {
+                                         NSLog(@"%@", object);
+                                         [self performSegueWithIdentifier:@"toFriendInfoView" sender:object];
+                                     }
+                                 }];
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    AVObject *object = (AVObject *)sender;
+    FriendInfoViewController *controller = segue.destinationViewController;
+    controller.model.objectId = object.objectId;
+    controller.model.avatarUrl = [object valueForKey:@"avatarURL"];
+    controller.model.vChatId = [object valueForKey:@"username"];
+    controller.model.nickName = [object valueForKey:@"nickName"];
+    controller.model.phoneNumber = [object valueForKey:@"mobilePhoneNumber"];
+    controller.model.area =[object valueForKey:@"area"];
+    controller.model.signature = [object valueForKey:@"signature"];\
+    controller.model.isFriend = NO;
 }
 
 

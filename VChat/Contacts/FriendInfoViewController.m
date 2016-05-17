@@ -26,6 +26,7 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    NSLog(@"%@", self.model);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -120,7 +121,7 @@
     }
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toFriendVerifyView"]) {
         FriendVerifyViewController *controller = [[FriendVerifyViewController alloc] init];
         controller = segue.destinationViewController;
@@ -128,5 +129,11 @@
     }
 }
 
+- (FriendInfoModel *)model {
+    if (!_model) {
+        _model = [[FriendInfoModel alloc] init];
+    }
+    return _model;
+}
 
 @end
