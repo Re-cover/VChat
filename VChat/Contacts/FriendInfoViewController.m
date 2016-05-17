@@ -9,6 +9,7 @@
 #import "FriendInfoViewController.h"
 #import "FriendTableViewCell.h"
 #import "FriendInfoTableViewCell.h"
+#import "FriendVerifyViewController.h"
 #import <YYWebImage.h>
 
 @interface FriendInfoViewController ()
@@ -30,6 +31,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+    if (self.model.isFriend) {
+        [self.FriendOperationButtton setTitle:@"发消息" forState:UIControlStateNormal];
+    } else {
+        [self.FriendOperationButtton setTitle:@"添加到通讯录" forState:UIControlStateNormal];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -109,7 +115,17 @@
 }
 
 - (IBAction)FriendOperation:(id)sender {
-    NSLog(@"添加到通讯录");
+    if (!self.model.isFriend) {
+        [self performSegueWithIdentifier:@"toFriendVerifyView" sender:nil];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toFriendVerifyView"]) {
+        FriendVerifyViewController *controller = [[FriendVerifyViewController alloc] init];
+        controller = segue.destinationViewController;
+        controller.model = self.model;
+    }
 }
 
 

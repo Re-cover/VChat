@@ -45,7 +45,7 @@
     
     [AVOSCloud setApplicationId:@"nRTh2Xb9aQ8Dfq8W4XwqNKtG-gzGzoHsz"
                       clientKey:@"WOrJmocpBoXkREXnuFus14Ov"];
-    [[RCIM sharedRCIM] initWithAppKey:@"kj7swf8o7bdy2"];
+    [[RCIM sharedRCIM] initWithAppKey:kAppKey];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIStoryboard *mainStoryboard = nil;
@@ -57,7 +57,7 @@
         NSLog(@"Token:%@", userToken);
         mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         [[RCIM sharedRCIM] connectWithToken:userToken success:^(NSString *userId) {
-            NSLog(@"登录成功");
+            NSLog(@"免密码登录成功");
         } error:^(RCConnectErrorCode status) {
             NSLog(@"%ld", status);
         } tokenIncorrect:^{

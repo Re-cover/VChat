@@ -31,9 +31,21 @@ typedef void(^failure)(NSError *error);
 
 + (instancetype)sharedUserService;
 
-- (void)tokenWithUserId:(NSString *)userId name:(NSString *)name portraitUri:(NSString *)uri
-               complete:(success)successBlock failure:(failure)failureBlock;
+- (void)tokenWithUserId:(NSString *)userId
+                   name:(NSString *)name
+            portraitUri:(NSString *)uri
+               complete:(success)successBlock
+                failure:(failure)failureBlock;
 
 - (void)connectIMServer;
+
+- (void)sendSystemMessageWithSourceId:(NSString *)sourceId
+                             targetId:(NSString *)targetId
+                           objectName:(NSString *)objectName
+                              content:(NSString *)content
+                          pushContent:(NSString *)pushContent
+                             pushData:(NSString*)pushData
+                             complete:(success)successBlock
+                              failure:(failure)failureBlock;
 
 @end

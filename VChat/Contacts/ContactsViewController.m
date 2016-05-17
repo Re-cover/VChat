@@ -10,6 +10,8 @@
 #import "ContactTableViewCell.h"
 #import "BlurView.h"
 #import <AVQuery.h>
+#import <AVUser.h>
+#import <AVStatus.h>
 #import "FriendInfoModel.h"
 #import "FriendInfoViewController.h"
 
@@ -63,21 +65,25 @@
 
 # pragma mark - UITableViewDelegate
 
-#pragma mark - UISearchControllerDelegate
+# pragma mark - UISearchControllerDelegate
 
-- (void)willPresentSearchController:(UISearchController*)searchController
-{
+- (void)willPresentSearchController:(UISearchController*)searchController {
     [self.view addSubview:self.blurView];
 }
 
-- (void)willDismissSearchController:(UISearchController*)searchController
-{
+- (void)willDismissSearchController:(UISearchController*)searchController {
     [self.blurView removeFromSuperview];
 }
 
 # pragma mark - UISearchBarDelegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"%@", searchBar.text);
+    if ([[AVUser currentUser].mobilePhoneNumber isEqualToString:searchBar.text]) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"你不能添加自己到通讯录" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+        [alert addAction:confirmAction];
+        [self presentViewController:alert animated:YES completion:nil];
+        return;
+    }
     AVQuery *query = [AVQuery queryWithClassName:@"_User"];
     [query whereKey:@"mobilePhoneNumber" equalTo: searchBar.text];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -90,6 +96,17 @@
         else {
             AVObject *friendObject = [objects lastObject];
             [self setModelWith:friendObject];
+            [[AVUser currentUser] getFollowees:^(NSArray *objects, NSError *error) {
+                if (error == nil) {
+                    AVObject *followee;
+                    for(followee in objects){
+                        if(followee.objectId == friendObject.objectId)
+                            self.model.isFriend = YES;
+                    }
+                } else {
+                    NSLog(@"%@", error.description);
+                }
+            }];
             [self performSegueWithIdentifier:@"toFriendInfoView" sender:nil];
         }
     }];
@@ -113,12 +130,14 @@
 
 - (void)setModelWith:(AVObject *)object {
     _model = [[FriendInfoModel alloc] init];
+    _model.objectId = object.objectId;
     _model.avatarUrl = [object valueForKey:@"avatarURL"];
     _model.vChatId = [object valueForKey:@"username"];
     _model.nickName = [object valueForKey:@"nickName"];
     _model.phoneNumber = [object valueForKey:@"mobilePhoneNumber"];
     _model.area =[object valueForKey:@"area"];
     _model.signature = [object valueForKey:@"signature"];
+    _model.isFriend = NO;
 }
 
 - (UISearchController *)searchController {

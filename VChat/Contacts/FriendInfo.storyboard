@@ -19,7 +19,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ka6-lB-wNF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="XQ4-he-EzZ">
                                     <rect key="frame" x="0.0" y="201.5" width="375" height="65"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -28,7 +28,7 @@
                                             <rect key="frame" x="15" y="10" width="345" height="45"/>
                                             <color key="backgroundColor" red="0.1450980392" green="0.69019607839999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
-                                            <state key="normal" title="添加到通讯录">
+                                            <state key="normal" title="Button">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -73,18 +73,18 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-wt-ZVi">
                                                     <rect key="frame" x="100" y="15" width="40.5" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRS-aM-VVq">
-                                                    <rect key="frame" x="100" y="42" width="35.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                                                    <rect key="frame" x="100" y="42" width="33" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmr-Fa-d8i">
-                                                    <rect key="frame" x="100" y="62" width="35.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                                                    <rect key="frame" x="100" y="60.5" width="33" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -117,13 +117,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-9m-oz1">
                                                     <rect key="frame" x="15" y="12" width="38" height="21"/>
                                                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzY-Mo-2QV">
                                                     <rect key="frame" x="100" y="10.5" width="40.5" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -155,11 +155,89 @@
                     <connections>
                         <outlet property="FriendOperationButtton" destination="0Ku-h1-1GI" id="RFf-Gq-qTK"/>
                         <outlet property="tableView" destination="Ka6-lB-wNF" id="e7Y-ho-mxi"/>
+                        <segue destination="1D0-2b-3VL" kind="show" identifier="toFriendVerifyView" id="0r9-7K-DIZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TJ-It-BwM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="147.5" y="375.5"/>
+        </scene>
+        <!--朋友验证-->
+        <scene sceneID="BAd-LW-Oyt">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="1D0-2b-3VL" customClass="FriendVerifyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g8F-aR-Ph2"/>
+                        <viewControllerLayoutGuide type="bottom" id="NgF-eC-l9y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ym4-aB-gAB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="8uF-06-CfQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendVerifyMessageTableViewCell" id="l23-3t-1nA" customClass="FriendVerifyMessageTableViewCell">
+                                        <rect key="frame" x="0.0" y="49.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l23-3t-1nA" id="3iP-k1-Xzl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EqH-Ny-kIc">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="verifyMeassgeChanged:" destination="1D0-2b-3VL" eventType="editingChanged" id="tNt-tJ-H9W"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EqH-Ny-kIc" firstAttribute="leading" secondItem="3iP-k1-Xzl" secondAttribute="leading" constant="15" id="4wZ-mB-LUw"/>
+                                                <constraint firstAttribute="trailing" secondItem="EqH-Ny-kIc" secondAttribute="trailing" constant="15" id="R77-e1-UiW"/>
+                                                <constraint firstAttribute="bottom" secondItem="EqH-Ny-kIc" secondAttribute="bottom" id="Ur3-9F-Lnt"/>
+                                                <constraint firstItem="EqH-Ny-kIc" firstAttribute="top" secondItem="3iP-k1-Xzl" secondAttribute="top" id="zCo-ZK-RC8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="VerifyMessageTextField" destination="EqH-Ny-kIc" id="bAz-1P-Ixg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8uF-06-CfQ" secondAttribute="trailing" id="2gD-gT-unB"/>
+                            <constraint firstItem="8uF-06-CfQ" firstAttribute="top" secondItem="g8F-aR-Ph2" secondAttribute="bottom" id="Exb-CL-KUs"/>
+                            <constraint firstItem="NgF-eC-l9y" firstAttribute="top" secondItem="8uF-06-CfQ" secondAttribute="bottom" id="QUi-WM-Ufw"/>
+                            <constraint firstItem="8uF-06-CfQ" firstAttribute="leading" secondItem="Ym4-aB-gAB" secondAttribute="leading" id="hrK-XL-Rtx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="朋友验证" id="gUN-5v-oeS">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="rFH-kT-nhE">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="CancelButtonDidClicked:" destination="1D0-2b-3VL" id="juX-dd-HVj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="发送" id="ZTR-u6-12R">
+                            <color key="tintColor" red="0.1450980392" green="0.69019607839999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="sendButtonDidClicked:" destination="1D0-2b-3VL" id="mkc-Mc-YDu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="8uF-06-CfQ" id="TE6-KU-L3K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNp-9P-Bja" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611.5" y="375.5"/>
         </scene>
     </scenes>
 </document>

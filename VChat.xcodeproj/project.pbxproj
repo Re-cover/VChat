@@ -12,6 +12,7 @@
 		832F57091CD786FD000F46AA /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F57051CD786FD000F46AA /* Register.m */; };
 		832F570A1CD786FD000F46AA /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F57071CD786FD000F46AA /* UserService.m */; };
 		832F570D1CD7896B000F46AA /* TokenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F570C1CD7896B000F46AA /* TokenModel.m */; };
+		834FA6D61CE9817A00EFFA92 /* FriendVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834FA6D51CE9817A00EFFA92 /* FriendVerifyViewController.m */; };
 		8372A1481CD798730030385B /* NSString+SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8372A1471CD798730030385B /* NSString+SHA1.m */; };
 		8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385B6C11CD597D20005EFE6 /* ChatViewController.m */; };
 		8385B6C81CD5B1500005EFE6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8385B6C71CD5B1500005EFE6 /* Chat.storyboard */; };
@@ -37,6 +38,7 @@
 		83E7F87A1CD6309B00F94FCA /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F8791CD6309B00F94FCA /* VerifyViewController.m */; };
 		83E7F87D1CD630F300F94FCA /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F87C1CD630F300F94FCA /* PersonalInfoViewController.m */; };
 		83E7F87F1CD6314400F94FCA /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E7F87E1CD6314400F94FCA /* Register.storyboard */; };
+		83E9FB571CE9B293001CE958 /* FriendVerifyMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E9FB561CE9B293001CE958 /* FriendVerifyMessageTableViewCell.m */; };
 		83EA57A21CD47E4700D00B0E /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57A11CD47E4700D00B0E /* ContactsViewController.m */; };
 		83EA57A51CD47F1F00D00B0E /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57A41CD47F1F00D00B0E /* ContactTableViewCell.m */; };
 		83EA57AB1CD47F5000D00B0E /* Contacts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EA57A61CD47F5000D00B0E /* Contacts.xcassets */; };
@@ -84,6 +86,8 @@
 		832F57071CD786FD000F46AA /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserService.m; path = VChat/Network/UserService.m; sourceTree = "<group>"; };
 		832F570B1CD7896B000F46AA /* TokenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TokenModel.h; path = Login/TokenModel.h; sourceTree = "<group>"; };
 		832F570C1CD7896B000F46AA /* TokenModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TokenModel.m; path = Login/TokenModel.m; sourceTree = "<group>"; };
+		834FA6D41CE9817A00EFFA92 /* FriendVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendVerifyViewController.h; path = Contacts/FriendVerifyViewController.h; sourceTree = "<group>"; };
+		834FA6D51CE9817A00EFFA92 /* FriendVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendVerifyViewController.m; path = Contacts/FriendVerifyViewController.m; sourceTree = "<group>"; };
 		8372A1461CD798730030385B /* NSString+SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SHA1.h"; path = "Common/NSString+SHA1.h"; sourceTree = "<group>"; };
 		8372A1471CD798730030385B /* NSString+SHA1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SHA1.m"; path = "Common/NSString+SHA1.m"; sourceTree = "<group>"; };
 		8385B6C01CD597D20005EFE6 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = Chats/ChatViewController.h; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 		83E7F87B1CD630F300F94FCA /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonalInfoViewController.h; path = Register/PersonalInfoViewController.h; sourceTree = "<group>"; };
 		83E7F87C1CD630F300F94FCA /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonalInfoViewController.m; path = Register/PersonalInfoViewController.m; sourceTree = "<group>"; };
 		83E7F87E1CD6314400F94FCA /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Register.storyboard; path = Register/Register.storyboard; sourceTree = "<group>"; };
+		83E9FB551CE9B293001CE958 /* FriendVerifyMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendVerifyMessageTableViewCell.h; path = Contacts/FriendVerifyMessageTableViewCell.h; sourceTree = "<group>"; };
+		83E9FB561CE9B293001CE958 /* FriendVerifyMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendVerifyMessageTableViewCell.m; path = Contacts/FriendVerifyMessageTableViewCell.m; sourceTree = "<group>"; };
 		83EA57A01CD47E4700D00B0E /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsViewController.h; path = Contacts/ContactsViewController.h; sourceTree = "<group>"; };
 		83EA57A11CD47E4700D00B0E /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsViewController.m; path = Contacts/ContactsViewController.m; sourceTree = "<group>"; };
 		83EA57A31CD47F1F00D00B0E /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactTableViewCell.h; path = Contacts/ContactTableViewCell.h; sourceTree = "<group>"; };
@@ -496,6 +502,8 @@
 				83EA57A11CD47E4700D00B0E /* ContactsViewController.m */,
 				83C24F2A1CE6CC3C000BF792 /* FriendInfoViewController.h */,
 				83C24F2B1CE6CC3C000BF792 /* FriendInfoViewController.m */,
+				834FA6D41CE9817A00EFFA92 /* FriendVerifyViewController.h */,
+				834FA6D51CE9817A00EFFA92 /* FriendVerifyViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -511,6 +519,8 @@
 				83C24F341CE716AA000BF792 /* FriendInfoTableViewCell.m */,
 				83C24F2D1CE7152D000BF792 /* FriendTableViewCell.h */,
 				83C24F2E1CE7152D000BF792 /* FriendTableViewCell.m */,
+				83E9FB551CE9B293001CE958 /* FriendVerifyMessageTableViewCell.h */,
+				83E9FB561CE9B293001CE958 /* FriendVerifyMessageTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -798,12 +808,14 @@
 				83EA57BB1CD4F47800D00B0E /* MeTableViewCell.m in Sources */,
 				83EA57B81CD4EE4700D00B0E /* MeInfoTableViewCell.m in Sources */,
 				83FA5F271CA1B2B8008426FF /* MainTabBarController.m in Sources */,
+				834FA6D61CE9817A00EFFA92 /* FriendVerifyViewController.m in Sources */,
 				83C24F2C1CE6CC3C000BF792 /* FriendInfoViewController.m in Sources */,
 				83C24F351CE716AA000BF792 /* FriendInfoTableViewCell.m in Sources */,
 				8372A1481CD798730030385B /* NSString+SHA1.m in Sources */,
 				83B787D01C9FD75400B60AF7 /* main.m in Sources */,
 				83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */,
 				83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */,
+				83E9FB571CE9B293001CE958 /* FriendVerifyMessageTableViewCell.m in Sources */,
 				83EA57A21CD47E4700D00B0E /* ContactsViewController.m in Sources */,
 				83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */,
 				832F57091CD786FD000F46AA /* Register.m in Sources */,

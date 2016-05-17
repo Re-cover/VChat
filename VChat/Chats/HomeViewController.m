@@ -27,7 +27,8 @@
     [self setDisplayConversationTypes:@[@(ConversationType_PRIVATE),
                                         @(ConversationType_DISCUSSION),
                                         @(ConversationType_GROUP),
-                                        @(ConversationType_SYSTEM)]];
+                                        @(ConversationType_SYSTEM),
+                                        @(ConversationType_PUSHSERVICE)]];
     [self setCollectionConversationType:@[@(ConversationType_SYSTEM)]];
 }
 

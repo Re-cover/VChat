@@ -21,11 +21,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIK-7r-KBn">
-                                <rect key="frame" x="20" y="600" width="160" height="40"/>
+                                <rect key="frame" x="15" y="597" width="165" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JLk-cJ-KRR"/>
                                     <constraint firstAttribute="width" constant="160" id="eMq-gY-76T"/>
-                                    <constraint firstAttribute="height" constant="40" id="wcY-ix-4Ju"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                                 <state key="normal" title="登录">
@@ -36,15 +36,20 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eMq-gY-76T"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="FEG-h7-G5x" kind="show" id="oZh-ex-GIK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9y-CQ-wDA">
-                                <rect key="frame" x="195" y="600" width="160" height="40"/>
+                                <rect key="frame" x="195" y="597" width="165" height="40"/>
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.72941176470000002" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="QQy-E8-cnO"/>
+                                    <constraint firstAttribute="height" constant="40" id="Auc-1f-iUb"/>
                                     <constraint firstAttribute="width" constant="160" id="mG9-A8-SNm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
@@ -56,6 +61,11 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mG9-A8-SNm"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="DWq-HV-f0p" kind="show" id="fGz-mr-oEr"/>
                                 </connections>
@@ -74,15 +84,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="A9y-CQ-wDA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="600" id="9Nk-gM-5ia"/>
+                            <constraint firstItem="hIK-7r-KBn" firstAttribute="width" secondItem="A9y-CQ-wDA" secondAttribute="width" id="5Zo-7c-zWl"/>
+                            <constraint firstItem="A9y-CQ-wDA" firstAttribute="leading" secondItem="hIK-7r-KBn" secondAttribute="trailing" constant="15" id="6ZD-Ky-pwP"/>
                             <constraint firstAttribute="trailing" secondItem="BzT-6K-W4p" secondAttribute="trailing" id="Bwl-Zv-Tyc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A9y-CQ-wDA" secondAttribute="bottom" constant="30" id="Dj1-Dm-sW8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hIK-7r-KBn" secondAttribute="bottom" constant="30" id="Dt0-RV-syp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BzT-6K-W4p" secondAttribute="bottom" id="FdY-sx-Y0a"/>
                             <constraint firstItem="yq7-sd-vyh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="GiU-Vd-5F9"/>
-                            <constraint firstItem="hIK-7r-KBn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="600" id="HAc-kj-6DM"/>
-                            <constraint firstItem="hIK-7r-KBn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bdZ-de-8nk"/>
                             <constraint firstItem="BzT-6K-W4p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lsN-Oh-6pg"/>
-                            <constraint firstAttribute="trailing" secondItem="A9y-CQ-wDA" secondAttribute="trailing" constant="20" id="qN9-lP-fWT"/>
+                            <constraint firstAttribute="trailing" secondItem="A9y-CQ-wDA" secondAttribute="trailing" constant="15" id="nJL-uf-g6T"/>
                             <constraint firstAttribute="trailing" secondItem="yq7-sd-vyh" secondAttribute="trailing" constant="20" id="rmW-ZW-ode"/>
+                            <constraint firstItem="hIK-7r-KBn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="szI-hB-F1Z"/>
                             <constraint firstItem="BzT-6K-W4p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vxl-T4-hvQ"/>
                         </constraints>
                     </view>
