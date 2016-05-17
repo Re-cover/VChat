@@ -10,13 +10,18 @@
 #import "FriendTableViewCell.h"
 #import "FriendInfoTableViewCell.h"
 #import "FriendVerifyViewController.h"
+#import "ChatViewController.h"
 #import <YYWebImage.h>
+#import <RongIMKit/RCIM.h>
+#import <AVStatus.h>
 
 @interface FriendInfoViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (weak, nonatomic) IBOutlet UIButton *FriendOperationButtton;
+@property (weak, nonatomic) IBOutlet UIButton *friendOperationButtton;
+
+@property (weak, nonatomic) IBOutlet UIButton *refuseFriendRequestButton;
 
 @end
 
@@ -26,16 +31,21 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    NSLog(@"%@", self.model);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
-    if (self.model.isFriend) {
-        [self.FriendOperationButtton setTitle:@"发消息" forState:UIControlStateNormal];
+    if (self.isReciveFriendRequest) {
+        [self.friendOperationButtton setTitle:@"通过验证" forState:UIControlStateNormal];
+        [self.refuseFriendRequestButton setTitle:@"拒绝" forState:UIControlStateNormal];
+        [self.refuseFriendRequestButton setHidden:NO];
     } else {
-        [self.FriendOperationButtton setTitle:@"添加到通讯录" forState:UIControlStateNormal];
+        if (self.model.isFriend) {
+            [self.friendOperationButtton setTitle:@"发消息" forState:UIControlStateNormal];
+        } else {
+            [self.friendOperationButtton setTitle:@"添加到通讯录" forState:UIControlStateNormal];
+        }
     }
 }
 
@@ -115,10 +125,28 @@
     
 }
 
-- (IBAction)FriendOperation:(id)sender {
-    if (!self.model.isFriend) {
+- (IBAction)friendOperationButtonDidClicked:(id)sender {
+    if (self.isReciveFriendRequest) {
+        [[AVUser currentUser] follow:self.model.objectId andCallback:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"添加好友成功");
+                self.model.isFriend = YES;
+                self.isReciveFriendRequest = NO;
+                self.refuseFriendRequestButton.hidden = YES;
+                [self.friendOperationButtton setTitle:@"发消息" forState:UIControlStateNormal];
+            } else {
+                NSLog(@"添加好友失败 %@",error.description);
+            }
+        }];
+    }else if (!self.model.isFriend) {
         [self performSegueWithIdentifier:@"toFriendVerifyView" sender:nil];
+    } else {
+        [self performSegueWithIdentifier:@"toChatView" sender:nil];
     }
+}
+
+- (IBAction)refuseFriendRequestButtonClicked:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -126,14 +154,12 @@
         FriendVerifyViewController *controller = [[FriendVerifyViewController alloc] init];
         controller = segue.destinationViewController;
         controller.model = self.model;
+    } else if ([segue.identifier isEqualToString:@"toChatView"]) {
+        ChatViewController *vc = segue.destinationViewController;
+        vc.conversationType = self.conversationModel.conversationType;
+        vc.targetId = self.conversationModel.targetId;
+        vc.title = self.conversationModel.conversationTitle;
     }
-}
-
-- (FriendInfoModel *)model {
-    if (!_model) {
-        _model = [[FriendInfoModel alloc] init];
-    }
-    return _model;
 }
 
 @end

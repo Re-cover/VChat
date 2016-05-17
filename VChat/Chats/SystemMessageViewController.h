@@ -10,4 +10,6 @@
 
 @interface SystemMessageViewController : RCConversationListViewController
 
+@property (nonatomic, strong) RCConversationModel *conversationModel;
+
 @end

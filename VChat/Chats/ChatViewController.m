@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if(self.conversationType == ConversationType_PRIVATE) {
+    if(self.conversationType == ConversationType_PRIVATE || self.conversationType == ConversationType_SYSTEM) {
         self.displayUserNameInCell = NO;
     }
 }

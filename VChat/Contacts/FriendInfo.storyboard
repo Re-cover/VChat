@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="XQ4-he-EzZ">
-                                    <rect key="frame" x="0.0" y="201.5" width="375" height="65"/>
+                                    <rect key="frame" x="0.0" y="201.5" width="375" height="120"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ku-h1-1GI">
@@ -37,18 +37,40 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="FriendOperation:" destination="AzP-VV-cLa" eventType="touchUpInside" id="2hM-ze-VnS"/>
+                                                <action selector="friendOperationButtonDidClicked:" destination="AzP-VV-cLa" eventType="touchUpInside" id="dfF-7g-fCz"/>
+                                            </connections>
+                                        </button>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWN-5t-w6j">
+                                            <rect key="frame" x="15" y="65" width="345" height="45"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="refuseFriendRequestButtonClicked:" destination="AzP-VV-cLa" eventType="touchUpInside" id="noZ-U1-flp"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="0Ku-h1-1GI" secondAttribute="bottom" constant="10" id="331-Gk-8hB"/>
-                                        <constraint firstAttribute="trailing" secondItem="0Ku-h1-1GI" secondAttribute="trailing" constant="15" id="4Ft-l7-tS7"/>
-                                        <constraint firstItem="0Ku-h1-1GI" firstAttribute="leading" secondItem="XQ4-he-EzZ" secondAttribute="leading" constant="15" id="Dvd-NO-cGt"/>
-                                        <constraint firstItem="0Ku-h1-1GI" firstAttribute="top" secondItem="XQ4-he-EzZ" secondAttribute="top" constant="10" id="bwB-TJ-V32"/>
-                                        <constraint firstAttribute="height" constant="65" id="szd-JL-t2q"/>
+                                        <constraint firstItem="0Ku-h1-1GI" firstAttribute="top" secondItem="XQ4-he-EzZ" secondAttribute="top" constant="10" id="2o3-f6-5ui"/>
+                                        <constraint firstItem="0Ku-h1-1GI" firstAttribute="leading" secondItem="XQ4-he-EzZ" secondAttribute="leading" constant="15" id="6PK-N5-Q63"/>
+                                        <constraint firstItem="mWN-5t-w6j" firstAttribute="leading" secondItem="XQ4-he-EzZ" secondAttribute="leading" constant="15" id="Dze-qa-arJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="mWN-5t-w6j" secondAttribute="bottom" constant="10" id="JZf-co-6xg"/>
+                                        <constraint firstItem="mWN-5t-w6j" firstAttribute="top" secondItem="0Ku-h1-1GI" secondAttribute="bottom" constant="10" id="O66-k5-5T7"/>
+                                        <constraint firstAttribute="trailing" secondItem="0Ku-h1-1GI" secondAttribute="trailing" constant="15" id="QrT-8x-fxW"/>
+                                        <constraint firstAttribute="trailing" secondItem="mWN-5t-w6j" secondAttribute="trailing" constant="15" id="WCf-uU-iX8"/>
+                                        <constraint firstItem="mWN-5t-w6j" firstAttribute="width" secondItem="0Ku-h1-1GI" secondAttribute="width" id="bHJ-qA-seT"/>
+                                        <constraint firstItem="mWN-5t-w6j" firstAttribute="top" secondItem="0Ku-h1-1GI" secondAttribute="bottom" constant="10" id="fn6-tu-1hm"/>
+                                        <constraint firstItem="mWN-5t-w6j" firstAttribute="height" secondItem="0Ku-h1-1GI" secondAttribute="height" id="qwi-xm-nq7"/>
+                                        <constraint firstAttribute="height" constant="120" id="szd-JL-t2q"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="bHJ-qA-seT"/>
+                                        </mask>
+                                    </variation>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FriendInfoTableViewCell" rowHeight="90" id="Nks-JW-Okc" customClass="FriendInfoTableViewCell">
@@ -153,14 +175,24 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="FriendOperationButtton" destination="0Ku-h1-1GI" id="RFf-Gq-qTK"/>
+                        <outlet property="friendOperationButtton" destination="0Ku-h1-1GI" id="7gk-ba-d5q"/>
+                        <outlet property="refuseFriendRequestButton" destination="mWN-5t-w6j" id="JWt-4i-Mck"/>
                         <outlet property="tableView" destination="Ka6-lB-wNF" id="e7Y-ho-mxi"/>
                         <segue destination="1D0-2b-3VL" kind="show" identifier="toFriendVerifyView" id="0r9-7K-DIZ"/>
+                        <segue destination="IxK-5u-096" kind="show" identifier="toChatView" id="Uoz-aE-yeE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TJ-It-BwM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="147.5" y="375.5"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="Pgx-gB-74Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="IxK-5u-096" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1o-PT-lNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527.5" y="642"/>
         </scene>
         <!--朋友验证-->
         <scene sceneID="BAd-LW-Oyt">
@@ -237,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNp-9P-Bja" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="611.5" y="375.5"/>
+            <point key="canvasLocation" x="684.5" y="204.5"/>
         </scene>
     </scenes>
 </document>
