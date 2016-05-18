@@ -27,6 +27,8 @@ typedef void(^failure)(NSError *error);
 
 @interface UserService : NSObject
 
+@property (nonatomic, strong) NSMutableArray *contactsArray;
+
 @property (weak, nonatomic) id<ConnectIMServerDelegate> connectIMServerDelegate;
 
 + (instancetype)sharedUserService;
@@ -47,5 +49,7 @@ typedef void(^failure)(NSError *error);
                              pushData:(NSString*)pushData
                              complete:(success)successBlock
                               failure:(failure)failureBlock;
+
+- (void)loadContactsArrray;
 
 @end

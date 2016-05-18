@@ -12,6 +12,7 @@
 #import <AVQuery.h>
 #import <SVProgressHUD.h>
 #import "MainTabBarController.h"
+#import "UserService.h"
 
 @interface AppDelegate ()
 
@@ -54,6 +55,7 @@
     if (userToken == nil) {
         mainStoryboard = [UIStoryboard storyboardWithName:@"PreLogin" bundle:nil];
     } else {
+        [[UserService sharedUserService] loadContactsArrray];
         NSLog(@"Token:%@", userToken);
         mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         [[RCIM sharedRCIM] connectWithToken:userToken success:^(NSString *userId) {

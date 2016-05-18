@@ -9,11 +9,13 @@
 #import "ContactsViewController.h"
 #import "ContactTableViewCell.h"
 #import "BlurView.h"
+#import "FriendInfoViewController.h"
+#import "UserService.h"
 #import <AVQuery.h>
 #import <AVUser.h>
 #import <AVStatus.h>
-#import "FriendInfoModel.h"
-#import "FriendInfoViewController.h"
+#import <YYWebImage.h>
+
 
 @interface ContactsViewController ()
 
@@ -21,6 +23,7 @@
 @property (strong, nonatomic) UISearchController *searchController;
 @property (strong, nonatomic) BlurView *blurView;
 @property (strong, nonatomic) FriendInfoModel *model;
+@property (strong, nonatomic) NSMutableArray *contactsArray;
 
 @end
 
@@ -29,6 +32,7 @@
 # pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.contactsArray = [UserService sharedUserService].contactsArray;
     self.ContactsTableView.dataSource = self;
     self.ContactsTableView.delegate = self;
     self.searchController.delegate = self;
@@ -38,24 +42,28 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 # pragma mark - UITableViewDataSource
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 9;
+    return _contactsArray.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"Y";
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = @"ContactTableViewCell";
     ContactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    cell.avatarImageView.image = [UIImage imageNamed:@"default_avatar"];
-    cell.nickNameLabel.text = @"昵称";
+    FriendInfoModel *model = _contactsArray[indexPath.row];
+    [cell.avatarImageView yy_setImageWithURL:[NSURL URLWithString:model.avatarUrl] placeholder:nil];
+    cell.nickNameLabel.text = model.nickName;
     return cell;
 }
 
@@ -64,6 +72,10 @@
 }
 
 # pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.model = _contactsArray[indexPath.row];
+    [self performSegueWithIdentifier:@"toFriendInfoView" sender:nil];
+}
 
 # pragma mark - UISearchControllerDelegate
 

@@ -17,6 +17,7 @@
 @property (nonatomic, copy) NSString *phoneNumber;
 @property (nonatomic, copy) NSString *area;
 @property (nonatomic, copy) NSString *signature;
+@property (nonatomic, copy) NSString *firstCharacter;
 @property (nonatomic, assign) BOOL isFriend;
 
 @end

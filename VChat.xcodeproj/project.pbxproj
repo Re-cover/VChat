@@ -17,6 +17,8 @@
 		8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385B6C11CD597D20005EFE6 /* ChatViewController.m */; };
 		8385B6C81CD5B1500005EFE6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8385B6C71CD5B1500005EFE6 /* Chat.storyboard */; };
 		8385B6CA1CD5B17E0005EFE6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8385B6C91CD5B17E0005EFE6 /* Home.storyboard */; };
+		838FAD281CEC1C7B0041D13D /* NSString+FirstCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FAD271CEC1C7B0041D13D /* NSString+FirstCharacter.m */; };
+		838FAD2B1CEC22A60041D13D /* ContactGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FAD2A1CEC22A60041D13D /* ContactGroupModel.m */; };
 		83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355511CA028E3001C99F2 /* LoginViewController.m */; };
 		83A355541CA02939001C99F2 /* PreLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A355531CA02939001C99F2 /* PreLogin.storyboard */; };
 		83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A355561CA076EA001C99F2 /* PreLoginViewController.m */; };
@@ -94,6 +96,10 @@
 		8385B6C11CD597D20005EFE6 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatViewController.m; path = Chats/ChatViewController.m; sourceTree = "<group>"; };
 		8385B6C71CD5B1500005EFE6 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Chat.storyboard; path = Chats/Chat.storyboard; sourceTree = "<group>"; };
 		8385B6C91CD5B17E0005EFE6 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Chats/Home.storyboard; sourceTree = "<group>"; };
+		838FAD261CEC1C7B0041D13D /* NSString+FirstCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FirstCharacter.h"; path = "Common/NSString+FirstCharacter.h"; sourceTree = "<group>"; };
+		838FAD271CEC1C7B0041D13D /* NSString+FirstCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FirstCharacter.m"; path = "Common/NSString+FirstCharacter.m"; sourceTree = "<group>"; };
+		838FAD291CEC22A60041D13D /* ContactGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactGroupModel.h; path = Contacts/ContactGroupModel.h; sourceTree = "<group>"; };
+		838FAD2A1CEC22A60041D13D /* ContactGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactGroupModel.m; path = Contacts/ContactGroupModel.m; sourceTree = "<group>"; };
 		83A3554F1CA02536001C99F2 /* VChatPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VChatPrefixHeader.pch; sourceTree = "<group>"; };
 		83A355501CA028E3001C99F2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		83A355511CA028E3001C99F2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
@@ -333,6 +339,8 @@
 			children = (
 				83D0D6231CD385D900CB2B26 /* BaseViewController.h */,
 				83D0D6241CD385D900CB2B26 /* BaseViewController.m */,
+				838FAD261CEC1C7B0041D13D /* NSString+FirstCharacter.h */,
+				838FAD271CEC1C7B0041D13D /* NSString+FirstCharacter.m */,
 				8372A1461CD798730030385B /* NSString+SHA1.h */,
 				8372A1471CD798730030385B /* NSString+SHA1.m */,
 				83C24F251CE6406F000BF792 /* BlurView.h */,
@@ -530,6 +538,8 @@
 			children = (
 				83C24F361CE720F8000BF792 /* FriendInfoModel.h */,
 				83C24F371CE720F8000BF792 /* FriendInfoModel.m */,
+				838FAD291CEC22A60041D13D /* ContactGroupModel.h */,
+				838FAD2A1CEC22A60041D13D /* ContactGroupModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -807,6 +817,7 @@
 				83E7F87A1CD6309B00F94FCA /* VerifyViewController.m in Sources */,
 				83EA57BB1CD4F47800D00B0E /* MeTableViewCell.m in Sources */,
 				83EA57B81CD4EE4700D00B0E /* MeInfoTableViewCell.m in Sources */,
+				838FAD281CEC1C7B0041D13D /* NSString+FirstCharacter.m in Sources */,
 				83FA5F271CA1B2B8008426FF /* MainTabBarController.m in Sources */,
 				834FA6D61CE9817A00EFFA92 /* FriendVerifyViewController.m in Sources */,
 				83C24F2C1CE6CC3C000BF792 /* FriendInfoViewController.m in Sources */,
@@ -814,6 +825,7 @@
 				8372A1481CD798730030385B /* NSString+SHA1.m in Sources */,
 				83B787D01C9FD75400B60AF7 /* main.m in Sources */,
 				83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */,
+				838FAD2B1CEC22A60041D13D /* ContactGroupModel.m in Sources */,
 				83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */,
 				83E9FB571CE9B293001CE958 /* FriendVerifyMessageTableViewCell.m in Sources */,
 				83EA57A21CD47E4700D00B0E /* ContactsViewController.m in Sources */,
