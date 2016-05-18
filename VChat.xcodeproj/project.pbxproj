@@ -22,6 +22,9 @@
 		834270931CECC7EF00E6A029 /* NickNameSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834270921CECC7EF00E6A029 /* NickNameSettingViewController.m */; };
 		834270951CECD2A800E6A029 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834270941CECD2A800E6A029 /* QRCode.storyboard */; };
 		834270981CECDB5D00E6A029 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834270971CECDB5D00E6A029 /* QRCodeViewController.m */; };
+		8342709B1CECE1F000E6A029 /* SexSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8342709A1CECE1F000E6A029 /* SexSettingViewController.m */; };
+		8342709E1CECE35900E6A029 /* SexTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8342709D1CECE35900E6A029 /* SexTableViewCell.m */; };
+		834270A01CECE38F00E6A029 /* SexSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8342709F1CECE38F00E6A029 /* SexSetting.storyboard */; };
 		834FA6D61CE9817A00EFFA92 /* FriendVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834FA6D51CE9817A00EFFA92 /* FriendVerifyViewController.m */; };
 		8372A1481CD798730030385B /* NSString+SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8372A1471CD798730030385B /* NSString+SHA1.m */; };
 		8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385B6C11CD597D20005EFE6 /* ChatViewController.m */; };
@@ -114,6 +117,11 @@
 		834270941CECD2A800E6A029 /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QRCode.storyboard; path = Me/QRCode.storyboard; sourceTree = "<group>"; };
 		834270961CECDB5D00E6A029 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QRCodeViewController.h; path = Me/QRCodeViewController.h; sourceTree = "<group>"; };
 		834270971CECDB5D00E6A029 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QRCodeViewController.m; path = Me/QRCodeViewController.m; sourceTree = "<group>"; };
+		834270991CECE1F000E6A029 /* SexSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SexSettingViewController.h; path = Me/SexSettingViewController.h; sourceTree = "<group>"; };
+		8342709A1CECE1F000E6A029 /* SexSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SexSettingViewController.m; path = Me/SexSettingViewController.m; sourceTree = "<group>"; };
+		8342709C1CECE35900E6A029 /* SexTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SexTableViewCell.h; path = Me/SexTableViewCell.h; sourceTree = "<group>"; };
+		8342709D1CECE35900E6A029 /* SexTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SexTableViewCell.m; path = Me/SexTableViewCell.m; sourceTree = "<group>"; };
+		8342709F1CECE38F00E6A029 /* SexSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SexSetting.storyboard; path = Me/SexSetting.storyboard; sourceTree = "<group>"; };
 		834FA6D41CE9817A00EFFA92 /* FriendVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendVerifyViewController.h; path = Contacts/FriendVerifyViewController.h; sourceTree = "<group>"; };
 		834FA6D51CE9817A00EFFA92 /* FriendVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendVerifyViewController.m; path = Contacts/FriendVerifyViewController.m; sourceTree = "<group>"; };
 		8372A1461CD798730030385B /* NSString+SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SHA1.h"; path = "Common/NSString+SHA1.h"; sourceTree = "<group>"; };
@@ -609,6 +617,8 @@
 				834270921CECC7EF00E6A029 /* NickNameSettingViewController.m */,
 				834270961CECDB5D00E6A029 /* QRCodeViewController.h */,
 				834270971CECDB5D00E6A029 /* QRCodeViewController.m */,
+				834270991CECE1F000E6A029 /* SexSettingViewController.h */,
+				8342709A1CECE1F000E6A029 /* SexSettingViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -621,6 +631,7 @@
 				8342708D1CECB35B00E6A029 /* AvatarSetting.storyboard */,
 				8342708F1CECC7CE00E6A029 /* NickNameSetting.storyboard */,
 				834270941CECD2A800E6A029 /* QRCode.storyboard */,
+				8342709F1CECE38F00E6A029 /* SexSetting.storyboard */,
 				83EA57B61CD4EE4700D00B0E /* MeInfoTableViewCell.h */,
 				83EA57B71CD4EE4700D00B0E /* MeInfoTableViewCell.m */,
 				83EA57B91CD4F47800D00B0E /* MeTableViewCell.h */,
@@ -629,6 +640,8 @@
 				8342707E1CEC9BDB00E6A029 /* AvatarTableViewCell.m */,
 				834270801CEC9C1A00E6A029 /* InfoTableViewCell.h */,
 				834270811CEC9C1A00E6A029 /* InfoTableViewCell.m */,
+				8342709C1CECE35900E6A029 /* SexTableViewCell.h */,
+				8342709D1CECE35900E6A029 /* SexTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -778,6 +791,7 @@
 				834270871CEC9E6A00E6A029 /* MeInfo.storyboard in Resources */,
 				83FA5F291CA1B460008426FF /* Login.storyboard in Resources */,
 				83E7F87F1CD6314400F94FCA /* Register.storyboard in Resources */,
+				834270A01CECE38F00E6A029 /* SexSetting.storyboard in Resources */,
 				83C24F291CE6CC0E000BF792 /* FriendInfo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -861,6 +875,7 @@
 				83EA57A51CD47F1F00D00B0E /* ContactTableViewCell.m in Sources */,
 				834270981CECDB5D00E6A029 /* QRCodeViewController.m in Sources */,
 				83EA57B51CD483B400D00B0E /* DiscoverViewController.m in Sources */,
+				8342709B1CECE1F000E6A029 /* SexSettingViewController.m in Sources */,
 				83E7F87A1CD6309B00F94FCA /* VerifyViewController.m in Sources */,
 				83EA57BB1CD4F47800D00B0E /* MeTableViewCell.m in Sources */,
 				834270931CECC7EF00E6A029 /* NickNameSettingViewController.m in Sources */,
@@ -872,6 +887,7 @@
 				83C24F2C1CE6CC3C000BF792 /* FriendInfoViewController.m in Sources */,
 				83C24F351CE716AA000BF792 /* FriendInfoTableViewCell.m in Sources */,
 				8372A1481CD798730030385B /* NSString+SHA1.m in Sources */,
+				8342709E1CECE35900E6A029 /* SexTableViewCell.m in Sources */,
 				83B787D01C9FD75400B60AF7 /* main.m in Sources */,
 				83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */,
 				838FAD2B1CEC22A60041D13D /* ContactGroupModel.m in Sources */,

@@ -137,6 +137,17 @@
                 default:
                     break;
             }
+            break;
+        }
+        case 1: {
+            switch (indexPath.row) {
+                case 0:
+                    [self performSegueWithIdentifier:@"toSexSettingView" sender:nil];
+                    break;
+                    
+                default:
+                    break;
+            }
         }
         default:
             break;

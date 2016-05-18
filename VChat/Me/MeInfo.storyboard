@@ -119,6 +119,7 @@
                         <segue destination="OJh-8x-bVj" kind="show" identifier="toAvatarSettingView" id="Mh8-98-hf0"/>
                         <segue destination="UkZ-Xr-Jmv" kind="show" identifier="toNickNameSettingView" id="PmZ-T8-fWw"/>
                         <segue destination="ugY-98-9fr" kind="show" identifier="toQRCodeView" id="Opg-mH-B3G"/>
+                        <segue destination="Sf1-MZ-4Ke" kind="show" identifier="toSexSettingView" id="gkt-tx-UFL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kuo-tG-iMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -131,7 +132,7 @@
                 <viewControllerPlaceholder storyboardName="AvatarSetting" id="OJh-8x-bVj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ai3-by-K1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797" y="648"/>
+            <point key="canvasLocation" x="1836" y="643"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="EJF-kY-oJD">
@@ -166,7 +167,7 @@
                 <viewControllerPlaceholder storyboardName="NickNameSetting" id="UkZ-Xr-Jmv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ck4-VG-b66" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832" y="752"/>
+            <point key="canvasLocation" x="1847" y="745"/>
         </scene>
         <!--QRCode-->
         <scene sceneID="0QR-8K-815">
@@ -174,7 +175,15 @@
                 <viewControllerPlaceholder storyboardName="QRCode" id="ugY-98-9fr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXL-rF-LBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="914"/>
+            <point key="canvasLocation" x="1819" y="853"/>
+        </scene>
+        <!--SexSetting-->
+        <scene sceneID="gM9-Aa-AQv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SexSetting" id="Sf1-MZ-4Ke" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJH-L2-Le7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1827.5" y="966"/>
         </scene>
     </scenes>
 </document>
