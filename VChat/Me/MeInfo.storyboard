@@ -117,6 +117,7 @@
                     <connections>
                         <outlet property="tableView" destination="AVg-Tp-2q0" id="GZ7-di-Kxp"/>
                         <segue destination="OJh-8x-bVj" kind="show" identifier="toAvatarSettingView" id="Mh8-98-hf0"/>
+                        <segue destination="UkZ-Xr-Jmv" kind="show" identifier="toNickNameSettingView" id="PmZ-T8-fWw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kuo-tG-iMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -129,7 +130,42 @@
                 <viewControllerPlaceholder storyboardName="AvatarSetting" id="OJh-8x-bVj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ai3-by-K1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1788" y="914"/>
+            <point key="canvasLocation" x="1797" y="648"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="EJF-kY-oJD">
+            <objects>
+                <tableViewController id="BHW-R8-Lac" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TkE-mL-lfh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="M0e-dd-GGM">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M0e-dd-GGM" id="OdZ-0I-cQk">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BHW-R8-Lac" id="2gl-An-UzP"/>
+                            <outlet property="delegate" destination="BHW-R8-Lac" id="hhP-gp-SSZ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x0b-ch-32p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--NickNameSetting-->
+        <scene sceneID="spL-BQ-CPv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NickNameSetting" id="UkZ-Xr-Jmv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ck4-VG-b66" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1832" y="752"/>
         </scene>
     </scenes>
 </document>

@@ -7,12 +7,15 @@
 //
 
 #import "AvatarSettingViewController.h"
+#import <SVProgressHUD.h>
 #import <AVUser.h>
 #import <AVFile.h>
 #import <YYWebImage.h>
-#import <SVProgressHUD.h>
+
 
 @interface AvatarSettingViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 
 @property (strong, nonatomic) UIImagePickerController *picker;
 
@@ -25,6 +28,13 @@
     [self.avatarImageView yy_setImageWithURL:[NSURL URLWithString:[[AVUser currentUser] objectForKey:@"avatarURL"]] placeholder:nil];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if ([SVProgressHUD isVisible]) {
+        [SVProgressHUD dismiss];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -32,7 +42,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
-    [SVProgressHUD showInfoWithStatus:@"头像上传中..."];
+    [SVProgressHUD showWithStatus:@"头像上传中..."];
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     [self.avatarImageView setImage:image];
     NSData *imageData = [self imageWithImage:self.avatarImageView.image scaledToSize:CGSizeMake(360, 360)];

@@ -125,13 +125,13 @@
                 case 0:
                     [self performSegueWithIdentifier:@"toAvatarSettingView" sender:nil];
                     break;
+                case 1:
+                    [self performSegueWithIdentifier:@"toNickNameSettingView" sender:nil];
+                    break;
                 default:
                     break;
             }
         }
-            
-            break;
-            
         default:
             break;
     }
