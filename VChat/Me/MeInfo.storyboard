@@ -121,7 +121,7 @@
                         <segue destination="ugY-98-9fr" kind="show" identifier="toQRCodeView" id="Opg-mH-B3G"/>
                         <segue destination="Sf1-MZ-4Ke" kind="show" identifier="toSexSettingView" id="gkt-tx-UFL"/>
                         <segue destination="EId-PG-S6O" kind="show" identifier="toAreaSettingView" id="NOZ-dG-m90"/>
-                        <segue destination="DIA-cV-t8j" kind="show" id="g2A-kG-rTQ"/>
+                        <segue destination="DIA-cV-t8j" kind="show" identifier="toSignatureSettingView" id="g2A-kG-rTQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kuo-tG-iMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,7 +185,7 @@
                 <viewControllerPlaceholder storyboardName="SexSetting" id="Sf1-MZ-4Ke" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJH-L2-Le7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1827.5" y="966"/>
+            <point key="canvasLocation" x="1827.5" y="958"/>
         </scene>
         <!--AreaSetting-->
         <scene sceneID="r2T-dI-CVU">
@@ -193,7 +193,7 @@
                 <viewControllerPlaceholder storyboardName="AreaSetting" id="EId-PG-S6O" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NG3-LG-I49" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830.5" y="1080"/>
+            <point key="canvasLocation" x="1830.5" y="1061"/>
         </scene>
         <!--SignatureSetting-->
         <scene sceneID="7bV-Ia-MTc">
@@ -201,7 +201,7 @@
                 <viewControllerPlaceholder storyboardName="SignatureSetting" id="DIA-cV-t8j" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Hl-k2-cE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976.5" y="1340.5"/>
+            <point key="canvasLocation" x="1845.5" y="1159"/>
         </scene>
     </scenes>
 </document>

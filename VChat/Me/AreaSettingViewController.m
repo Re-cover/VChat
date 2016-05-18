@@ -22,11 +22,6 @@
     self.areaTextField.text = [[AVUser currentUser] objectForKey:@"area"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     if ([SVProgressHUD isVisible]) {

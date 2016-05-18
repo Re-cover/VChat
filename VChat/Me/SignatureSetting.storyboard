@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ahw-T9-tiS">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--个性签名-->
+        <scene sceneID="iWV-44-6eo">
+            <objects>
+                <viewController id="Ahw-T9-tiS" customClass="SignatureSettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xbf-aV-PxL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xhi-lu-Jfl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LNC-BC-KxB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYJ-pH-wQj">
+                                <rect key="frame" x="0.0" y="74" width="375" height="90"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K5E-Ql-hIm">
+                                        <rect key="frame" x="15" y="10" width="345" height="70"/>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="signatureTextFieldDidChanged:" destination="Ahw-T9-tiS" eventType="editingChanged" id="aQ5-u3-kwD"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woM-L6-Rq4">
+                                        <rect key="frame" x="316.5" y="61" width="43" height="24"/>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="woM-L6-Rq4" secondAttribute="trailing" constant="15" id="Mx1-DR-R0z"/>
+                                    <constraint firstAttribute="height" constant="90" id="e4o-RD-FxY"/>
+                                    <constraint firstAttribute="bottom" secondItem="woM-L6-Rq4" secondAttribute="bottom" constant="5" id="eMW-Bj-Mgi"/>
+                                    <constraint firstItem="K5E-Ql-hIm" firstAttribute="top" secondItem="CYJ-pH-wQj" secondAttribute="top" constant="10" id="hWd-m9-dZ2"/>
+                                    <constraint firstAttribute="bottom" secondItem="K5E-Ql-hIm" secondAttribute="bottom" constant="10" id="ja2-10-Aip"/>
+                                    <constraint firstItem="K5E-Ql-hIm" firstAttribute="leading" secondItem="CYJ-pH-wQj" secondAttribute="leading" constant="15" id="lix-1Y-LFF"/>
+                                    <constraint firstAttribute="trailing" secondItem="K5E-Ql-hIm" secondAttribute="trailing" constant="15" id="lrY-Yi-YBt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CYJ-pH-wQj" secondAttribute="trailing" id="EmI-gZ-2Ua"/>
+                            <constraint firstItem="CYJ-pH-wQj" firstAttribute="top" secondItem="xbf-aV-PxL" secondAttribute="bottom" constant="10" id="STA-rH-i00"/>
+                            <constraint firstItem="CYJ-pH-wQj" firstAttribute="leading" secondItem="LNC-BC-KxB" secondAttribute="leading" id="mnx-55-1Hl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="个性签名" id="hpJ-Ea-rli">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="P63-ju-xAT">
+                            <color key="tintColor" red="0.1450980392" green="0.69019607839999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveButtonDidClicked:" destination="Ahw-T9-tiS" id="Mkd-ii-peZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="woM-L6-Rq4" id="G1x-q6-Xif"/>
+                        <outlet property="signatureTextField" destination="K5E-Ql-hIm" id="g0F-rd-qd0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bq1-aL-1l7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815.5" y="1331.5"/>
+        </scene>
+    </scenes>
+</document>

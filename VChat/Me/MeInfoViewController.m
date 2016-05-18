@@ -147,6 +147,9 @@
                 case 1:
                     [self performSegueWithIdentifier:@"toAreaSettingView" sender:nil];
                     break;
+                case 2:
+                    [self performSegueWithIdentifier:@"toSignatureSettingView" sender:nil];
+                    break;
                 default:
                     break;
             }
