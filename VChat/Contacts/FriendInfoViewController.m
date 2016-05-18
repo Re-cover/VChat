@@ -135,6 +135,24 @@
                 weak_self.isReciveFriendRequest = NO;
                 weak_self.refuseFriendRequestButton.hidden = YES;
                 [weak_self.friendOperationButtton setTitle:@"发消息" forState:UIControlStateNormal];
+                RCTextMessage *message = [RCTextMessage messageWithContent:@"我们已经是好友了，赶快开始聊天吧"];
+                [[RCIM sharedRCIM] sendMessage:ConversationType_PRIVATE
+                                      targetId:weak_self.model.objectId
+                                       content:message
+                                   pushContent:@""
+                                      pushData:@""
+                                       success:^(long messageId) {
+                                           NSLog(@"信息发送成功 @%ld", messageId);
+                                       } error:^(RCErrorCode nErrorCode, long messageId) {
+                                           NSLog(@"信息发送失败 %ld，错误ID %ld", messageId, nErrorCode);
+                                       }];
+//                    [[RCIM sharedRCIM] sendMessage:ConversationType_PRIVATE
+//                                          targetId:weak_self.model.objectId
+//                                           content:message
+//                                       pushContent:nil
+//                                          pushData:nil
+//                                           success:nil
+//                                             error:nil];
             } else {
                 NSLog(@"添加好友失败 %@",error.description);
             }
