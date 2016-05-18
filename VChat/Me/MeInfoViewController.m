@@ -81,6 +81,7 @@
                 case 2:
                     cell.titleLabel.text = @"微信号";
                     cell.contentLabel.text = [AVUser currentUser].mobilePhoneNumber;
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     break;
                 case 3:
                     cell.titleLabel.text = @"我的二维码";
@@ -127,6 +128,11 @@
                     break;
                 case 1:
                     [self performSegueWithIdentifier:@"toNickNameSettingView" sender:nil];
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    [self performSegueWithIdentifier:@"toQRCodeView" sender:nil];
                     break;
                 default:
                     break;

@@ -118,6 +118,7 @@
                         <outlet property="tableView" destination="AVg-Tp-2q0" id="GZ7-di-Kxp"/>
                         <segue destination="OJh-8x-bVj" kind="show" identifier="toAvatarSettingView" id="Mh8-98-hf0"/>
                         <segue destination="UkZ-Xr-Jmv" kind="show" identifier="toNickNameSettingView" id="PmZ-T8-fWw"/>
+                        <segue destination="ugY-98-9fr" kind="show" identifier="toQRCodeView" id="Opg-mH-B3G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kuo-tG-iMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,6 +167,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ck4-VG-b66" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1832" y="752"/>
+        </scene>
+        <!--QRCode-->
+        <scene sceneID="0QR-8K-815">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QRCode" id="ugY-98-9fr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXL-rF-LBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="914"/>
         </scene>
     </scenes>
 </document>
