@@ -144,7 +144,9 @@
                 case 0:
                     [self performSegueWithIdentifier:@"toSexSettingView" sender:nil];
                     break;
-                    
+                case 1:
+                    [self performSegueWithIdentifier:@"toAreaSettingView" sender:nil];
+                    break;
                 default:
                     break;
             }

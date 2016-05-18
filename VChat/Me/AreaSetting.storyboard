@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O3a-6K-0vs">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--地区-->
+        <scene sceneID="JKV-TK-ejY">
+            <objects>
+                <viewController id="O3a-6K-0vs" customClass="AreaSettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PGm-oN-8Fq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qVv-hB-xmJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mwM-Ao-63P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HwI-Nk-Sso">
+                                <rect key="frame" x="0.0" y="74" width="375" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XL6-pf-Yd6">
+                                        <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XL6-pf-Yd6" secondAttribute="trailing" constant="15" id="UYC-h1-WHc"/>
+                                    <constraint firstItem="XL6-pf-Yd6" firstAttribute="top" secondItem="HwI-Nk-Sso" secondAttribute="top" id="na2-5A-oog"/>
+                                    <constraint firstAttribute="height" constant="44" id="pvB-3W-pUI"/>
+                                    <constraint firstAttribute="bottom" secondItem="XL6-pf-Yd6" secondAttribute="bottom" id="rz9-y9-MaV"/>
+                                    <constraint firstItem="XL6-pf-Yd6" firstAttribute="leading" secondItem="HwI-Nk-Sso" secondAttribute="leading" constant="15" id="xYe-n8-GXJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HwI-Nk-Sso" secondAttribute="trailing" id="5Yu-jR-f5A"/>
+                            <constraint firstItem="HwI-Nk-Sso" firstAttribute="leading" secondItem="mwM-Ao-63P" secondAttribute="leading" id="h6O-JN-wLN"/>
+                            <constraint firstItem="HwI-Nk-Sso" firstAttribute="top" secondItem="PGm-oN-8Fq" secondAttribute="bottom" constant="10" id="khY-Iq-fWm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="地区" id="kWX-KO-xVQ">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="QEq-6I-ly1">
+                            <color key="tintColor" red="0.1450980392" green="0.69019607839999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveButtonDidClicked:" destination="O3a-6K-0vs" id="tJ7-zA-39C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="areaTextField" destination="XL6-pf-Yd6" id="jkm-ek-f6r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4v-Sj-FNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821.5" y="1386.5"/>
+        </scene>
+    </scenes>
+</document>
