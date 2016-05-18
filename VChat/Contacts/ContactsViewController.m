@@ -84,6 +84,7 @@
         [self presentViewController:alert animated:YES completion:nil];
         return;
     }
+    @weakify(self);
     AVQuery *query = [AVQuery queryWithClassName:@"_User"];
     [query whereKey:@"mobilePhoneNumber" equalTo: searchBar.text];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -100,14 +101,15 @@
                 if (error == nil) {
                     AVObject *followee;
                     for(followee in objects){
-                        if(followee.objectId == friendObject.objectId)
-                            self.model.isFriend = YES;
+                        if([followee.objectId isEqualToString:friendObject.objectId]) {
+                            weak_self.model.isFriend = YES;
+                        }
                     }
+                    [self performSegueWithIdentifier:@"toFriendInfoView" sender:nil];
                 } else {
                     NSLog(@"%@", error.description);
                 }
             }];
-            [self performSegueWithIdentifier:@"toFriendInfoView" sender:nil];
         }
     }];
 }

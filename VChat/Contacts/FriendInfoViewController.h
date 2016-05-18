@@ -14,8 +14,6 @@
 
 @property (nonatomic, strong) FriendInfoModel *model;
 
-@property (nonatomic, strong) RCConversationModel *conversationModel;
-
 @property (nonatomic, assign) BOOL isReciveFriendRequest;
 
 @end

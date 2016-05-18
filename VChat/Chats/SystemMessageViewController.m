@@ -36,14 +36,24 @@
 - (void)onSelectedTableRow:(RCConversationModelType)conversationModelType
          conversationModel:(RCConversationModel *)model
                atIndexPath:(NSIndexPath *)indexPath {
-    self.conversationModel = model;
-    NSLog(@"%@", model.targetId);
+    @weakify(self);
     AVQuery *query = [AVQuery queryWithClassName:@"_User"];
     [query getObjectInBackgroundWithId:model.targetId
                                  block:^(AVObject *object, NSError *error) {
                                      if (error == nil) {
-                                         [self setModelWith: object];
-                                         [self performSegueWithIdentifier:@"toFriendInfoView" sender:nil];
+                                         [weak_self setModelWith: object];
+                                         [[AVUser currentUser] getFollowees:^(NSArray *objects, NSError *error) {
+                                             if (error == nil) {
+                                                 AVObject *followee;
+                                                 for(followee in objects){
+                                                     if([followee.objectId isEqualToString:_model.objectId])
+                                                         _model.isFriend = YES;
+                                                 }
+                                                 [weak_self performSegueWithIdentifier:@"toFriendInfoView" sender:nil];
+                                             } else {
+                                                 NSLog(@"%@", error.description);
+                                             }
+                                         }];
                                      }
                                  }];
     
@@ -52,7 +62,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     FriendInfoViewController *controller = segue.destinationViewController;
     controller.model = self.model;
-    controller.conversationModel = self.conversationModel;
     controller.isReciveFriendRequest = !self.model.isFriend;
 }
 
@@ -68,17 +77,6 @@
     _model.area =[object valueForKey:@"area"];
     _model.signature = [object valueForKey:@"signature"];
     _model.isFriend = NO;
-//    [[AVUser currentUser] getFollowees:^(NSArray *objects, NSError *error) {
-//        if (error == nil) {
-//            AVObject *followee;
-//            for(followee in objects){
-//                if(followee.objectId == _model.objectId)
-//                    _model.isFriend = YES;
-//            }
-//        } else {
-//            NSLog(@"%@", error.description);
-//        }
-//    }];
 }
 
 @end

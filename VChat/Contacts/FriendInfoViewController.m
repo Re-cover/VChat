@@ -126,14 +126,15 @@
 }
 
 - (IBAction)friendOperationButtonDidClicked:(id)sender {
+    @weakify(self);
     if (self.isReciveFriendRequest) {
         [[AVUser currentUser] follow:self.model.objectId andCallback:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
                 NSLog(@"添加好友成功");
-                self.model.isFriend = YES;
-                self.isReciveFriendRequest = NO;
-                self.refuseFriendRequestButton.hidden = YES;
-                [self.friendOperationButtton setTitle:@"发消息" forState:UIControlStateNormal];
+                weak_self.model.isFriend = YES;
+                weak_self.isReciveFriendRequest = NO;
+                weak_self.refuseFriendRequestButton.hidden = YES;
+                [weak_self.friendOperationButtton setTitle:@"发消息" forState:UIControlStateNormal];
             } else {
                 NSLog(@"添加好友失败 %@",error.description);
             }
@@ -156,9 +157,9 @@
         controller.model = self.model;
     } else if ([segue.identifier isEqualToString:@"toChatView"]) {
         ChatViewController *vc = segue.destinationViewController;
-        vc.conversationType = self.conversationModel.conversationType;
-        vc.targetId = self.conversationModel.targetId;
-        vc.title = self.conversationModel.conversationTitle;
+        vc.conversationType = ConversationType_PRIVATE;
+        vc.targetId = self.model.objectId;
+        vc.title = self.model.nickName;
     }
 }
 
