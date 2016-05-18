@@ -26,7 +26,11 @@
     [super viewDidLoad];
     self.meTableView.dataSource = self;
     self.meTableView.delegate = self;
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.meTableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

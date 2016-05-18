@@ -116,11 +116,20 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="AVg-Tp-2q0" id="GZ7-di-Kxp"/>
+                        <segue destination="OJh-8x-bVj" kind="show" identifier="toAvatarSettingView" id="Mh8-98-hf0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kuo-tG-iMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1430.5" y="913.5"/>
+        </scene>
+        <!--AvatarSetting-->
+        <scene sceneID="Rhh-Rk-HPx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AvatarSetting" id="OJh-8x-bVj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ai3-by-K1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="914"/>
         </scene>
     </scenes>
 </document>

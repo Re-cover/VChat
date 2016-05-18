@@ -26,6 +26,11 @@
     self.tableView.delegate = self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
@@ -113,10 +118,23 @@
     }
 }
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0:{
+            switch (indexPath.row) {
+                case 0:
+                    [self performSegueWithIdentifier:@"toAvatarSettingView" sender:nil];
+                    break;
+                default:
+                    break;
+            }
+        }
+            
+            break;
+            
+        default:
+            break;
+    }
 }
 
 

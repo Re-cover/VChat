@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6vc-KU-jAm">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--个人头像-->
+        <scene sceneID="Qcp-mX-ffW">
+            <objects>
+                <viewController id="6vc-KU-jAm" customClass="AvatarSettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OYG-mo-TCi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vpf-IF-Lhb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I3B-ck-tsd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gn9-sg-yu1">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="9yP-Dh-2RK"/>
+                                    <constraint firstAttribute="width" secondItem="Gn9-sg-yu1" secondAttribute="height" multiplier="1:1" id="sOH-Fy-hjh"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9yP-Dh-2RK"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gn9-sg-yu1" firstAttribute="leading" secondItem="I3B-ck-tsd" secondAttribute="leading" id="6OO-8x-ODK"/>
+                            <constraint firstAttribute="trailing" secondItem="Gn9-sg-yu1" secondAttribute="trailing" id="fsq-oH-9xE"/>
+                            <constraint firstItem="Gn9-sg-yu1" firstAttribute="centerY" secondItem="I3B-ck-tsd" secondAttribute="centerY" id="kxH-6v-4xh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人头像" id="uug-Kc-JXn">
+                        <barButtonItem key="rightBarButtonItem" image="barbuttonicon_more" id="9M4-6S-eYk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="modifyAvatarButtonDidClicked:" destination="6vc-KU-jAm" id="ECS-uL-Tgo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="Gn9-sg-yu1" id="bea-gr-Iex"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3cy-Od-ICS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698.5" y="898.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="barbuttonicon_more" width="30" height="30"/>
+    </resources>
+</document>
