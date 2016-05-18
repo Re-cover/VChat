@@ -9,6 +9,7 @@
 #import "QRCodeViewController.h"
 #import <AVUser.h>
 #import <YYWebImage.h>
+#import <CoreImage/CoreImage.h>
 
 @interface QRCodeViewController ()
 
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *areaLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *QRCodeImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *centerAvatarImageView;
+@property (strong, nonatomic) UIImage *QRCodeImage;
 
 @end
 
@@ -28,12 +30,25 @@
     [self.centerAvatarImageView yy_setImageWithURL:[NSURL URLWithString:[[AVUser currentUser] objectForKey:@"avatarURL"]] placeholder:nil];
     self.nickNameLabel.text = [[AVUser currentUser] objectForKey:@"nickName"];
     self.areaLabel.text = [[AVUser currentUser] objectForKey:@"area"];
-    [self.QRCodeImageView setBackgroundColor:[UIColor blackColor]];
+    self.QRCodeImageView.image = self.QRCodeImage;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIImage *)QRCodeImage {
+    if (!_QRCodeImage) {
+        CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+        [filter setDefaults];
+        NSString *objectId = [AVUser currentUser].objectId;
+        NSData *data = [objectId dataUsingEncoding:NSUTF8StringEncoding];
+        [filter setValue:data forKey:@"inputMessage"];
+        CIImage *outPutImage = [filter outputImage];
+        _QRCodeImage = [UIImage imageWithCIImage:outPutImage];
+    }
+    return _QRCodeImage;
 }
 
 /*
