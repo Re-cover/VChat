@@ -12,6 +12,10 @@
 		832F57091CD786FD000F46AA /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F57051CD786FD000F46AA /* Register.m */; };
 		832F570A1CD786FD000F46AA /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F57071CD786FD000F46AA /* UserService.m */; };
 		832F570D1CD7896B000F46AA /* TokenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F570C1CD7896B000F46AA /* TokenModel.m */; };
+		8342707F1CEC9BDB00E6A029 /* AvatarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8342707E1CEC9BDB00E6A029 /* AvatarTableViewCell.m */; };
+		834270821CEC9C1A00E6A029 /* InfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 834270811CEC9C1A00E6A029 /* InfoTableViewCell.m */; };
+		834270851CEC9E4000E6A029 /* MeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834270841CEC9E4000E6A029 /* MeInfoViewController.m */; };
+		834270871CEC9E6A00E6A029 /* MeInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834270861CEC9E6A00E6A029 /* MeInfo.storyboard */; };
 		834FA6D61CE9817A00EFFA92 /* FriendVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834FA6D51CE9817A00EFFA92 /* FriendVerifyViewController.m */; };
 		8372A1481CD798730030385B /* NSString+SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8372A1471CD798730030385B /* NSString+SHA1.m */; };
 		8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385B6C11CD597D20005EFE6 /* ChatViewController.m */; };
@@ -88,6 +92,13 @@
 		832F57071CD786FD000F46AA /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserService.m; path = VChat/Network/UserService.m; sourceTree = "<group>"; };
 		832F570B1CD7896B000F46AA /* TokenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TokenModel.h; path = Login/TokenModel.h; sourceTree = "<group>"; };
 		832F570C1CD7896B000F46AA /* TokenModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TokenModel.m; path = Login/TokenModel.m; sourceTree = "<group>"; };
+		8342707D1CEC9BDB00E6A029 /* AvatarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvatarTableViewCell.h; path = Me/AvatarTableViewCell.h; sourceTree = "<group>"; };
+		8342707E1CEC9BDB00E6A029 /* AvatarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvatarTableViewCell.m; path = Me/AvatarTableViewCell.m; sourceTree = "<group>"; };
+		834270801CEC9C1A00E6A029 /* InfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoTableViewCell.h; path = Me/InfoTableViewCell.h; sourceTree = "<group>"; };
+		834270811CEC9C1A00E6A029 /* InfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoTableViewCell.m; path = Me/InfoTableViewCell.m; sourceTree = "<group>"; };
+		834270831CEC9E4000E6A029 /* MeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeInfoViewController.h; path = Me/MeInfoViewController.h; sourceTree = "<group>"; };
+		834270841CEC9E4000E6A029 /* MeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeInfoViewController.m; path = Me/MeInfoViewController.m; sourceTree = "<group>"; };
+		834270861CEC9E6A00E6A029 /* MeInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MeInfo.storyboard; path = Me/MeInfo.storyboard; sourceTree = "<group>"; };
 		834FA6D41CE9817A00EFFA92 /* FriendVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendVerifyViewController.h; path = Contacts/FriendVerifyViewController.h; sourceTree = "<group>"; };
 		834FA6D51CE9817A00EFFA92 /* FriendVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendVerifyViewController.m; path = Contacts/FriendVerifyViewController.m; sourceTree = "<group>"; };
 		8372A1461CD798730030385B /* NSString+SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SHA1.h"; path = "Common/NSString+SHA1.h"; sourceTree = "<group>"; };
@@ -575,6 +586,8 @@
 			children = (
 				83EA57BF1CD4F61200D00B0E /* MeViewController.h */,
 				83EA57C01CD4F61200D00B0E /* MeViewController.m */,
+				834270831CEC9E4000E6A029 /* MeInfoViewController.h */,
+				834270841CEC9E4000E6A029 /* MeInfoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -583,10 +596,15 @@
 			isa = PBXGroup;
 			children = (
 				83FA5F611CA25F90008426FF /* Me.storyboard */,
+				834270861CEC9E6A00E6A029 /* MeInfo.storyboard */,
 				83EA57B61CD4EE4700D00B0E /* MeInfoTableViewCell.h */,
 				83EA57B71CD4EE4700D00B0E /* MeInfoTableViewCell.m */,
 				83EA57B91CD4F47800D00B0E /* MeTableViewCell.h */,
 				83EA57BA1CD4F47800D00B0E /* MeTableViewCell.m */,
+				8342707D1CEC9BDB00E6A029 /* AvatarTableViewCell.h */,
+				8342707E1CEC9BDB00E6A029 /* AvatarTableViewCell.m */,
+				834270801CEC9C1A00E6A029 /* InfoTableViewCell.h */,
+				834270811CEC9C1A00E6A029 /* InfoTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -730,6 +748,7 @@
 				83C24F3C1CE7894E000BF792 /* SystemMessage.storyboard in Resources */,
 				83EA57AE1CD47F5000D00B0E /* Images.xcassets in Resources */,
 				83FA5F5E1CA25F5C008426FF /* Contacts.storyboard in Resources */,
+				834270871CEC9E6A00E6A029 /* MeInfo.storyboard in Resources */,
 				83FA5F291CA1B460008426FF /* Login.storyboard in Resources */,
 				83E7F87F1CD6314400F94FCA /* Register.storyboard in Resources */,
 				83C24F291CE6CC0E000BF792 /* FriendInfo.storyboard in Resources */,
@@ -819,6 +838,7 @@
 				83EA57B81CD4EE4700D00B0E /* MeInfoTableViewCell.m in Sources */,
 				838FAD281CEC1C7B0041D13D /* NSString+FirstCharacter.m in Sources */,
 				83FA5F271CA1B2B8008426FF /* MainTabBarController.m in Sources */,
+				8342707F1CEC9BDB00E6A029 /* AvatarTableViewCell.m in Sources */,
 				834FA6D61CE9817A00EFFA92 /* FriendVerifyViewController.m in Sources */,
 				83C24F2C1CE6CC3C000BF792 /* FriendInfoViewController.m in Sources */,
 				83C24F351CE716AA000BF792 /* FriendInfoTableViewCell.m in Sources */,
@@ -838,6 +858,8 @@
 				83E7F87D1CD630F300F94FCA /* PersonalInfoViewController.m in Sources */,
 				832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */,
 				83C24F381CE720F8000BF792 /* FriendInfoModel.m in Sources */,
+				834270851CEC9E4000E6A029 /* MeInfoViewController.m in Sources */,
+				834270821CEC9C1A00E6A029 /* InfoTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

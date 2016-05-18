@@ -9,6 +9,8 @@
 #import "MeViewController.h"
 #import "MeTableViewCell.h"
 #import "MeInfoTableViewCell.h"
+#import <YYWebImage.h>
+#import <AVUser.h>
 
 @interface MeViewController ()
 
@@ -69,9 +71,9 @@
         case 0: {
             NSString *identifier = @"MeInfoTableViewCell";
             MeInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-            cell.avatarImageView.image = [UIImage imageNamed:@"default_avatar"];
-            cell.nickNameLabel.text = @"Terry.";
-            cell.wechatIDLabel.text = @"微信号：recover2012";
+            [cell.avatarImageView yy_setImageWithURL:[NSURL URLWithString:[[AVUser currentUser] objectForKey:@"avatarURL"]] placeholder:[UIImage imageNamed:@"default_avatar"]] ;
+            cell.nickNameLabel.text = [[AVUser currentUser] objectForKey:@"nickName"];
+            cell.wechatIDLabel.text = [NSString stringWithFormat:@"微信号：%@", [AVUser currentUser].mobilePhoneNumber];
             return cell;
         }
         case 1: {
@@ -119,5 +121,14 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0:
+            [self performSegueWithIdentifier:@"toMeInfoView" sender:nil];
+            break;
+        default:
+            break;
+    }
+}
 
 @end
