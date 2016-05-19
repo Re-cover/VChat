@@ -8,11 +8,14 @@
 
 #import "DiscoverViewController.h"
 #import "DiscoverTableViewCell.h"
+#import "WebViewController.h"
 #import <LBXScanView.h>
 
 @interface DiscoverViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *discoverTableView;
+
+@property (copy, nonatomic) NSString *urlString;
 
 @end
 
@@ -142,8 +145,12 @@
         case 3:
             switch (indexPath.row) {
                 case 0:
+                    self.urlString = @"http://www.jd.com";
+                    [self performSegueWithIdentifier:@"toWebView" sender:nil];
                     break;
                 case 1:
+                    self.urlString = @"http://h5.static.myappgame.com/liujiaosuipian/index.html";
+                    [self performSegueWithIdentifier:@"toWebView" sender:nil];
                     break;
                 default:
                     break;
@@ -154,5 +161,11 @@
     }
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toWebView"]) {
+        WebViewController *controller = segue.destinationViewController;
+        controller.urlString = self.urlString;
+    }
+}
 
 @end

@@ -29,17 +29,14 @@
     self.webViewProgress.progressDelegate = self;
     self.webViewProgressView.progressBarView.backgroundColor = kVChatGreen;
     [self.webViewProgressView setProgress:0 animated:YES];
-    
     NSURL *url = [NSURL URLWithString:self.urlString];
+    self.webView.scalesPageToFit = YES;
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 - (void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress {
-    NSLog(@"%f", progress);
+    self.webViewProgressView.hidden = NO;
     [self.webViewProgressView setProgress:progress animated:YES];
-    if (progress > 99.9) {
-        self.webViewProgressView.hidden = YES;
-    }
 }
 
 - (void)didReceiveMemoryWarning {
