@@ -13,6 +13,7 @@
 #import "ChatViewController.h"
 #import <YYWebImage.h>
 #import <RongIMKit/RCIM.h>
+#import <RongIMLib/RCIMClient.h>
 #import <AVStatus.h>
 
 @interface FriendInfoViewController ()
@@ -143,6 +144,8 @@
                                       pushData:@""
                                        success:^(long messageId) {
                                            NSLog(@"信息发送成功 @%ld", messageId);
+                                           [[RCIMClient sharedRCIMClient] removeConversation:ConversationType_SYSTEM
+                                                                                    targetId:weak_self.model.objectId];
                                        } error:^(RCErrorCode nErrorCode, long messageId) {
                                            NSLog(@"信息发送失败 %ld，错误ID %ld", messageId, nErrorCode);
                                        }];

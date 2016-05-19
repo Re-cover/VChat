@@ -131,6 +131,13 @@
         case 0:
             [self performSegueWithIdentifier:@"toMeInfoView" sender:nil];
             break;
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            [self performSegueWithIdentifier:@"toSettingView" sender:nil];
+            break;
         default:
             break;
     }

@@ -74,6 +74,9 @@
 		83EA57C11CD4F61200D00B0E /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57C01CD4F61200D00B0E /* MeViewController.m */; };
 		83F375321CED75F5006B5667 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F375311CED75F5006B5667 /* WebViewController.m */; };
 		83F375341CED7617006B5667 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F375331CED7617006B5667 /* WebView.storyboard */; };
+		83F375361CEDB4FA006B5667 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F375351CEDB4FA006B5667 /* Setting.storyboard */; };
+		83F375391CEDB74B006B5667 /* LogOutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F375381CEDB74B006B5667 /* LogOutTableViewCell.m */; };
+		83F3753C1CEDB7AC006B5667 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F3753B1CEDB7AC006B5667 /* SettingViewController.m */; };
 		83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA5F1D1CA1A51A008426FF /* BaseTextField.m */; };
 		83FA5F271CA1B2B8008426FF /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA5F261CA1B2B8008426FF /* MainTabBarController.m */; };
 		83FA5F291CA1B460008426FF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F281CA1B460008426FF /* Login.storyboard */; };
@@ -216,6 +219,11 @@
 		83F375301CED75F5006B5667 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = Discover/WebViewController.h; sourceTree = "<group>"; };
 		83F375311CED75F5006B5667 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = Discover/WebViewController.m; sourceTree = "<group>"; };
 		83F375331CED7617006B5667 /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WebView.storyboard; path = Discover/WebView.storyboard; sourceTree = "<group>"; };
+		83F375351CEDB4FA006B5667 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Setting.storyboard; path = Me/Setting.storyboard; sourceTree = "<group>"; };
+		83F375371CEDB74B006B5667 /* LogOutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogOutTableViewCell.h; path = Me/LogOutTableViewCell.h; sourceTree = "<group>"; };
+		83F375381CEDB74B006B5667 /* LogOutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogOutTableViewCell.m; path = Me/LogOutTableViewCell.m; sourceTree = "<group>"; };
+		83F3753A1CEDB7AC006B5667 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Me/SettingViewController.h; sourceTree = "<group>"; };
+		83F3753B1CEDB7AC006B5667 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Me/SettingViewController.m; sourceTree = "<group>"; };
 		83FA5F1C1CA1A51A008426FF /* BaseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTextField.h; path = Login/BaseTextField.h; sourceTree = "<group>"; };
 		83FA5F1D1CA1A51A008426FF /* BaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTextField.m; path = Login/BaseTextField.m; sourceTree = "<group>"; };
 		83FA5F251CA1B2B8008426FF /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabBarController.h; path = Main/MainTabBarController.h; sourceTree = "<group>"; };
@@ -637,6 +645,8 @@
 				83EA57C01CD4F61200D00B0E /* MeViewController.m */,
 				834270831CEC9E4000E6A029 /* MeInfoViewController.h */,
 				834270841CEC9E4000E6A029 /* MeInfoViewController.m */,
+				83F3753A1CEDB7AC006B5667 /* SettingViewController.h */,
+				83F3753B1CEDB7AC006B5667 /* SettingViewController.m */,
 				834270881CECB2F800E6A029 /* AvatarSettingViewController.h */,
 				834270891CECB2F800E6A029 /* AvatarSettingViewController.m */,
 				834270911CECC7EF00E6A029 /* NickNameSettingViewController.h */,
@@ -658,6 +668,7 @@
 			children = (
 				83FA5F611CA25F90008426FF /* Me.storyboard */,
 				834270861CEC9E6A00E6A029 /* MeInfo.storyboard */,
+				83F375351CEDB4FA006B5667 /* Setting.storyboard */,
 				8342708D1CECB35B00E6A029 /* AvatarSetting.storyboard */,
 				8342708F1CECC7CE00E6A029 /* NickNameSetting.storyboard */,
 				834270941CECD2A800E6A029 /* QRCode.storyboard */,
@@ -674,6 +685,8 @@
 				834270811CEC9C1A00E6A029 /* InfoTableViewCell.m */,
 				8342709C1CECE35900E6A029 /* SexTableViewCell.h */,
 				8342709D1CECE35900E6A029 /* SexTableViewCell.m */,
+				83F375371CEDB74B006B5667 /* LogOutTableViewCell.h */,
+				83F375381CEDB74B006B5667 /* LogOutTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -808,6 +821,7 @@
 				83EA57AF1CD47F5000D00B0E /* Me.xcassets in Resources */,
 				83FA5F601CA25F72008426FF /* Discover.storyboard in Resources */,
 				83B787DE1C9FD75400B60AF7 /* LaunchScreen.storyboard in Resources */,
+				83F375361CEDB4FA006B5667 /* Setting.storyboard in Resources */,
 				83FA5F2B1CA1B5C5008426FF /* Main.storyboard in Resources */,
 				83FA5F621CA25F90008426FF /* Me.storyboard in Resources */,
 				83A355541CA02939001C99F2 /* PreLogin.storyboard in Resources */,
@@ -913,6 +927,7 @@
 				834270981CECDB5D00E6A029 /* QRCodeViewController.m in Sources */,
 				83EA57B51CD483B400D00B0E /* DiscoverViewController.m in Sources */,
 				8342709B1CECE1F000E6A029 /* SexSettingViewController.m in Sources */,
+				83F3753C1CEDB7AC006B5667 /* SettingViewController.m in Sources */,
 				83E7F87A1CD6309B00F94FCA /* VerifyViewController.m in Sources */,
 				83EA57BB1CD4F47800D00B0E /* MeTableViewCell.m in Sources */,
 				834270931CECC7EF00E6A029 /* NickNameSettingViewController.m in Sources */,
@@ -930,6 +945,7 @@
 				838FAD2B1CEC22A60041D13D /* ContactGroupModel.m in Sources */,
 				83A355521CA028E3001C99F2 /* LoginViewController.m in Sources */,
 				83E9FB571CE9B293001CE958 /* FriendVerifyMessageTableViewCell.m in Sources */,
+				83F375391CEDB74B006B5667 /* LogOutTableViewCell.m in Sources */,
 				83EA57A21CD47E4700D00B0E /* ContactsViewController.m in Sources */,
 				83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */,
 				83F375321CED75F5006B5667 /* WebViewController.m in Sources */,

@@ -147,6 +147,7 @@
                     <connections>
                         <outlet property="meTableView" destination="smv-7v-cNc" id="jap-A4-EGu"/>
                         <segue destination="zRI-VE-uvj" kind="show" identifier="toMeInfoView" id="zth-Eq-ogF"/>
+                        <segue destination="7qB-BY-Zof" kind="show" identifier="toSettingView" id="89o-bY-SZa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewQ-Tu-X16" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,7 +160,15 @@
                 <viewControllerPlaceholder storyboardName="MeInfo" id="zRI-VE-uvj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgk-NP-z8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1410" y="933"/>
+            <point key="canvasLocation" x="1436" y="842"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="ilj-NM-pYJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Setting" id="7qB-BY-Zof" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RhT-9h-CeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1435" y="1018"/>
         </scene>
     </scenes>
     <resources>
