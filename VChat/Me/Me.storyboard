@@ -96,7 +96,7 @@
                                             <outlet property="wechatIDLabel" destination="1Ex-wv-tbf" id="q8C-0d-pl0"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MeTableViewCell" id="m0f-Wm-w0f" customClass="MeTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MeTableViewCell" id="m0f-Wm-w0f" customClass="MeTableViewCell">
                                         <rect key="frame" x="0.0" y="139.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0f-Wm-w0f" id="HAm-Ff-UfC">

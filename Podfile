@@ -10,4 +10,4 @@ pod 'DateTools'
 pod 'YYModel'
 pod 'YYWebImage'
 pod 'YYText'
-
+pod 'LBXScan',git:'https://github.com/MxABC/LBXScan.git'

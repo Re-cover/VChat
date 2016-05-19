@@ -9,7 +9,7 @@
 #import "QRCodeViewController.h"
 #import <AVUser.h>
 #import <YYWebImage.h>
-#import <CoreImage/CoreImage.h>
+#import <LBXScanWrapper.h>
 
 @interface QRCodeViewController ()
 
@@ -40,13 +40,8 @@
 
 - (UIImage *)QRCodeImage {
     if (!_QRCodeImage) {
-        CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
-        [filter setDefaults];
-        NSString *objectId = [AVUser currentUser].objectId;
-        NSData *data = [objectId dataUsingEncoding:NSUTF8StringEncoding];
-        [filter setValue:data forKey:@"inputMessage"];
-        CIImage *outPutImage = [filter outputImage];
-        _QRCodeImage = [UIImage imageWithCIImage:outPutImage];
+        NSString *QRcodeString = [NSString stringWithFormat:@"vchat://%@", [AVUser currentUser].objectId];
+        _QRCodeImage = [LBXScanWrapper createQRWithString: QRcodeString size:_QRCodeImageView.bounds.size];
     }
     return _QRCodeImage;
 }

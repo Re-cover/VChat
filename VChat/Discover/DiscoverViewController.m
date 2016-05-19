@@ -8,6 +8,7 @@
 
 #import "DiscoverViewController.h"
 #import "DiscoverTableViewCell.h"
+#import <LBXScanView.h>
 
 @interface DiscoverViewController ()
 
@@ -110,6 +111,47 @@
             break;
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.section) {
+        case 0:
+            break;
+        case 1:
+            switch (indexPath.row) {
+                case 0:
+                    [self performSegueWithIdentifier:@"toQRCodeScanView" sender:nil];
+                    break;
+                case 1:
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case 2:
+            switch (indexPath.row) {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case 3:
+            switch (indexPath.row) {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                default:
+                    break;
+            }
+            break;
+        default:
+            break;
+    }
 }
 
 

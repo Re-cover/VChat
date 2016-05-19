@@ -16,6 +16,8 @@ PODS:
     - AFNetworking/NSURLSession
   - AVOSCloud (3.2.9)
   - DateTools (1.7.0)
+  - LBXScan (1.1.2):
+    - ZXingObjC (~> 3.0)
   - Masonry (1.0.0)
   - RongCloudIMKitWithVoip (2.5.1)
   - SVProgressHUD (2.0.3)
@@ -28,11 +30,15 @@ PODS:
   - YYWebImage (1.0.3):
     - YYCache
     - YYImage
+  - ZXingObjC (3.1.0):
+    - ZXingObjC/All (= 3.1.0)
+  - ZXingObjC/All (3.1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - AVOSCloud
   - DateTools
+  - LBXScan (from `https://github.com/MxABC/LBXScan.git`)
   - Masonry
   - RongCloudIMKitWithVoip
   - SVProgressHUD
@@ -40,10 +46,20 @@ DEPENDENCIES:
   - YYText
   - YYWebImage
 
+EXTERNAL SOURCES:
+  LBXScan:
+    :git: https://github.com/MxABC/LBXScan.git
+
+CHECKOUT OPTIONS:
+  LBXScan:
+    :commit: 32efa3cf0c7dc061d7830d5e1b31a6f58e0dc554
+    :git: https://github.com/MxABC/LBXScan.git
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AVOSCloud: b020009b1f2e35c271d4d019075458c879fc1d21
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  LBXScan: 30153fa9c57bbe63d93cc6bf35c047ec1b63260c
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   RongCloudIMKitWithVoip: fad734787a1d10eb61f9943231fc932358db2734
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
@@ -52,5 +68,6 @@ SPEC CHECKSUMS:
   YYModel: 63142c2f07c5c8c9d1c261689cf3827ea6ab2886
   YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
   YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
+  ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
 COCOAPODS: 0.39.0
