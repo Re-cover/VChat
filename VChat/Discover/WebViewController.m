@@ -37,6 +37,9 @@
 - (void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress {
     self.webViewProgressView.hidden = NO;
     [self.webViewProgressView setProgress:progress animated:YES];
+//    if (progress == 1.0) {
+//        self.title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {

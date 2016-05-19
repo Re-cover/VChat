@@ -62,15 +62,13 @@
     
     [self.manager POST:urlString
             parameters:parameters
-              progress:nil
-               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
                    NSLog(@"%@", responseObject);
                    TokenModel *model = [TokenModel yy_modelWithJSON: responseObject];
                    if (model) {
                        successBlock(model);
                    }
-               }
-               failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+               } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                    failureBlock(error);
                }];
 }
@@ -128,7 +126,6 @@
     
     [self.manager POST:urlString
             parameters:parameters
-              progress:nil
                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                    successBlock(responseObject);
                }

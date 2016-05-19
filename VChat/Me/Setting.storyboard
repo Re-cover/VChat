@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Setting View Controller-->
+        <!--设置-->
         <scene sceneID="jHS-7i-ddv">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="hQb-69-Knd" customClass="SettingViewController" sceneMemberID="viewController">
+                <viewController title="设置" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="hQb-69-Knd" customClass="SettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NYD-YZ-Fnm"/>
                         <viewControllerLayoutGuide type="bottom" id="blG-pn-Syi"/>
