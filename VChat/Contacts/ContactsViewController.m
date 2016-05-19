@@ -32,7 +32,7 @@
 # pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.contactsArray = [UserService sharedUserService].contactsArray;
+    [self loadContactsArrray];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.searchController.delegate = self;
@@ -42,7 +42,6 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self loadContactsArrray];
 }
 
 - (void)didReceiveMemoryWarning {

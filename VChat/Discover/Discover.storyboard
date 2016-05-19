@@ -90,11 +90,20 @@
                     <connections>
                         <outlet property="discoverTableView" destination="yBc-9B-AhN" id="Dbf-fD-zkk"/>
                         <segue destination="xFL-xa-3DI" kind="show" identifier="toQRCodeScanView" id="5OW-oY-bmY"/>
+                        <segue destination="VzI-Of-ArN" kind="show" identifier="toWebView" id="xKA-Nr-Obx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZn-NS-CZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="643.5" y="898.5"/>
+        </scene>
+        <!--WebView-->
+        <scene sceneID="SzR-3A-8ax">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WebView" id="VzI-Of-ArN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWQ-YL-uJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="986"/>
         </scene>
         <!--QRCodeScan-->
         <scene sceneID="vSG-LI-W9P">
@@ -102,7 +111,7 @@
                 <viewControllerPlaceholder storyboardName="QRCodeScan" id="xFL-xa-3DI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wi-Yh-Ztg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="985.5" y="899"/>
+            <point key="canvasLocation" x="1005.5" y="804"/>
         </scene>
     </scenes>
     <resources>

@@ -8,7 +8,7 @@
         <!--Web View Controller-->
         <scene sceneID="gy6-EF-C6K">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="O9f-6K-f91" customClass="WebViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="O9f-6K-f91" customClass="WebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="meu-4f-BPH"/>
                         <viewControllerLayoutGuide type="bottom" id="THv-db-B0E"/>
@@ -23,7 +23,7 @@
                             </webView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="om7-Uu-g8I" customClass="NJKWebViewProgressView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="3"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="Vhg-YL-J83"/>
                                 </constraints>
