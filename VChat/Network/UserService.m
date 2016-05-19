@@ -28,7 +28,6 @@
 - (instancetype)init {
     if (self = [super init]) {
         self.manager = [[AFHTTPSessionManager alloc] init];
-        self.contactsArray = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -139,35 +138,6 @@
                failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                    failureBlock(error);
                }];
-}
-
-- (void)loadContactsArrray {
-    [_contactsArray removeAllObjects];
-    [[AVUser currentUser] getFollowees:^(NSArray *objects, NSError *error) {
-        if (error == nil) {
-            AVObject *contact = nil;
-            FriendInfoModel *contactModel = [[FriendInfoModel alloc] init];
-            for (contact in objects) {
-                contactModel.objectId = contact.objectId;
-                contactModel.avatarUrl = [contact valueForKey:@"avatarURL"];
-                contactModel.vChatId = [contact valueForKey:@"username"];
-                contactModel.nickName = [contact valueForKey:@"nickName"];
-                contactModel.phoneNumber = [contact valueForKey:@"mobilePhoneNumber"];
-                contactModel.area =[contact valueForKey:@"area"];
-                contactModel.signature = [contact valueForKey:@"signature"];
-                contactModel.firstCharacter = contactModel.nickName.firstCharacter;
-                contactModel.isFriend = YES;
-                [_contactsArray addObject:contactModel];
-            }
-            _contactsArray = [_contactsArray sortedArrayUsingFunction:nickNameCompare context:NULL].mutableCopy;
-        } else {
-            NSLog(@"%@", error.description);
-        }
-    }];
-}
-
-NSInteger nickNameCompare(FriendInfoModel *model1, FriendInfoModel *model2, void *context) {
-    return [model1.nickName localizedCompare: model2.nickName];
 }
 
 @end

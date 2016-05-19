@@ -87,7 +87,6 @@
     [AVUser logInWithUsernameInBackground:self.userTextField.text password:self.passwordTextField.text block:^(AVUser *user, NSError *error) {
         if (user != nil) {
             NSLog(@"leanCloud登录成功");
-            [[UserService sharedUserService] loadContactsArrray];
             [UserService sharedUserService].connectIMServerDelegate = self;
             [[UserService sharedUserService] connectIMServer];
         } else {

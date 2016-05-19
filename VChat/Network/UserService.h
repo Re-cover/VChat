@@ -50,6 +50,5 @@ typedef void(^failure)(NSError *error);
                              complete:(success)successBlock
                               failure:(failure)failureBlock;
 
-- (void)loadContactsArrray;
 
 @end

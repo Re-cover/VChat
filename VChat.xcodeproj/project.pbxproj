@@ -53,6 +53,8 @@
 		83C24F3C1CE7894E000BF792 /* SystemMessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C24F3B1CE7894E000BF792 /* SystemMessage.storyboard */; };
 		83C24F3F1CE78AB7000BF792 /* SystemMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C24F3E1CE78AB7000BF792 /* SystemMessageViewController.m */; };
 		83D0D6251CD385D900CB2B26 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0D6241CD385D900CB2B26 /* BaseViewController.m */; };
+		83D85F8B1CED5E8C00704539 /* QRCodeScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D85F8A1CED5E8C00704539 /* QRCodeScan.storyboard */; };
+		83D85F8E1CED5ECE00704539 /* QRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D85F8D1CED5ECE00704539 /* QRCodeScanViewController.m */; };
 		83E7F8771CD6306B00F94FCA /* RegisterViaPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F8761CD6306B00F94FCA /* RegisterViaPhoneViewController.m */; };
 		83E7F87A1CD6309B00F94FCA /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F8791CD6309B00F94FCA /* VerifyViewController.m */; };
 		83E7F87D1CD630F300F94FCA /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E7F87C1CD630F300F94FCA /* PersonalInfoViewController.m */; };
@@ -70,6 +72,8 @@
 		83EA57B81CD4EE4700D00B0E /* MeInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57B71CD4EE4700D00B0E /* MeInfoTableViewCell.m */; };
 		83EA57BB1CD4F47800D00B0E /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57BA1CD4F47800D00B0E /* MeTableViewCell.m */; };
 		83EA57C11CD4F61200D00B0E /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57C01CD4F61200D00B0E /* MeViewController.m */; };
+		83F375321CED75F5006B5667 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F375311CED75F5006B5667 /* WebViewController.m */; };
+		83F375341CED7617006B5667 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F375331CED7617006B5667 /* WebView.storyboard */; };
 		83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA5F1D1CA1A51A008426FF /* BaseTextField.m */; };
 		83FA5F271CA1B2B8008426FF /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA5F261CA1B2B8008426FF /* MainTabBarController.m */; };
 		83FA5F291CA1B460008426FF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA5F281CA1B460008426FF /* Login.storyboard */; };
@@ -178,6 +182,9 @@
 		83C24F3E1CE78AB7000BF792 /* SystemMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemMessageViewController.m; path = Chats/SystemMessageViewController.m; sourceTree = "<group>"; };
 		83D0D6231CD385D900CB2B26 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Common/BaseViewController.h; sourceTree = "<group>"; };
 		83D0D6241CD385D900CB2B26 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Common/BaseViewController.m; sourceTree = "<group>"; };
+		83D85F8A1CED5E8C00704539 /* QRCodeScan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QRCodeScan.storyboard; path = Discover/QRCodeScan.storyboard; sourceTree = "<group>"; };
+		83D85F8C1CED5ECE00704539 /* QRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QRCodeScanViewController.h; path = Discover/QRCodeScanViewController.h; sourceTree = "<group>"; };
+		83D85F8D1CED5ECE00704539 /* QRCodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QRCodeScanViewController.m; path = Discover/QRCodeScanViewController.m; sourceTree = "<group>"; };
 		83E7F8751CD6306B00F94FCA /* RegisterViaPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViaPhoneViewController.h; path = Register/RegisterViaPhoneViewController.h; sourceTree = "<group>"; };
 		83E7F8761CD6306B00F94FCA /* RegisterViaPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViaPhoneViewController.m; path = Register/RegisterViaPhoneViewController.m; sourceTree = "<group>"; };
 		83E7F8781CD6309B00F94FCA /* VerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerifyViewController.h; path = Register/VerifyViewController.h; sourceTree = "<group>"; };
@@ -206,6 +213,9 @@
 		83EA57BA1CD4F47800D00B0E /* MeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeTableViewCell.m; path = Me/MeTableViewCell.m; sourceTree = "<group>"; };
 		83EA57BF1CD4F61200D00B0E /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeViewController.h; path = Me/MeViewController.h; sourceTree = "<group>"; };
 		83EA57C01CD4F61200D00B0E /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeViewController.m; path = Me/MeViewController.m; sourceTree = "<group>"; };
+		83F375301CED75F5006B5667 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = Discover/WebViewController.h; sourceTree = "<group>"; };
+		83F375311CED75F5006B5667 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = Discover/WebViewController.m; sourceTree = "<group>"; };
+		83F375331CED7617006B5667 /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WebView.storyboard; path = Discover/WebView.storyboard; sourceTree = "<group>"; };
 		83FA5F1C1CA1A51A008426FF /* BaseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTextField.h; path = Login/BaseTextField.h; sourceTree = "<group>"; };
 		83FA5F1D1CA1A51A008426FF /* BaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTextField.m; path = Login/BaseTextField.m; sourceTree = "<group>"; };
 		83FA5F251CA1B2B8008426FF /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabBarController.h; path = Main/MainTabBarController.h; sourceTree = "<group>"; };
@@ -593,6 +603,10 @@
 			children = (
 				83EA57B31CD483B400D00B0E /* DiscoverViewController.h */,
 				83EA57B41CD483B400D00B0E /* DiscoverViewController.m */,
+				83D85F8C1CED5ECE00704539 /* QRCodeScanViewController.h */,
+				83D85F8D1CED5ECE00704539 /* QRCodeScanViewController.m */,
+				83F375301CED75F5006B5667 /* WebViewController.h */,
+				83F375311CED75F5006B5667 /* WebViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -601,6 +615,8 @@
 			isa = PBXGroup;
 			children = (
 				83FA5F5F1CA25F72008426FF /* Discover.storyboard */,
+				83D85F8A1CED5E8C00704539 /* QRCodeScan.storyboard */,
+				83F375331CED7617006B5667 /* WebView.storyboard */,
 				83EA57B01CD4838C00D00B0E /* DiscoverTableViewCell.h */,
 				83EA57B11CD4838C00D00B0E /* DiscoverTableViewCell.m */,
 			);
@@ -800,10 +816,12 @@
 				83EA57AD1CD47F5000D00B0E /* Home.xcassets in Resources */,
 				83EA57AC1CD47F5000D00B0E /* Discover.xcassets in Resources */,
 				834270A41CECEB6E00E6A029 /* AreaSetting.storyboard in Resources */,
+				83D85F8B1CED5E8C00704539 /* QRCodeScan.storyboard in Resources */,
 				83EA57AB1CD47F5000D00B0E /* Contacts.xcassets in Resources */,
 				83C24F3C1CE7894E000BF792 /* SystemMessage.storyboard in Resources */,
 				834270901CECC7CE00E6A029 /* NickNameSetting.storyboard in Resources */,
 				83EA57AE1CD47F5000D00B0E /* Images.xcassets in Resources */,
+				83F375341CED7617006B5667 /* WebView.storyboard in Resources */,
 				83FA5F5E1CA25F5C008426FF /* Contacts.storyboard in Resources */,
 				834270AC1CECEF1500E6A029 /* SignatureSetting.storyboard in Resources */,
 				834270871CEC9E6A00E6A029 /* MeInfo.storyboard in Resources */,
@@ -914,6 +932,7 @@
 				83E9FB571CE9B293001CE958 /* FriendVerifyMessageTableViewCell.m in Sources */,
 				83EA57A21CD47E4700D00B0E /* ContactsViewController.m in Sources */,
 				83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */,
+				83F375321CED75F5006B5667 /* WebViewController.m in Sources */,
 				832F57091CD786FD000F46AA /* Register.m in Sources */,
 				832F570D1CD7896B000F46AA /* TokenModel.m in Sources */,
 				8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */,
@@ -926,6 +945,7 @@
 				83C24F381CE720F8000BF792 /* FriendInfoModel.m in Sources */,
 				834270851CEC9E4000E6A029 /* MeInfoViewController.m in Sources */,
 				834270821CEC9C1A00E6A029 /* InfoTableViewCell.m in Sources */,
+				83D85F8E1CED5ECE00704539 /* QRCodeScanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

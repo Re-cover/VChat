@@ -10,7 +10,8 @@
 #import "ContactTableViewCell.h"
 #import "BlurView.h"
 #import "FriendInfoViewController.h"
-#import "UserService.h"
+//#import "UserService.h"
+#import "NSString+FirstCharacter.h"
 #import <AVQuery.h>
 #import <AVUser.h>
 #import <AVStatus.h>
@@ -19,7 +20,7 @@
 
 @interface ContactsViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *ContactsTableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) UISearchController *searchController;
 @property (strong, nonatomic) BlurView *blurView;
 @property (strong, nonatomic) FriendInfoModel *model;
@@ -32,12 +33,17 @@
 # pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.contactsArray = [UserService sharedUserService].contactsArray;
-    self.ContactsTableView.dataSource = self;
-    self.ContactsTableView.delegate = self;
+//    self.contactsArray = [UserService sharedUserService].contactsArray;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     self.searchController.delegate = self;
     self.searchController.searchBar.delegate = self;
-    self.ContactsTableView.tableHeaderView = self.searchController.searchBar;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadContactsArrray];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,6 +80,7 @@
 # pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.model = _contactsArray[indexPath.row];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:@"toFriendInfoView" sender:nil];
 }
 
@@ -129,6 +136,38 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     FriendInfoViewController *controller = segue.destinationViewController;
     controller.model = self.model;
+}
+- (void)loadContactsArrray {
+    if (!_contactsArray) {
+        _contactsArray = [[NSMutableArray alloc] init];
+    }
+    [_contactsArray removeAllObjects];
+    [[AVUser currentUser] getFollowees:^(NSArray *objects, NSError *error) {
+        if (error == nil) {
+            AVObject *contact = nil;
+            FriendInfoModel *contactModel = [[FriendInfoModel alloc] init];
+            for (contact in objects) {
+                contactModel.objectId = contact.objectId;
+                contactModel.avatarUrl = [contact valueForKey:@"avatarURL"];
+                contactModel.vChatId = [contact valueForKey:@"username"];
+                contactModel.nickName = [contact valueForKey:@"nickName"];
+                contactModel.phoneNumber = [contact valueForKey:@"mobilePhoneNumber"];
+                contactModel.area =[contact valueForKey:@"area"];
+                contactModel.signature = [contact valueForKey:@"signature"];
+                contactModel.firstCharacter = contactModel.nickName.firstCharacter;
+                contactModel.isFriend = YES;
+                [_contactsArray addObject:contactModel];
+            }
+            _contactsArray = [_contactsArray sortedArrayUsingFunction:nickNameCompare context:NULL].mutableCopy;
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"%@", error.description);
+        }
+    }];
+}
+
+NSInteger nickNameCompare(FriendInfoModel *model1, FriendInfoModel *model2, void *context) {
+    return [model1.nickName localizedCompare: model2.nickName];
 }
 
 # pragma mark Getters
