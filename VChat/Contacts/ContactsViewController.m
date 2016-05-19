@@ -10,7 +10,6 @@
 #import "ContactTableViewCell.h"
 #import "BlurView.h"
 #import "FriendInfoViewController.h"
-//#import "UserService.h"
 #import "NSString+FirstCharacter.h"
 #import <AVQuery.h>
 #import <AVUser.h>

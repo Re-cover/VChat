@@ -9,12 +9,9 @@
 #import "UserService.h"
 #import "NSString+SHA1.h"
 #import "TokenModel.h"
-#import "FriendInfoModel.h"
-#import "NSString+FirstCharacter.h"
 #import <AFNetworking.h>
 #import <YYModel.h>
 #import <AVUser.h>
-#import <AVStatus.h>
 #import <RongIMKit/RCIM.h>
 
 @interface UserService()
