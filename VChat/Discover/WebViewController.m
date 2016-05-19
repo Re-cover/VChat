@@ -7,10 +7,15 @@
 //
 
 #import "WebViewController.h"
+#import <NJKWebViewProgressView.h>
 
 @interface WebViewController ()
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+@property (weak, nonatomic) IBOutlet NJKWebViewProgressView *webViewProgressView;
+
+@property (strong, nonatomic) NJKWebViewProgress *webViewProgress;
 
 @end
 
@@ -18,23 +23,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.webViewProgress = [[NJKWebViewProgress alloc] init];
+    self.webView.delegate = self.webViewProgress;
+    self.webViewProgress.webViewProxyDelegate = self;
+    self.webViewProgress.progressDelegate = self;
+    self.webViewProgressView.progressBarView.backgroundColor = kVChatGreen;
+    [self.webViewProgressView setProgress:0 animated:YES];
+    
     NSURL *url = [NSURL URLWithString:self.urlString];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
+- (void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress {
+    NSLog(@"%f", progress);
+    [self.webViewProgressView setProgress:progress animated:YES];
+    if (progress > 99.9) {
+        self.webViewProgressView.hidden = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

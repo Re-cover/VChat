@@ -19,6 +19,11 @@ PODS:
   - LBXScan (1.1.2):
     - ZXingObjC (~> 3.0)
   - Masonry (1.0.0)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
   - RongCloudIMKitWithVoip (2.5.1)
   - SVProgressHUD (2.0.3)
   - YYCache (1.0.3)
@@ -40,6 +45,7 @@ DEPENDENCIES:
   - DateTools
   - LBXScan (from `https://github.com/MxABC/LBXScan.git`)
   - Masonry
+  - NJKWebViewProgress
   - RongCloudIMKitWithVoip
   - SVProgressHUD
   - YYModel
@@ -61,6 +67,7 @@ SPEC CHECKSUMS:
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   LBXScan: 30153fa9c57bbe63d93cc6bf35c047ec1b63260c
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   RongCloudIMKitWithVoip: fad734787a1d10eb61f9943231fc932358db2734
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2

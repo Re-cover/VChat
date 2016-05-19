@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <NJKWebViewProgress.h>
 
-@interface WebViewController : UIViewController
+@interface WebViewController : UIViewController<UIWebViewDelegate, NJKWebViewProgressDelegate>
 
 @property (nonatomic, copy) NSString *urlString;
 
