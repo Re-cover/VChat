@@ -40,10 +40,13 @@
     self.tableView.tableHeaderView = self.searchController.searchBar;
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.searchController.searchBar resignFirstResponder];
+    [self.searchController.searchBar setText:nil];
+    [self.blurView removeFromSuperview];
+    [self.searchController.searchResultsController dismissViewControllerAnimated:YES completion:nil];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -193,7 +196,7 @@ NSInteger nickNameCompare(FriendInfoModel *model1, FriendInfoModel *model2, void
 
 - (UISearchController *)searchController {
     if (!_searchController) {
-        _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+        _searchController = [[UISearchController alloc] initWithSearchResultsController: [[UIViewController alloc] init]];
         _searchController.dimsBackgroundDuringPresentation = NO;
         _searchController.hidesNavigationBarDuringPresentation = YES;
         _searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
