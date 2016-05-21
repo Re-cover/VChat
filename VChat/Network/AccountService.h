@@ -1,5 +1,5 @@
 //
-//  Register.h
+//  AccountService.h
 //  VChat
 //
 //  Created by Recover on 16/5/2.
@@ -23,16 +23,28 @@
 
 @end
 
-@interface Register : NSObject
+@protocol LoginViaPhoneNumberDelegate <NSObject>
+
+- (void)LoginViaPhoneNumberSuccessed;
+
+- (void)LoginViaPhoneNumberFailed;
+
+@end
+
+@interface AccountService : NSObject
 
 @property (nonatomic, weak) id<VerifySMSDelegate> verifySMSdelegate;
 
 @property (nonatomic, weak) id<RegisterViaPhoneNumberDelegate> registerViaPhoneNumberDelegate;
 
+@property (nonatomic, weak) id<LoginViaPhoneNumberDelegate> loginViaPhoneNumberDelegate;
+
 + (instancetype)sharedRegister;
 
-- (void)registerViaPhoneNumber:(NSString *)number;
+- (void)requestSMSCodeViaPhoneNumber:(NSString *)number;
 
-- (void)verifyPhoneNumber:(NSString *)number With:(NSString *)code;
+- (void)registerVerifyPhoneNumber:(NSString*)number With:(NSString *)code;
+
+- (void)loginVerifyPhoneNumber:(NSString*)number With:(NSString *)code;
 
 @end

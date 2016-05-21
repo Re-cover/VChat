@@ -22,6 +22,7 @@
     [super viewDidLoad];
     self.signatureTextField.text = [[AVUser currentUser] objectForKey:@"signature"];
     self.counterLabel.text = [NSString stringWithFormat:@"%lu", 30 - self.signatureTextField.text.length];
+    [self.signatureTextField becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

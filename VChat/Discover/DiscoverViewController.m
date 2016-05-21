@@ -9,6 +9,7 @@
 #import "DiscoverViewController.h"
 #import "DiscoverTableViewCell.h"
 #import "WebViewController.h"
+#import "TimeLineViewController.h"
 #import <LBXScanView.h>
 
 @interface DiscoverViewController ()
@@ -119,8 +120,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.section) {
-        case 0:
+        case 0: {
+            TimeLineViewController *controller = [[TimeLineViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
             break;
+        }
         case 1:
             switch (indexPath.row) {
                 case 0:

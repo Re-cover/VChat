@@ -38,7 +38,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [UINavigationBar appearance].barStyle  = UIBarStyleBlack;
-    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setBarTintColor: [UIColor blackColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     [[RCIM sharedRCIM] setUserInfoDataSource:self];
@@ -51,7 +51,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIStoryboard *mainStoryboard = nil;
     NSString *userToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"userToken"];
-    
     if (userToken == nil) {
         mainStoryboard = [UIStoryboard storyboardWithName:@"PreLogin" bundle:nil];
     } else {

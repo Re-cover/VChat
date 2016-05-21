@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Register.h"
+#import "AccountService.h"
 #import "UserService.h"
 
 @interface VerifyViewController : UIViewController<RegisterViaPhoneNumberDelegate, ConnectIMServerDelegate>

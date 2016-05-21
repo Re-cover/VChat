@@ -113,6 +113,7 @@
 
 - (IBAction)loginProblemButtonDidCilcked:(id)sender {
     NSLog(@"登录遇到问题");
+    [self performSegueWithIdentifier:@"toLoginViaPhoneView" sender:nil];
 }
 
 - (void)endEdit {

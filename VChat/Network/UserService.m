@@ -79,6 +79,7 @@
               portraitUri:(NSString *)[[AVUser currentUser] objectForKey:@"avatarURL"]
                  complete:^(TokenModel* model) {
                      [_connectIMServerDelegate getTokenSuccessed];
+                     NSLog(@"TOKEN:%@", model.token);
                      [[NSUserDefaults standardUserDefaults] setObject:model.token forKey:@"userToken"];
                      [[RCIM sharedRCIM] connectWithToken:model.token success:^(NSString *userId) {
                          [_connectIMServerDelegate connectIMServerSuccessed];
@@ -122,7 +123,6 @@
     [self.manager.requestSerializer setValue:timestamp forHTTPHeaderField:@"Timestamp"];
     [self.manager.requestSerializer setValue:signature forHTTPHeaderField:@"Signature"];
     [self.manager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    
     
     [self.manager POST:urlString
             parameters:parameters

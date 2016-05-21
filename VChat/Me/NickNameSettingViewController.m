@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.nickNameTextField.text = [[AVUser currentUser] objectForKey:@"nickName"];
+    [self.nickNameTextField becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

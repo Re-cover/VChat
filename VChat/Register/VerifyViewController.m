@@ -8,7 +8,6 @@
 
 #import "VerifyViewController.h"
 #import "BaseTextField.h"
-#import "TokenModel.h"
 #import <SVProgressHUD.h>
 #import <AVQuery.h>
 #import <AVUser.h>
@@ -17,7 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
 
-@property (weak, nonatomic) IBOutlet BaseTextField *VerifyCodeTextField;
+@property (weak, nonatomic) IBOutlet BaseTextField *verifyCodeTextField;
 
 @property (weak, nonatomic) IBOutlet UIButton *commitButton;
 
@@ -64,7 +63,7 @@
     if ([SVProgressHUD isVisible]) {
         [SVProgressHUD dismiss];
     }
-    [self performSegueWithIdentifier:@"toMainView" sender:self];
+    [self performSegueWithIdentifier:@"toMainView" sender:nil];
 }
 
 - (void)connectIMServerFailed:(NSInteger)status {
@@ -76,8 +75,8 @@
     [SVProgressHUD showErrorWithStatus:@"连接IM服务器失败，token错误"];
 }
 
-- (IBAction)VeifyCodeTextDidChanged:(id)sender {
-    if (self.VerifyCodeTextField.text.length == 6) {
+- (IBAction)veifyCodeTextDidChanged:(id)sender {
+    if (self.verifyCodeTextField.text.length == 6) {
         self.commitButton.enabled = YES;
         self.commitButton.backgroundColor = kVChatGreen;
     } else {
@@ -93,6 +92,7 @@
 
 - (IBAction)commitButtonDidClicked:(id)sender {
     [self endEdit];
+    @weakify(self);
     AVQuery *query = [AVQuery queryWithClassName:@"_User"];
     [query whereKey:@"mobilePhoneNumber" equalTo: self.phoneNumber];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -100,8 +100,8 @@
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"该手机号已注册" message:@"是否使用该手机号直接登录" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [SVProgressHUD showWithStatus:@"登录中..."];
-                [AVUser signUpOrLoginWithMobilePhoneNumberInBackground:self.phoneNumber
-                                                               smsCode:self.VerifyCodeTextField.text
+                [AVUser signUpOrLoginWithMobilePhoneNumberInBackground:weak_self.phoneNumber
+                                                               smsCode:weak_self.verifyCodeTextField.text
                                                                  block:^(AVUser *user, NSError *error) {
                                                                      if (user != nil) {
                                                                          NSLog(@"已注册用户登录成功");
@@ -115,13 +115,12 @@
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
             [alert addAction:confirmAction];
             [alert addAction:cancelAction];
-            [self presentViewController:alert animated:YES completion:nil];
+            [weak_self presentViewController:alert animated:YES completion:nil];
         } else {
-            [Register sharedRegister].registerViaPhoneNumberDelegate = self;
-            [[Register sharedRegister] verifyPhoneNumber:self.phoneNumber With:self.VerifyCodeTextField.text];
+            [AccountService sharedRegister].registerViaPhoneNumberDelegate = self;
+            [[AccountService sharedRegister] registerVerifyPhoneNumber:weak_self.phoneNumber With:weak_self.verifyCodeTextField.text];
         }
     }];
-
 }
 
 - (void)endEdit {

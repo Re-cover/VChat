@@ -107,13 +107,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZw-jD-ydU">
-                                <rect key="frame" x="142" y="317" width="90" height="20"/>
+                                <rect key="frame" x="133" y="317" width="108" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="247-Kl-57h"/>
                                     <constraint firstAttribute="height" constant="20" id="96G-a6-SA6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="登录遇到问题？"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
+                                <state key="normal" title="使用短信验证码登录"/>
                                 <connections>
                                     <action selector="loginProblemButtonDidCilcked:" destination="Mo7-ga-yKP" eventType="touchUpInside" id="B72-1k-hJc"/>
                                 </connections>
@@ -166,6 +165,7 @@
                         <outlet property="passwordTextField" destination="LjS-JV-zti" id="iMJ-dI-UDd"/>
                         <outlet property="userTextField" destination="UNd-sd-6pq" id="y3s-I8-0ks"/>
                         <segue destination="nsv-hx-bJr" kind="show" identifier="toMainView" id="2iG-TU-2un"/>
+                        <segue destination="OXx-Ng-cHr" kind="show" identifier="toLoginViaPhoneView" id="kbA-EH-gsc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdz-xN-EhT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -178,7 +178,15 @@
                 <viewControllerPlaceholder storyboardName="Main" id="nsv-hx-bJr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4M-V5-Pls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="479" y="315"/>
+            <point key="canvasLocation" x="477" y="238"/>
+        </scene>
+        <!--LoginViaSMSCode-->
+        <scene sceneID="JJ6-AG-whe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LoginViaSMSCode" id="OXx-Ng-cHr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6h-Kn-2OS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517.5" y="387"/>
         </scene>
     </scenes>
 </document>

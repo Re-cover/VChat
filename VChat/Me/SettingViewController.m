@@ -61,7 +61,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确定要退出登录吗？" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"退出登录" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        [NSUserDefaults resetStandardUserDefaults];
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userToken"];
+        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"userToken"]);
         [[RCIM sharedRCIM] clearUserInfoCache];
         [[RCIM sharedRCIM] clearGroupInfoCache];
         [[RCIM sharedRCIM] logout];

@@ -66,6 +66,7 @@
         case 0: {
             NSString *identifier = @"InfoTableViewCell";
             InfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+            cell.selectionStyle = UITableViewCellSelectionStyleDefault;
             switch (indexPath.row) {
                 case 0: {
                     NSString *identifier = @"AvatarTableViewCell";

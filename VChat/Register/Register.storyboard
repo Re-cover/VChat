@@ -316,7 +316,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
-                                    <action selector="VeifyCodeTextDidChanged:" destination="3gC-VF-4Qy" eventType="editingChanged" id="6uf-qL-MZJ"/>
+                                    <action selector="veifyCodeTextDidChanged:" destination="3gC-VF-4Qy" eventType="editingChanged" id="vgu-SP-hlI"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -349,9 +349,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="VerifyCodeTextField" destination="X4f-tD-S9X" id="Zvu-Ry-2Ky"/>
                         <outlet property="commitButton" destination="AFL-OL-Oax" id="p94-CF-pcZ"/>
                         <outlet property="phoneNumberLabel" destination="Hpl-in-Sde" id="bHE-R8-352"/>
+                        <outlet property="verifyCodeTextField" destination="X4f-tD-S9X" id="4pX-vz-bPK"/>
                         <segue destination="fZZ-RP-Efa" kind="show" identifier="toPersonalInfoView" id="0if-c4-1Gs"/>
                         <segue destination="tVO-j4-f4s" kind="show" identifier="toMainView" id="dOa-Ft-0mX"/>
                     </connections>

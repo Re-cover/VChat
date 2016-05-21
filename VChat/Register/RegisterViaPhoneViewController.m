@@ -9,6 +9,7 @@
 #import "RegisterViaPhoneViewController.h"
 #import "VerifyViewController.h"
 #import "BaseTextField.h"
+#import "NSString+isPhoneNumber.h"
 #import <SVProgressHUD.h>
 
 @interface RegisterViaPhoneViewController ()
@@ -42,20 +43,7 @@
 }
 
 - (void)verifySMSSendFailed {
-    [SVProgressHUD showInfoWithStatus:@"验证短信发送失败"];
-}
-
-- (BOOL)isPhoneNumber:(NSString *)num {
-    
-    //    电信号段:133/153/180/181/189/177
-    //    联通号段:130/131/132/155/156/185/186/145/176
-    //    移动号段:134/135/136/137/138/139/150/151/152/157/158/159/182/183/184/187/188/147/178
-    //    虚拟运营商:170
-    NSString *MOBILE = @"^1(3[0-9]|4[57]|5[0-35-9]|8[0-9]|7[06-8])\\d{8}$";
-    
-    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
-    
-    return [regextestmobile evaluateWithObject: num];
+    [SVProgressHUD showErrorWithStatus:@"验证短信发送失败"];
 }
 
 - (void)endEdit {
@@ -66,7 +54,7 @@
 }
 
 - (IBAction)phoneNumberDidChanged:(id)sender {
-    if ([self isPhoneNumber: self.phoneNumberTextField.text]) {
+    if ([self.phoneNumberTextField.text isPhoneNumber]) {
         self.registerButton.enabled = YES;
         self.registerButton.backgroundColor = kVChatGreen;
     } else {
@@ -81,8 +69,8 @@
 
 - (IBAction)registerButtonDidClicked:(id)sender {
     [self endEdit];
-    [Register sharedRegister].verifySMSdelegate = self;
-    [[Register sharedRegister] registerViaPhoneNumber:self.phoneNumberTextField.text];
+    [AccountService sharedRegister].verifySMSdelegate = self;
+    [[AccountService sharedRegister] requestSMSCodeViaPhoneNumber: self.phoneNumberTextField.text];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

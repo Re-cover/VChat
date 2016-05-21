@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.areaTextField.text = [[AVUser currentUser] objectForKey:@"area"];
+    [self.areaTextField becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

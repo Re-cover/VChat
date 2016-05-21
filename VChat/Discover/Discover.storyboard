@@ -111,7 +111,7 @@
                 <viewControllerPlaceholder storyboardName="QRCodeScan" id="xFL-xa-3DI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wi-Yh-Ztg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1005.5" y="804"/>
+            <point key="canvasLocation" x="1000.5" y="795"/>
         </scene>
     </scenes>
     <resources>

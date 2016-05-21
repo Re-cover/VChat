@@ -9,6 +9,8 @@
 #ifndef VChatPrefixHeader_pch
 #define VChatPrefixHeader_pch
 
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CGBase.h>
 //屏幕bounds、高度、宽度
 #define kScreenBounds   [UIScreen mainScreen].bounds
 #define kSceenHeight    [UIScreen mainScreen].bounds.size.height
@@ -23,6 +25,12 @@
 //微信灰绿
 
 #define kVChatGrayGreen [UIColor colorWithRed:147/255.0 green:219/255.0 blue:146/255.0 alpha:1]
+
+//基佬紫
+#define kVChatPurple [UIColor colorWithRed:83/255.0 green:26/255.0 blue:171/255.0 alpha:1]
+
+//基佬灰紫
+#define kVChatGrayPurple [UIColor colorWithRed:103/255.0 green:58/255.0 blue:183/255.0 alpha:1]
 
 #define kAppKey @"kj7swf8o7bdy2"
 

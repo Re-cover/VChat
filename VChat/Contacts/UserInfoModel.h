@@ -1,17 +1,15 @@
 //
-//  FriendInfoModel.h
+//  UserInfoModel.h
 //  VChat
 //
-//  Created by Recover on 16/5/14.
+//  Created by Recover on 16/5/20.
 //  Copyright © 2016年 Recover. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <AVObject.h>
+#import "AVUser.h"
 
-@interface FriendInfoModel : NSObject
+@interface UserInfoModel : AVUser
 
-@property (nonatomic, copy) NSString *objectId;
 @property (nonatomic, copy) NSString *avatarUrl;
 @property (nonatomic, copy) NSString *vChatId;
 @property (nonatomic, copy) NSString *nickName;
@@ -19,7 +17,5 @@
 @property (nonatomic, copy) NSString *sex;
 @property (nonatomic, copy) NSString *area;
 @property (nonatomic, copy) NSString *signature;
-@property (nonatomic, copy) NSString *firstCharacter;
-@property (nonatomic, assign) BOOL isFriend;
 
 @end

@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		2C5F88CE3C16327E4426599E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5F2D4D3BBD1BE7B9091F12 /* libPods.a */; };
 		832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832A2BA61CD4564800CEBEA9 /* HomeViewController.m */; };
-		832F57091CD786FD000F46AA /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F57051CD786FD000F46AA /* Register.m */; };
+		832BEEBC1CF00E4F0079AFF8 /* LoginViaSMSCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832BEEBB1CF00E4F0079AFF8 /* LoginViaSMSCode.storyboard */; };
+		832BEEC21CF01D350079AFF8 /* LoginViaPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832BEEC11CF01D350079AFF8 /* LoginViaPhoneViewController.m */; };
+		832BEEC51CF01E2F0079AFF8 /* LoginVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832BEEC41CF01E2F0079AFF8 /* LoginVerifyViewController.m */; };
+		832BEEC81CF036730079AFF8 /* NSString+isPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 832BEEC71CF036730079AFF8 /* NSString+isPhoneNumber.m */; };
+		832F57091CD786FD000F46AA /* AccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F57051CD786FD000F46AA /* AccountService.m */; };
 		832F570A1CD786FD000F46AA /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F57071CD786FD000F46AA /* UserService.m */; };
 		832F570D1CD7896B000F46AA /* TokenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 832F570C1CD7896B000F46AA /* TokenModel.m */; };
 		8342707F1CEC9BDB00E6A029 /* AvatarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8342707E1CEC9BDB00E6A029 /* AvatarTableViewCell.m */; };
@@ -72,6 +76,8 @@
 		83EA57B81CD4EE4700D00B0E /* MeInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57B71CD4EE4700D00B0E /* MeInfoTableViewCell.m */; };
 		83EA57BB1CD4F47800D00B0E /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57BA1CD4F47800D00B0E /* MeTableViewCell.m */; };
 		83EA57C11CD4F61200D00B0E /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA57C01CD4F61200D00B0E /* MeViewController.m */; };
+		83EB12451CEE02DF0055BD8B /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EB12441CEE02DF0055BD8B /* TimeLineViewController.m */; };
+		83EB124A1CEE1F5C0055BD8B /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EB12491CEE1F5C0055BD8B /* UserInfoModel.m */; };
 		83F375321CED75F5006B5667 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F375311CED75F5006B5667 /* WebViewController.m */; };
 		83F375341CED7617006B5667 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F375331CED7617006B5667 /* WebView.storyboard */; };
 		83F375361CEDB4FA006B5667 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F375351CEDB4FA006B5667 /* Setting.storyboard */; };
@@ -106,8 +112,15 @@
 /* Begin PBXFileReference section */
 		832A2BA51CD4564800CEBEA9 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Chats/HomeViewController.h; sourceTree = "<group>"; };
 		832A2BA61CD4564800CEBEA9 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Chats/HomeViewController.m; sourceTree = "<group>"; };
-		832F57041CD786FD000F46AA /* Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Register.h; path = VChat/Network/Register.h; sourceTree = "<group>"; };
-		832F57051CD786FD000F46AA /* Register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Register.m; path = VChat/Network/Register.m; sourceTree = "<group>"; };
+		832BEEBB1CF00E4F0079AFF8 /* LoginViaSMSCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginViaSMSCode.storyboard; path = Login/LoginViaSMSCode.storyboard; sourceTree = "<group>"; };
+		832BEEC01CF01D350079AFF8 /* LoginViaPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViaPhoneViewController.h; path = Login/LoginViaPhoneViewController.h; sourceTree = "<group>"; };
+		832BEEC11CF01D350079AFF8 /* LoginViaPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViaPhoneViewController.m; path = Login/LoginViaPhoneViewController.m; sourceTree = "<group>"; };
+		832BEEC31CF01E2F0079AFF8 /* LoginVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginVerifyViewController.h; path = Login/LoginVerifyViewController.h; sourceTree = "<group>"; };
+		832BEEC41CF01E2F0079AFF8 /* LoginVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginVerifyViewController.m; path = Login/LoginVerifyViewController.m; sourceTree = "<group>"; };
+		832BEEC61CF036730079AFF8 /* NSString+isPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+isPhoneNumber.h"; path = "Common/NSString+isPhoneNumber.h"; sourceTree = "<group>"; };
+		832BEEC71CF036730079AFF8 /* NSString+isPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+isPhoneNumber.m"; path = "Common/NSString+isPhoneNumber.m"; sourceTree = "<group>"; };
+		832F57041CD786FD000F46AA /* AccountService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountService.h; path = VChat/Network/AccountService.h; sourceTree = "<group>"; };
+		832F57051CD786FD000F46AA /* AccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountService.m; path = VChat/Network/AccountService.m; sourceTree = "<group>"; };
 		832F57061CD786FD000F46AA /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserService.h; path = VChat/Network/UserService.h; sourceTree = "<group>"; };
 		832F57071CD786FD000F46AA /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserService.m; path = VChat/Network/UserService.m; sourceTree = "<group>"; };
 		832F570B1CD7896B000F46AA /* TokenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TokenModel.h; path = Login/TokenModel.h; sourceTree = "<group>"; };
@@ -216,6 +229,10 @@
 		83EA57BA1CD4F47800D00B0E /* MeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeTableViewCell.m; path = Me/MeTableViewCell.m; sourceTree = "<group>"; };
 		83EA57BF1CD4F61200D00B0E /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeViewController.h; path = Me/MeViewController.h; sourceTree = "<group>"; };
 		83EA57C01CD4F61200D00B0E /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeViewController.m; path = Me/MeViewController.m; sourceTree = "<group>"; };
+		83EB12431CEE02DF0055BD8B /* TimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeLineViewController.h; path = Discover/TimeLineViewController.h; sourceTree = "<group>"; };
+		83EB12441CEE02DF0055BD8B /* TimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeLineViewController.m; path = Discover/TimeLineViewController.m; sourceTree = "<group>"; };
+		83EB12481CEE1F5C0055BD8B /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoModel.h; path = Contacts/UserInfoModel.h; sourceTree = "<group>"; };
+		83EB12491CEE1F5C0055BD8B /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoModel.m; path = Contacts/UserInfoModel.m; sourceTree = "<group>"; };
 		83F375301CED75F5006B5667 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = Discover/WebViewController.h; sourceTree = "<group>"; };
 		83F375311CED75F5006B5667 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = Discover/WebViewController.m; sourceTree = "<group>"; };
 		83F375331CED7617006B5667 /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WebView.storyboard; path = Discover/WebView.storyboard; sourceTree = "<group>"; };
@@ -301,6 +318,10 @@
 				83A355561CA076EA001C99F2 /* PreLoginViewController.m */,
 				83A355501CA028E3001C99F2 /* LoginViewController.h */,
 				83A355511CA028E3001C99F2 /* LoginViewController.m */,
+				832BEEC01CF01D350079AFF8 /* LoginViaPhoneViewController.h */,
+				832BEEC11CF01D350079AFF8 /* LoginViaPhoneViewController.m */,
+				832BEEC31CF01E2F0079AFF8 /* LoginVerifyViewController.h */,
+				832BEEC41CF01E2F0079AFF8 /* LoginVerifyViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -310,6 +331,7 @@
 			children = (
 				83A355531CA02939001C99F2 /* PreLogin.storyboard */,
 				83FA5F281CA1B460008426FF /* Login.storyboard */,
+				832BEEBB1CF00E4F0079AFF8 /* LoginViaSMSCode.storyboard */,
 				83FA5F1C1CA1A51A008426FF /* BaseTextField.h */,
 				83FA5F1D1CA1A51A008426FF /* BaseTextField.m */,
 			);
@@ -328,6 +350,7 @@
 		83B787C21C9FD75400B60AF7 = {
 			isa = PBXGroup;
 			children = (
+				83B787CE1C9FD75400B60AF7 /* Supporting Files */,
 				83B787CD1C9FD75400B60AF7 /* VChat */,
 				83B787E71C9FD75400B60AF7 /* VChatTests */,
 				83B787F21C9FD75400B60AF7 /* VChatUITests */,
@@ -363,7 +386,6 @@
 				83FA5F4B1CA259FC008426FF /* Me */,
 				83B787DC1C9FD75400B60AF7 /* LaunchScreen.storyboard */,
 				83B787DF1C9FD75400B60AF7 /* Info.plist */,
-				83B787CE1C9FD75400B60AF7 /* Supporting Files */,
 			);
 			path = VChat;
 			sourceTree = "<group>";
@@ -376,6 +398,7 @@
 				83B787CF1C9FD75400B60AF7 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = VChat;
 			sourceTree = "<group>";
 		};
 		83B787E71C9FD75400B60AF7 /* VChatTests */ = {
@@ -401,10 +424,12 @@
 			children = (
 				83D0D6231CD385D900CB2B26 /* BaseViewController.h */,
 				83D0D6241CD385D900CB2B26 /* BaseViewController.m */,
-				838FAD261CEC1C7B0041D13D /* NSString+FirstCharacter.h */,
-				838FAD271CEC1C7B0041D13D /* NSString+FirstCharacter.m */,
 				8372A1461CD798730030385B /* NSString+SHA1.h */,
 				8372A1471CD798730030385B /* NSString+SHA1.m */,
+				832BEEC61CF036730079AFF8 /* NSString+isPhoneNumber.h */,
+				832BEEC71CF036730079AFF8 /* NSString+isPhoneNumber.m */,
+				838FAD261CEC1C7B0041D13D /* NSString+FirstCharacter.h */,
+				838FAD271CEC1C7B0041D13D /* NSString+FirstCharacter.m */,
 				83C24F251CE6406F000BF792 /* BlurView.h */,
 				83C24F261CE6406F000BF792 /* BlurView.m */,
 			);
@@ -414,8 +439,8 @@
 		83DEAC761CD6F10F009A6CAB /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				832F57041CD786FD000F46AA /* Register.h */,
-				832F57051CD786FD000F46AA /* Register.m */,
+				832F57041CD786FD000F46AA /* AccountService.h */,
+				832F57051CD786FD000F46AA /* AccountService.m */,
 				832F57061CD786FD000F46AA /* UserService.h */,
 				832F57071CD786FD000F46AA /* UserService.m */,
 			);
@@ -598,6 +623,8 @@
 		83FA5F541CA25A4A008426FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				83EB12481CEE1F5C0055BD8B /* UserInfoModel.h */,
+				83EB12491CEE1F5C0055BD8B /* UserInfoModel.m */,
 				83C24F361CE720F8000BF792 /* FriendInfoModel.h */,
 				83C24F371CE720F8000BF792 /* FriendInfoModel.m */,
 				838FAD291CEC22A60041D13D /* ContactGroupModel.h */,
@@ -611,6 +638,8 @@
 			children = (
 				83EA57B31CD483B400D00B0E /* DiscoverViewController.h */,
 				83EA57B41CD483B400D00B0E /* DiscoverViewController.m */,
+				83EB12431CEE02DF0055BD8B /* TimeLineViewController.h */,
+				83EB12441CEE02DF0055BD8B /* TimeLineViewController.m */,
 				83D85F8C1CED5ECE00704539 /* QRCodeScanViewController.h */,
 				83D85F8D1CED5ECE00704539 /* QRCodeScanViewController.m */,
 				83F375301CED75F5006B5667 /* WebViewController.h */,
@@ -832,6 +861,7 @@
 				834270A41CECEB6E00E6A029 /* AreaSetting.storyboard in Resources */,
 				83D85F8B1CED5E8C00704539 /* QRCodeScan.storyboard in Resources */,
 				83EA57AB1CD47F5000D00B0E /* Contacts.xcassets in Resources */,
+				832BEEBC1CF00E4F0079AFF8 /* LoginViaSMSCode.storyboard in Resources */,
 				83C24F3C1CE7894E000BF792 /* SystemMessage.storyboard in Resources */,
 				834270901CECC7CE00E6A029 /* NickNameSetting.storyboard in Resources */,
 				83EA57AE1CD47F5000D00B0E /* Images.xcassets in Resources */,
@@ -917,6 +947,7 @@
 			files = (
 				83C24F3F1CE78AB7000BF792 /* SystemMessageViewController.m in Sources */,
 				834270AA1CECEEB600E6A029 /* SignatureSettingViewController.m in Sources */,
+				832BEEC21CF01D350079AFF8 /* LoginViaPhoneViewController.m in Sources */,
 				83EA57B21CD4838C00D00B0E /* DiscoverTableViewCell.m in Sources */,
 				83C24F2F1CE7152D000BF792 /* FriendTableViewCell.m in Sources */,
 				83B787D31C9FD75400B60AF7 /* AppDelegate.m in Sources */,
@@ -937,9 +968,12 @@
 				8342707F1CEC9BDB00E6A029 /* AvatarTableViewCell.m in Sources */,
 				834FA6D61CE9817A00EFFA92 /* FriendVerifyViewController.m in Sources */,
 				83C24F2C1CE6CC3C000BF792 /* FriendInfoViewController.m in Sources */,
+				83EB124A1CEE1F5C0055BD8B /* UserInfoModel.m in Sources */,
 				83C24F351CE716AA000BF792 /* FriendInfoTableViewCell.m in Sources */,
+				832BEEC81CF036730079AFF8 /* NSString+isPhoneNumber.m in Sources */,
 				8372A1481CD798730030385B /* NSString+SHA1.m in Sources */,
 				8342709E1CECE35900E6A029 /* SexTableViewCell.m in Sources */,
+				83EB12451CEE02DF0055BD8B /* TimeLineViewController.m in Sources */,
 				83B787D01C9FD75400B60AF7 /* main.m in Sources */,
 				83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */,
 				838FAD2B1CEC22A60041D13D /* ContactGroupModel.m in Sources */,
@@ -949,7 +983,7 @@
 				83EA57A21CD47E4700D00B0E /* ContactsViewController.m in Sources */,
 				83FA5F1E1CA1A51A008426FF /* BaseTextField.m in Sources */,
 				83F375321CED75F5006B5667 /* WebViewController.m in Sources */,
-				832F57091CD786FD000F46AA /* Register.m in Sources */,
+				832F57091CD786FD000F46AA /* AccountService.m in Sources */,
 				832F570D1CD7896B000F46AA /* TokenModel.m in Sources */,
 				8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */,
 				83EA57C11CD4F61200D00B0E /* MeViewController.m in Sources */,
@@ -958,6 +992,7 @@
 				834270A71CECEC8C00E6A029 /* AreaSettingViewController.m in Sources */,
 				83E7F87D1CD630F300F94FCA /* PersonalInfoViewController.m in Sources */,
 				832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */,
+				832BEEC51CF01E2F0079AFF8 /* LoginVerifyViewController.m in Sources */,
 				83C24F381CE720F8000BF792 /* FriendInfoModel.m in Sources */,
 				834270851CEC9E4000E6A029 /* MeInfoViewController.m in Sources */,
 				834270821CEC9C1A00E6A029 /* InfoTableViewCell.m in Sources */,
