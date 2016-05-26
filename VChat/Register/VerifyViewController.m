@@ -112,13 +112,16 @@
                                                                      }
                                                                  }];
             }];
-            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                                   style:UIAlertActionStyleCancel
+                                                                 handler:nil];
             [alert addAction:confirmAction];
             [alert addAction:cancelAction];
             [weak_self presentViewController:alert animated:YES completion:nil];
         } else {
             [AccountService sharedRegister].registerViaPhoneNumberDelegate = self;
-            [[AccountService sharedRegister] registerVerifyPhoneNumber:weak_self.phoneNumber With:weak_self.verifyCodeTextField.text];
+            [[AccountService sharedRegister] registerVerifyPhoneNumber:weak_self.phoneNumber
+                                                                  With:weak_self.verifyCodeTextField.text];
         }
     }];
 }

@@ -65,13 +65,17 @@
     [query whereKey:@"mobilePhoneNumber" equalTo: self.phoneNumberTextField.text];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (objects.count == 0) {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"该手机号未注册" message:nil preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"该手机号未注册"
+                                                                           message:nil
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定"
+                                                                    style:UIAlertActionStyleDefault
+                                                                  handler:nil];
             [alert addAction:confirmAction];
             [self presentViewController:alert animated:YES completion:nil];
         } else {
             [AccountService sharedRegister].verifySMSdelegate = self;
-            [[AccountService sharedRegister] requestSMSCodeViaPhoneNumber: weak_self.phoneNumberTextField.text];
+            [[AccountService sharedRegister] requestSMSCodeViaPhoneNumber:weak_self.phoneNumberTextField.text];
         }
     }];
 

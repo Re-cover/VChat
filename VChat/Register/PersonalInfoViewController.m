@@ -116,8 +116,12 @@
 - (IBAction)enterButtonDidClicked:(id)sender {
     [self endEdit];
     if (![self.passwordTextField.text isEqualToString: self.confirmPasswordTextField.text]) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"两次密码输入不一致" message:nil preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"两次密码输入不一致"
+                                                                       message:nil
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                               style:UIAlertActionStyleCancel
+                                                             handler:nil];
         [alert addAction:cancelAction];
         [self presentViewController:alert animated:YES completion:nil];
     } else {

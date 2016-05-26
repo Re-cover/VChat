@@ -84,7 +84,9 @@
 - (IBAction)loginButtonDidClicked:(id)sender {
     [self endEdit];
     [SVProgressHUD showWithStatus:@"登录中..."];
-    [AVUser logInWithUsernameInBackground:self.userTextField.text password:self.passwordTextField.text block:^(AVUser *user, NSError *error) {
+    [AVUser logInWithUsernameInBackground:self.userTextField.text
+                                 password:self.passwordTextField.text
+                                    block:^(AVUser *user, NSError *error) {
         if (user != nil) {
             NSLog(@"leanCloud登录成功");
             [UserService sharedUserService].connectIMServerDelegate = self;

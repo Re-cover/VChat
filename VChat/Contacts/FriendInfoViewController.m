@@ -84,7 +84,7 @@
             FriendInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
             [cell.avatarImageView yy_setImageWithURL:[NSURL URLWithString:self.model.avatarUrl] placeholder:nil];
             cell.remarkLabel.text = self.model.nickName;
-            cell.vChatIDLabel.text = [NSString stringWithFormat:@"%@%@", @"微信号：", self.model.vChatId];
+            cell.vChatIDLabel.text = [NSString stringWithFormat:@"%@%@", @"V信号：", self.model.vChatId];
             cell.nickNameLabel.text = [NSString stringWithFormat:@"%@%@", @"昵称：", self.model.nickName];
             return cell;
         }

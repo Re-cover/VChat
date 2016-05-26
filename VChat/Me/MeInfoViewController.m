@@ -80,7 +80,7 @@
                     cell.contentLabel.text = [[AVUser currentUser] objectForKey:@"nickName"];
                     break;
                 case 2:
-                    cell.titleLabel.text = @"微信号";
+                    cell.titleLabel.text = @"V信号";
                     cell.contentLabel.text = [AVUser currentUser].mobilePhoneNumber;
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     break;

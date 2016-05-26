@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C5F88CE3C16327E4426599E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5F2D4D3BBD1BE7B9091F12 /* libPods.a */; };
+		586F3CE37FE47CEA82AEBC9C /* libPods-VChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC93D86D3C9D3A68C3D0868B /* libPods-VChat.a */; };
 		832A2BA71CD4564800CEBEA9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832A2BA61CD4564800CEBEA9 /* HomeViewController.m */; };
 		832BEEBC1CF00E4F0079AFF8 /* LoginViaSMSCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832BEEBB1CF00E4F0079AFF8 /* LoginViaSMSCode.storyboard */; };
 		832BEEC21CF01D350079AFF8 /* LoginViaPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832BEEC11CF01D350079AFF8 /* LoginViaPhoneViewController.m */; };
@@ -110,6 +110,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34BCFF4C099A4290DDE25BED /* Pods-VChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VChat/Pods-VChat.debug.xcconfig"; sourceTree = "<group>"; };
+		3C6756791D496A599E7D58B0 /* Pods-VChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-VChat/Pods-VChat.release.xcconfig"; sourceTree = "<group>"; };
 		832A2BA51CD4564800CEBEA9 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Chats/HomeViewController.h; sourceTree = "<group>"; };
 		832A2BA61CD4564800CEBEA9 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Chats/HomeViewController.m; sourceTree = "<group>"; };
 		832BEEBB1CF00E4F0079AFF8 /* LoginViaSMSCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginViaSMSCode.storyboard; path = Login/LoginViaSMSCode.storyboard; sourceTree = "<group>"; };
@@ -250,9 +252,7 @@
 		83FA5F5D1CA25F5C008426FF /* Contacts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Contacts.storyboard; path = Contacts/Contacts.storyboard; sourceTree = "<group>"; };
 		83FA5F5F1CA25F72008426FF /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = Discover/Discover.storyboard; sourceTree = "<group>"; };
 		83FA5F611CA25F90008426FF /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Me.storyboard; path = Me/Me.storyboard; sourceTree = "<group>"; };
-		AB5F2D4D3BBD1BE7B9091F12 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C78E9EBB7BC5514BE76A0642 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		F564BFDC702DFB2FDCF0A05F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DC93D86D3C9D3A68C3D0868B /* libPods-VChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,7 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C5F88CE3C16327E4426599E /* libPods.a in Frameworks */,
+				586F3CE37FE47CEA82AEBC9C /* libPods-VChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,12 +281,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		73633FA5A81EB9646108FF06 /* Frameworks */ = {
+		2D28DB82766394DB65E67EB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AB5F2D4D3BBD1BE7B9091F12 /* libPods.a */,
+				DC93D86D3C9D3A68C3D0868B /* libPods-VChat.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		596CDC43FC5050983707F8CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34BCFF4C099A4290DDE25BED /* Pods-VChat.debug.xcconfig */,
+				3C6756791D496A599E7D58B0 /* Pods-VChat.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		8355E5FB1CD475D500FC7A51 /* Sources */ = {
@@ -355,8 +364,8 @@
 				83B787E71C9FD75400B60AF7 /* VChatTests */,
 				83B787F21C9FD75400B60AF7 /* VChatUITests */,
 				83B787CC1C9FD75400B60AF7 /* Products */,
-				D0AAB16A780CAB9F9D50E193 /* Pods */,
-				73633FA5A81EB9646108FF06 /* Frameworks */,
+				596CDC43FC5050983707F8CF /* Pods */,
+				2D28DB82766394DB65E67EB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -727,15 +736,6 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		D0AAB16A780CAB9F9D50E193 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C78E9EBB7BC5514BE76A0642 /* Pods.debug.xcconfig */,
-				F564BFDC702DFB2FDCF0A05F /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -743,12 +743,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83B787F81C9FD75400B60AF7 /* Build configuration list for PBXNativeTarget "VChat" */;
 			buildPhases = (
-				D58817F994DD0565CDDEE39E /* Check Pods Manifest.lock */,
+				07437234FAAF93C782D945DA /* 📦 Check Pods Manifest.lock */,
 				83B787C71C9FD75400B60AF7 /* Sources */,
 				83B787C81C9FD75400B60AF7 /* Frameworks */,
 				83B787C91C9FD75400B60AF7 /* Resources */,
-				17178F6A64AE9A31CA299AA4 /* Embed Pods Frameworks */,
-				A85D783A444A417844CD6121 /* Copy Pods Resources */,
+				2BF720EA2B6B13FB67620FFF /* 📦 Embed Pods Frameworks */,
+				072708B73BFDEF515C2EE21D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -893,49 +893,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17178F6A64AE9A31CA299AA4 /* Embed Pods Frameworks */ = {
+		072708B73BFDEF515C2EE21D /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VChat/Pods-VChat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A85D783A444A417844CD6121 /* Copy Pods Resources */ = {
+		07437234FAAF93C782D945DA /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D58817F994DD0565CDDEE39E /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2BF720EA2B6B13FB67620FFF /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VChat/Pods-VChat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1125,7 +1125,7 @@
 		};
 		83B787F91C9FD75400B60AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C78E9EBB7BC5514BE76A0642 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 34BCFF4C099A4290DDE25BED /* Pods-VChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1143,7 +1143,7 @@
 		};
 		83B787FA1C9FD75400B60AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F564BFDC702DFB2FDCF0A05F /* Pods.release.xcconfig */;
+			baseConfigurationReference = 3C6756791D496A599E7D58B0 /* Pods-VChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

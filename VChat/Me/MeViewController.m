@@ -77,7 +77,7 @@
             MeInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
             [cell.avatarImageView yy_setImageWithURL:[NSURL URLWithString:[[AVUser currentUser] objectForKey:@"avatarURL"]] placeholder:[UIImage imageNamed:@"default_avatar"]] ;
             cell.nickNameLabel.text = [[AVUser currentUser] objectForKey:@"nickName"];
-            cell.wechatIDLabel.text = [NSString stringWithFormat:@"微信号：%@", [AVUser currentUser].mobilePhoneNumber];
+            cell.wechatIDLabel.text = [NSString stringWithFormat:@"V信号：%@", [AVUser currentUser].mobilePhoneNumber];
             return cell;
         }
         case 1: {

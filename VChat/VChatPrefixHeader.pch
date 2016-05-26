@@ -19,10 +19,10 @@
 //@weakify
 #define weakify(object) autoreleasepool{} __weak typeof(object) weak_##object = object;
 
-//微信绿
+//V信绿
 #define kVChatGreen [UIColor colorWithRed:36/255.0 green:186/255.0 blue:36/255.0 alpha:1]
 
-//微信灰绿
+//V信灰绿
 
 #define kVChatGrayGreen [UIColor colorWithRed:147/255.0 green:219/255.0 blue:146/255.0 alpha:1]
 
