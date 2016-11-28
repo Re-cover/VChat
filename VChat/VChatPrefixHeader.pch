@@ -13,8 +13,8 @@
 #import <CoreGraphics/CGBase.h>
 //屏幕bounds、高度、宽度
 #define kScreenBounds   [UIScreen mainScreen].bounds
-#define kSceenHeight    [UIScreen mainScreen].bounds.size.height
-#define kSceenWidth     [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight    [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth     [UIScreen mainScreen].bounds.size.width
 
 //@weakify
 #define weakify(object) autoreleasepool{} __weak typeof(object) weak_##object = object;

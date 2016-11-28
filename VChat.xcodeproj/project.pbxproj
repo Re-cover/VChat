@@ -34,6 +34,8 @@
 		834270AA1CECEEB600E6A029 /* SignatureSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834270A91CECEEB600E6A029 /* SignatureSettingViewController.m */; };
 		834270AC1CECEF1500E6A029 /* SignatureSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834270AB1CECEF1500E6A029 /* SignatureSetting.storyboard */; };
 		834FA6D61CE9817A00EFFA92 /* FriendVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834FA6D51CE9817A00EFFA92 /* FriendVerifyViewController.m */; };
+		836C17EA1DEC3CA900721B5D /* ContactHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836C17E91DEC3CA900721B5D /* ContactHeaderView.xib */; };
+		836C17ED1DEC3E3700721B5D /* ContactHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 836C17EC1DEC3E3700721B5D /* ContactHeaderView.m */; };
 		8372A1481CD798730030385B /* NSString+SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8372A1471CD798730030385B /* NSString+SHA1.m */; };
 		8385B6C21CD597D20005EFE6 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385B6C11CD597D20005EFE6 /* ChatViewController.m */; };
 		8385B6C81CD5B1500005EFE6 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8385B6C71CD5B1500005EFE6 /* Chat.storyboard */; };
@@ -156,6 +158,9 @@
 		834270AB1CECEF1500E6A029 /* SignatureSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignatureSetting.storyboard; path = Me/SignatureSetting.storyboard; sourceTree = "<group>"; };
 		834FA6D41CE9817A00EFFA92 /* FriendVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendVerifyViewController.h; path = Contacts/FriendVerifyViewController.h; sourceTree = "<group>"; };
 		834FA6D51CE9817A00EFFA92 /* FriendVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendVerifyViewController.m; path = Contacts/FriendVerifyViewController.m; sourceTree = "<group>"; };
+		836C17E91DEC3CA900721B5D /* ContactHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactHeaderView.xib; sourceTree = "<group>"; };
+		836C17EB1DEC3E3700721B5D /* ContactHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactHeaderView.h; sourceTree = "<group>"; };
+		836C17EC1DEC3E3700721B5D /* ContactHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactHeaderView.m; sourceTree = "<group>"; };
 		8372A1461CD798730030385B /* NSString+SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SHA1.h"; path = "Common/NSString+SHA1.h"; sourceTree = "<group>"; };
 		8372A1471CD798730030385B /* NSString+SHA1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SHA1.m"; path = "Common/NSString+SHA1.m"; sourceTree = "<group>"; };
 		8385B6C01CD597D20005EFE6 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = Chats/ChatViewController.h; sourceTree = "<group>"; };
@@ -617,6 +622,9 @@
 			children = (
 				83FA5F5D1CA25F5C008426FF /* Contacts.storyboard */,
 				83C24F281CE6CC0E000BF792 /* FriendInfo.storyboard */,
+				836C17E91DEC3CA900721B5D /* ContactHeaderView.xib */,
+				836C17EB1DEC3E3700721B5D /* ContactHeaderView.h */,
+				836C17EC1DEC3E3700721B5D /* ContactHeaderView.m */,
 				83EA57A31CD47F1F00D00B0E /* ContactTableViewCell.h */,
 				83EA57A41CD47F1F00D00B0E /* ContactTableViewCell.m */,
 				83C24F331CE716AA000BF792 /* FriendInfoTableViewCell.h */,
@@ -743,12 +751,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83B787F81C9FD75400B60AF7 /* Build configuration list for PBXNativeTarget "VChat" */;
 			buildPhases = (
-				07437234FAAF93C782D945DA /* 📦 Check Pods Manifest.lock */,
+				07437234FAAF93C782D945DA /* [CP] Check Pods Manifest.lock */,
 				83B787C71C9FD75400B60AF7 /* Sources */,
 				83B787C81C9FD75400B60AF7 /* Frameworks */,
 				83B787C91C9FD75400B60AF7 /* Resources */,
-				2BF720EA2B6B13FB67620FFF /* 📦 Embed Pods Frameworks */,
-				072708B73BFDEF515C2EE21D /* 📦 Copy Pods Resources */,
+				2BF720EA2B6B13FB67620FFF /* [CP] Embed Pods Frameworks */,
+				072708B73BFDEF515C2EE21D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -801,7 +809,7 @@
 		83B787C31C9FD75400B60AF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Recover;
 				TargetAttributes = {
 					83B787CA1C9FD75400B60AF7 = {
@@ -846,6 +854,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8385B6C81CD5B1500005EFE6 /* Chat.storyboard in Resources */,
+				836C17EA1DEC3CA900721B5D /* ContactHeaderView.xib in Resources */,
 				834270951CECD2A800E6A029 /* QRCode.storyboard in Resources */,
 				83EA57AF1CD47F5000D00B0E /* Me.xcassets in Resources */,
 				83FA5F601CA25F72008426FF /* Discover.storyboard in Resources */,
@@ -893,14 +902,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		072708B73BFDEF515C2EE21D /* 📦 Copy Pods Resources */ = {
+		072708B73BFDEF515C2EE21D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -908,29 +917,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VChat/Pods-VChat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		07437234FAAF93C782D945DA /* 📦 Check Pods Manifest.lock */ = {
+		07437234FAAF93C782D945DA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		2BF720EA2B6B13FB67620FFF /* 📦 Embed Pods Frameworks */ = {
+		2BF720EA2B6B13FB67620FFF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -974,6 +983,7 @@
 				8372A1481CD798730030385B /* NSString+SHA1.m in Sources */,
 				8342709E1CECE35900E6A029 /* SexTableViewCell.m in Sources */,
 				83EB12451CEE02DF0055BD8B /* TimeLineViewController.m in Sources */,
+				836C17ED1DEC3E3700721B5D /* ContactHeaderView.m in Sources */,
 				83B787D01C9FD75400B60AF7 /* main.m in Sources */,
 				83A355571CA076EA001C99F2 /* PreLoginViewController.m in Sources */,
 				838FAD2B1CEC22A60041D13D /* ContactGroupModel.m in Sources */,
@@ -1056,8 +1066,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1079,7 +1091,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1099,8 +1111,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1116,7 +1130,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1134,6 +1148,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = VChat/VChatPrefixHeader.pch;
 				INFOPLIST_FILE = VChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Recover.VChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1152,6 +1167,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = VChat/VChatPrefixHeader.pch;
 				INFOPLIST_FILE = VChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Recover.VChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";

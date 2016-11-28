@@ -8,6 +8,7 @@
 
 #import "ContactsViewController.h"
 #import "ContactTableViewCell.h"
+#import "ContactHeaderView.h"
 #import "BlurView.h"
 #import "FriendInfoViewController.h"
 #import "NSString+FirstCharacter.h"
@@ -25,6 +26,9 @@
 @property (strong, nonatomic) FriendInfoModel *model;
 @property (strong, nonatomic) NSMutableArray *contactsArray;
 
+@property (strong, nonatomic) NSMutableArray *contactsGroups;
+@property (strong, nonatomic) NSMutableArray *contactsGroupsCount;
+
 @end
 
 @implementation ContactsViewController
@@ -32,6 +36,7 @@
 # pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadContactsArrray) name:@"contactsRefresh" object:nil];
     [self loadContactsArrray];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -40,13 +45,14 @@
     self.tableView.tableHeaderView = self.searchController.searchBar;
 }
 
--(void)viewDidDisappear:(BOOL)animated {
+- (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [self.searchController.searchBar resignFirstResponder];
     [self.searchController.searchBar setText:nil];
     [self.blurView removeFromSuperview];
     [self.searchController.searchResultsController dismissViewControllerAnimated:YES completion:nil];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -54,21 +60,30 @@
 # pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return _contactsGroups.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _contactsArray.count;
+    return [_contactsGroupsCount[section] intValue];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Y";
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    ContactHeaderView *headerView = [ContactHeaderView viewFromNib];
+    headerView.label.text = _contactsGroups[section];
+    return headerView;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 20;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.01;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = @"ContactTableViewCell";
     ContactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    FriendInfoModel *model = _contactsArray[indexPath.row];
+    
+    FriendInfoModel *model = _contactsArray[[self realIndexfor:indexPath]];
     [cell.avatarImageView yy_setImageWithURL:[NSURL URLWithString:model.avatarUrl] placeholder:nil];
     cell.nickNameLabel.text = model.nickName;
     return cell;
@@ -80,7 +95,7 @@
 
 # pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.model = _contactsArray[indexPath.row];
+    self.model = _contactsArray[[self realIndexfor:indexPath]];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:@"toFriendInfoView" sender:nil];
 }
@@ -146,8 +161,8 @@
     [[AVUser currentUser] getFollowees:^(NSArray *objects, NSError *error) {
         if (error == nil) {
             AVObject *contact = nil;
-            FriendInfoModel *contactModel = [[FriendInfoModel alloc] init];
             for (contact in objects) {
+                FriendInfoModel *contactModel = [[FriendInfoModel alloc] init];
                 contactModel.objectId = contact.objectId;
                 contactModel.avatarUrl = [contact valueForKey:@"avatarURL"];
                 contactModel.vChatId = [contact valueForKey:@"username"];
@@ -157,14 +172,48 @@
                 contactModel.signature = [contact valueForKey:@"signature"];
                 contactModel.firstCharacter = contactModel.nickName.firstCharacter;
                 contactModel.isFriend = YES;
+                NSLog(@"%@", contactModel.nickName);
                 [_contactsArray addObject:contactModel];
             }
             _contactsArray = [_contactsArray sortedArrayUsingFunction:nickNameCompare context:NULL].mutableCopy;
+            [self groupContacts];
             [self.tableView reloadData];
         } else {
             NSLog(@"%@", error.description);
         }
     }];
+}
+
+- (void)groupContacts {
+    _contactsGroups = [[NSMutableArray alloc] init];
+    _contactsGroupsCount = [[NSMutableArray alloc] init];
+    FriendInfoModel *contact = nil;
+    NSString *groupName = @"";
+    NSUInteger index = -1;
+    NSUInteger count = 0;
+    for (contact in _contactsArray) {
+        if(![contact.firstCharacter isEqualToString:groupName]) {
+            groupName = contact.firstCharacter;
+            ++index;
+            count = 1;
+            [_contactsGroups addObject: groupName];
+            [_contactsGroupsCount addObject: [[NSNumber alloc] initWithUnsignedInteger:count]];
+        } else {
+            ++count;
+            _contactsGroupsCount[index] = [[NSNumber alloc] initWithUnsignedInteger:count];
+        }
+    }
+    NSLog(@"%@", _contactsGroups);
+    NSLog(@"%@", _contactsGroupsCount);
+}
+
+- (NSUInteger)realIndexfor:(NSIndexPath *)indexPath{
+    NSUInteger index = 0;
+    for(int i = 0; i < indexPath.section; i++) {
+        index += [_contactsGroupsCount[i] intValue];
+    }
+    index = index + indexPath.row;
+    return index;
 }
 
 NSInteger nickNameCompare(FriendInfoModel *model1, FriendInfoModel *model2, void *context) {
@@ -175,7 +224,7 @@ NSInteger nickNameCompare(FriendInfoModel *model1, FriendInfoModel *model2, void
 
 - (BlurView *)blurView {
     if (!_blurView) {
-        _blurView = [[BlurView alloc] initWithFrame:CGRectMake(0, 64, kSceenWidth, kSceenHeight - 64)];
+        _blurView = [[BlurView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64)];
     }
     return _blurView;
 }

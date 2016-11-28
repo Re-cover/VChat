@@ -27,6 +27,8 @@
                                         @(ConversationType_SYSTEM),
                                         @(ConversationType_PUSHSERVICE)]];
     [self setCollectionConversationType:@[@(ConversationType_SYSTEM)]];
+    self.emptyConversationView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    self.emptyConversationView.backgroundColor = [UIColor whiteColor];
 }
 
 -(void)dealloc {

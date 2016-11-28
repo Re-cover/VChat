@@ -19,7 +19,7 @@
     [super viewDidLoad];
     if(self.conversationType == ConversationType_PRIVATE || self.conversationType == ConversationType_SYSTEM) {
         self.displayUserNameInCell = NO;
-        [self setMessagePortraitSize:CGSizeMake(42, 42)];
+        //[self setMessagePortraitSize:CGSizeMake(42, 42)];
     }
 }
 

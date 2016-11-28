@@ -132,6 +132,7 @@
         [[AVUser currentUser] follow:self.model.objectId andCallback:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
                 NSLog(@"添加好友成功");
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"contactsRefresh" object:nil];
                 weak_self.model.isFriend = YES;
                 weak_self.isReciveFriendRequest = NO;
                 weak_self.refuseFriendRequestButton.hidden = YES;

@@ -62,6 +62,7 @@
     
     [self.manager POST:urlString
             parameters:parameters
+              progress:nil
                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
                    NSLog(@"%@", responseObject);
                    TokenModel *model = [TokenModel yy_modelWithJSON: responseObject];
@@ -126,6 +127,7 @@
     
     [self.manager POST:urlString
             parameters:parameters
+              progress:nil 
                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                    successBlock(responseObject);
                }
