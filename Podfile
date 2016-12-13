@@ -1,8 +1,8 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 inhibit_all_warnings!
 target 'VChat' do
     pod 'AVOSCloud'
-    pod 'RongCloudIMKitWithVoip'
+    pod 'RongCloudIM'
     pod 'AFNetworking'
     pod 'SVProgressHUD'
     pod 'Masonry'

@@ -60,7 +60,22 @@ PODS:
   - NJKWebViewProgress/Core (0.2.3)
   - NJKWebViewProgress/ProgressView (0.2.3)
   - ODRefreshControl (1.2)
-  - RongCloudIMKitWithVoip (2.7.3)
+  - RongCloudIM (2.8.3):
+    - RongCloudIM/CallKit (= 2.8.3)
+    - RongCloudIM/CallLib (= 2.8.3)
+    - RongCloudIM/IMKit (= 2.8.3)
+    - RongCloudIM/IMLib (= 2.8.3)
+    - RongCloudIM/RedPacket (= 2.8.3)
+  - RongCloudIM/CallKit (2.8.3):
+    - RongCloudIM/CallLib
+    - RongCloudIM/IMKit
+  - RongCloudIM/CallLib (2.8.3):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMKit (2.8.3):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (2.8.3)
+  - RongCloudIM/RedPacket (2.8.3):
+    - RongCloudIM/IMKit
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
@@ -88,7 +103,7 @@ DEPENDENCIES:
   - LBXScan (from `https://github.com/MxABC/LBXScan.git`)
   - Masonry
   - NJKWebViewProgress
-  - RongCloudIMKitWithVoip
+  - RongCloudIM
   - SVProgressHUD
   - YYModel
   - YYText
@@ -119,7 +134,7 @@ SPEC CHECKSUMS:
   MMPopupView: fe1dd010824029dfb632fdf1a531db5dd5386020
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   ODRefreshControl: 907e6149d72dde488d5917ccfabee5bd8d711a20
-  RongCloudIMKitWithVoip: 7b7a6e4aebba3f0aadf7abe26cb1797341457a36
+  RongCloudIM: 33c6ba0880116d992b527c054903f683b014f0c2
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
   TZImagePickerController: cbfd57ba947263759b860f74132dd1bc33125afc
@@ -131,6 +146,6 @@ SPEC CHECKSUMS:
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
   ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-PODFILE CHECKSUM: 69eae1b8aba12e2dd91dde4562b1f32dff7c59bd
+PODFILE CHECKSUM: 0d72365cf63ddcb6d3cf452733a2414dd27e5d24
 
 COCOAPODS: 1.2.0.beta.1
